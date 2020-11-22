@@ -1,0 +1,89 @@
+@extends('layouts.layout')
+@section('content')
+    <main>
+        <div class="user_wrap">
+            <div class="container">
+                <form action="{{route('user.update')}}" enctype="multipart/form-data" method="POST">
+                @csrf
+                    <div class="row row_wrap">
+                        <div class="col-md-3 info_wrap">
+                            <div class="info_title border_future">
+                                <p><label for="industry">志望業界</label></p>
+                            </div>
+                            <div class="info_content">
+                                <p><input type="text" id="industry" name="industry" value="{{$items->industry}}"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 info_wrap">
+                            <div class="info_title border_future">
+                                <p><label for="name">氏名</label></p>
+                            </div>
+                            <div class="info_content">
+                                <p><input type="text" id="name" name="name" value="{{$items->name}}"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 info_wrap">
+                            <div class="info_title border_future">
+                                <p><label for="year">卒業年度</label></p>
+                            </div>
+                            <div class="info_content">
+                                <p><input type="text" id="year" name="year" value="{{$items->year}}"></p>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="row row_wrap">
+                        <div class="col-md-3 info_wrap">
+                            <div class="info_title border_future">
+                                <p><label for="club">部活動・サークル</label></p>
+                            </div>
+                            <div class="info_content">
+                                <p><input type="text" id="club" name="club" value="{{$items->club}}"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 info_wrap">
+                            <div >
+                                <img class="info_img" src="/storage/images/{{$items->img_name}}" alt="画像">
+                            </div>
+                            <input type="file" name="img_name" value="{{$items->img_name}}">
+                            <input type="submit" value="更新" class="toEdit_btn">
+                        </div>
+                        <div class="col-md-3 info_wrap text-center">
+                            <div class="info_title border_self">
+                                <p><label for="university">在学学校</label></p>
+                            </div>
+                            <div class="info_content">
+                                <p><input type="text" id="university" name="university" value="{{$items->club}}"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row_wrap">
+                        <div class="col-md-3 info_wrap">
+                            <div class="info_title border_self">
+                                <p><label for="hobby">趣味</label></p>
+                            </div>
+                            <div class="info_content">
+                                <p><input type="text" id="hobby" name="hobby" value="{{$items->hobby}}"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 info_wrap">
+                            <div class="info_title border_self">
+                                <p><label for="hometown">出身</label></p>
+                            </div>
+                            <div class="info_content">
+                                <p><input type="text" id="hometown" name="hometown" value="{{$items->hometown}}"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 info_wrap">
+                            <div class="info_title border_self">
+                                <p><label for="email">メールアドレス</label></p>
+                            </div>
+                            <div class="info_content">
+                                <p><input type="email" id="email" name="email" value="{{$items->email}}"></p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+@endsection

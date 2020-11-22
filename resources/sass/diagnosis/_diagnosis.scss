@@ -1,0 +1,118 @@
+$primary-color:#Fdff83;
+$self_color:#d4cced;
+$future_color:#30e3df;
+
+.diagnosis_wrap{
+    margin-top: 13vh;
+
+    .diagnosis_title{
+        padding-top: 20px;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .self_title{
+        text-shadow: 2px 2px 1px $self_color,
+    }
+    .future_title{
+        text-shadow: 2px 2px 1px $future_color,
+    }
+
+    .questions_wrap{
+        position: relative;
+    }
+    .question_wrap{
+        position: fixed;
+        width: 90%;
+        left: 5%;
+    }
+
+    .show{
+        display: block;
+    }
+    .hidden{
+        display: none;
+    }
+
+    .diagnosis_num{
+        font-size: 25px;
+        text-align: center;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    .diagnosis_content{
+        font-size: 40px;
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+    .diagnosis_selects{
+        .circle{
+            border-radius: 50%;
+            background-color: #fff;
+            display: block;
+            margin: 0 auto;
+        }
+        .circle_big{
+            width: 150px;
+            height: 150px;
+        }
+        .circle_middle{
+            width: 100px;
+            height: 100px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .circle_small{
+            border: 1px solid #000;
+            width: 75px;
+            height: 75px;
+            margin-top: 45px;
+            margin-bottom: 45px;
+        }
+        .circle_no{
+            border: 1px solid #6dcbff;
+        }
+        .circle_no:active{
+            background-color: #6dcbff;
+        }
+        .circle_yes{
+            border: 1px solid #fb8989;
+        }
+        .circle_yes:active{
+            background-color: #fb8989;
+        }
+        .circle_small:active{
+            background-color: #000;
+        }
+    }
+
+    .diagnosis_select_text{
+        p{
+            text-align: center;
+            font-size: 25px;
+        }
+    }
+
+    .diagnosis_counts{
+        width: 80%;
+        margin: 50px auto 0;
+        display: flex;
+        justify-content: space-between;
+        .diagnosis_count{
+            background-color: #fff;
+            display: block;
+            width: 25px;
+            height: 25px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            z-index: 10;
+        }
+        .checked{
+            background-color: #000;
+        }
+    }
+}
