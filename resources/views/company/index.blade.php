@@ -1,1 +1,39 @@
-indexページです
+@extends('layouts.company_header')
+
+@section('content')
+<main>
+        <div class="singleCompany_wrap">
+            <div class="companyProfile_title">プロフィール</div>
+            <p class="companyProfile_text">（以下の情報が企業データとして記載されます）</p>
+            <div class="singleCompany_content mt-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="company_chart col-md-6">
+                            <canvas id="companyChart" width="60%" height="40%"></canvas>
+                        </div>
+                        <div class="col-md-6  company_details">
+                            <div class="text-center">
+                                <img class="company_logo" src="/storage/images/{{$items->company_icon}}" alt="">
+                            </div>
+                            <div class="company_info">
+                                <ul>
+                                    <li>企業名：{{$items->name}}</li>
+                                    <li>業界：{{$items->industry}}</li>
+                                    <li>場所：{{$items->office}}</li>
+                                    <li>社員数：{{$items->employee}}人</li>
+                                    <li>ホームページ：{{$items->homepage}}</li>
+                                    <li>企業からのコメント<br>
+                                        {{$items->comment}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a href="{{route('company.edit')}}" class="toEdit_btn">編集</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+@endsection

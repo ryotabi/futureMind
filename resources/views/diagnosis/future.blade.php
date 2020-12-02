@@ -713,19 +713,19 @@
                             <div class="diagnosis_selects">
                                 <div class="row">
                                     <div class="col-2 offset-1">
-                                        <a href="{{route('diagnosis.result')}}" class="diagnosis_btn diagnosis_future_btn" data-value="1"><span class="circle circle_big circle_no"></span></a>
+                                        <a href="#submit" class="diagnosis_btn diagnosis_future_btn" data-value="1"><span class="circle circle_big circle_no"></span></a>
                                     </div>
                                     <div class="col-2">
-                                        <a href="{{route('diagnosis.result')}}" class="diagnosis_btn diagnosis_future_btn" data-value="2"><span class="circle circle_middle circle_no"></span></a>
+                                        <a href="#submit" class="diagnosis_btn diagnosis_future_btn" data-value="2"><span class="circle circle_middle circle_no"></span></a>
                                     </div>
                                     <div class="col-2">
-                                        <a href="{{route('diagnosis.result')}}" class="diagnosis_btn diagnosis_future_btn" data-value="3"><span class="circle circle_small"></span></a>
+                                        <a href="#submit" class="diagnosis_btn diagnosis_future_btn" data-value="3"><span class="circle circle_small"></span></a>
                                     </div>
                                     <div class="col-2">
-                                        <a href="{{route('diagnosis.result')}}" class="diagnosis_btn diagnosis_future_btn" data-value="4"><span class="circle circle_middle circle_yes"></span></a>
+                                        <a href="#submit" class="diagnosis_btn diagnosis_future_btn" data-value="4"><span class="circle circle_middle circle_yes"></span></a>
                                     </div>
                                     <div class="col-2">
-                                        <a href="{{route('diagnosis.result')}}" class="diagnosis_btn diagnosis_future_btn" data-value="5"><span class="circle circle_big circle_yes"></span></a>
+                                        <a href="#submit" class="diagnosis_btn diagnosis_future_btn" data-value="5"><span class="circle circle_big circle_yes"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -756,6 +756,13 @@
                                 <span class="diagnosis_count checked"></span>
                                 <span class="diagnosis_count"></span>
                             </div>
+                        </div>
+                        <div id="submit" class="question_wrap hidden">
+                            <form action="{{route('diagnosis.futurePost')}}" method="post">
+                                @csrf
+                                <input type="submit" value="送信">
+                                <input type="hidden" id="result" name="value">
+                            </form>
                         </div>
                     </div>
                 </div>
