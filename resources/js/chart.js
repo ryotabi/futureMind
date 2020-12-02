@@ -1,14 +1,18 @@
 const { nodeName } = require("jquery");
+const value = $('#js_getValue').data();
+console.log(value.chartvalue)
+$('#test').html(value.chartvalue)
 window.onload = function() {
-    let ctx = document.getElementById('resultChart').getContext('2d');;
+    let chart = document.getElementById('resultChart');
+    console.log(chart);
 
-let resultChart = new Chart(ctx,{
+    window.myBar = new Chart(chart,{
     type:'radar',
     data:{
         labels:["成長意欲","社会貢献","安定","仲間","将来性"],
         datasets:[{
             label:'自己分析',
-            data:[3,5,5,1,4],
+            data:[value.chartvalue,5,5,1,4],
             backgroundColor:'RGBA(255,255,255,0)',
             borderColor:'RGB(212,204,237)',
             borderWidth:2,
@@ -37,4 +41,6 @@ let resultChart = new Chart(ctx,{
         }
     }
 })
+
+
 }

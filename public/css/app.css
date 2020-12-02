@@ -17964,6 +17964,10 @@ main .main_wrap .future_color:active {
   text-shadow: 2px 2px 1px #d4cced;
 }
 
+.companyList_wrap .primary_title {
+  text-shadow: 2px 2px 1px #Fdff83;
+}
+
 .companyList_wrap .companies {
   margin-top: 30px;
 }
@@ -17978,6 +17982,7 @@ main .main_wrap .future_color:active {
   height: 150px;
   margin: 0 auto;
   border-radius: 50%;
+  background-color: #fff;
 }
 
 .companyList_wrap .companies .future_border {
@@ -17986,6 +17991,10 @@ main .main_wrap .future_color:active {
 
 .companyList_wrap .companies .self_border {
   border: 1px solid #d4cced;
+}
+
+.companyList_wrap .companies .primary_border {
+  border: 1px solid #Fdff83;
 }
 
 .companyList_wrap .companies .company_name {
@@ -18194,3 +18203,256 @@ main .main_wrap .future_color:active {
   transform: translateY(4px);
 }
 
+.company_login_wrap {
+  background-color: #f8fab0;
+}
+
+.company_login_wrap .login_title {
+  font-size: 90px;
+  text-shadow: 0 15px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  font-family: fantasy;
+}
+
+.company_login_wrap .company_title {
+  font-size: 30px;
+}
+
+.company_login_wrap .login_form_wrap {
+  background-color: #fff;
+  border-radius: 30px;
+  position: relative;
+  width: 65%;
+  margin: 45px auto;
+  padding: 10px 25px;
+}
+
+.company_login_wrap .form-control {
+  border-radius: 30px;
+}
+
+.company_login_wrap .btn {
+  width: 30%;
+  background-color: #Fdff83;
+  box-shadow: 0px 4px 4px #d1d327;
+  border-radius: 30px;
+  border: none;
+  color: #000;
+}
+
+.company_login_wrap .btn:active {
+  box-shadow: none;
+  transform: translateY(4px);
+  background-color: #Fdff83 !important;
+  border-color: #Fdff83 !important;
+  border: none;
+  color: #000 !important;
+}
+
+.company_login_wrap a:hover {
+  text-decoration: underline !important;
+}
+
+.company_register_wrap {
+  background-color: #baf5f4;
+}
+
+.company_register_wrap .register_title {
+  font-size: 90px;
+  text-shadow: 0 15px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  font-family: fantasy;
+}
+
+.company_register_wrap .company_title {
+  font-size: 30px;
+}
+
+.company_register_wrap .register_form_wrap {
+  background-color: #fff;
+  border-radius: 30px;
+  position: relative;
+  width: 65%;
+  margin: 0 auto;
+  padding: 10px 25px;
+}
+
+.company_register_wrap .file_wrap {
+  display: block;
+}
+
+.company_register_wrap .form-control {
+  border-radius: 30px;
+}
+
+.company_register_wrap .btn {
+  width: 30%;
+  background-color: #30e3df;
+  box-shadow: 0px 4px 4px #27e9d1;
+  border-radius: 30px;
+  border: none;
+  color: #000;
+}
+
+.company_register_wrap .btn:active {
+  box-shadow: none;
+  transform: translateY(4px);
+  background-color: #30e3df !important;
+  border-color: #30e3df !important;
+  border: none;
+  color: #000 !important;
+}
+
+.company_register_wrap a:hover {
+  text-decoration: underline !important;
+}
+
+.companyProfile_title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.companyProfile_text {
+  text-align: center;
+  font-size: 15px;
+}
+
+.company_chart {
+  background-color: #fff;
+  padding: 40px;
+}
+
+.toEdit_btn {
+  display: block;
+  width: 20%;
+  text-align: center;
+  border-radius: 30px;
+  border: 1px solid #000;
+  background-color: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 10px auto 0;
+}
+
+.toEdit_btn:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.company_edit {
+  line-height: 25px !important;
+}
+
+.company_color {
+  background-color: #f8fab0;
+}
+
+.company_title {
+  text-shadow: 2px 2px 1px #f8fab0;
+}
+
+.company_admin {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.search_wrap {
+  margin-top: 13vh;
+}
+
+.search_wrap .search_title {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.search_wrap .primary_title {
+  text-shadow: 2px 2px 1px #Fdff83;
+}
+
+.search_wrap .search_form {
+  background-color: #fff;
+  border-radius: 30px;
+  position: fixed;
+  left: 0%;
+  right: 0%;
+  margin: 20px auto 0;
+  padding: 20px 50px;
+  width: 90%;
+  height: 450px;
+}
+
+.search_wrap .form_item {
+  font-size: 25px;
+}
+
+.search_wrap select {
+  -moz-appearance: menulist;
+  -webkit-appearance: menulist;
+  padding: 5px 15px;
+  border: 1px solid #000;
+}
+
+.search_wrap .range_label {
+  margin-top: 10px;
+}
+
+.search_wrap .range {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.search_wrap .range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  background-color: #Fdff83;
+  border: 1px solid #000;
+  cursor: pointer;
+  box-shadow: -320px 0 0 320px #Fdff83;
+  width: 15px;
+  height: 15px;
+  color: #Fdff83;
+  border-radius: 50%;
+}
+
+.search_wrap .range::-ms-fill-lower {
+  background-color: #Fdff83;
+}
+
+.search_wrap .range::-moz-range-thumb {
+  background-color: #Fdff83;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.search_wrap .search_btn_wrap {
+  text-align: center;
+}
+
+.search_wrap .search_btn_wrap .search_btn {
+  width: 30%;
+  padding: 15px 10px;
+  font-size: 18px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 30px;
+  text-align: center;
+  background-color: #Fdff83;
+  box-shadow: 0px 8px 4px rgba(209, 211, 39, 0.25);
+}
+
+.search_wrap .search_btn_wrap .search_btn:active {
+  transform: translateY(8px);
+  box-shadow: none;
+  outline: none !important;
+}
+
+
+/*# sourceMappingURL=app.css.map*/

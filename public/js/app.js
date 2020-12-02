@@ -37280,6 +37280,8 @@ __webpack_require__(/*! ./tab */ "./resources/js/tab.js");
 
 __webpack_require__(/*! ./diagnosis */ "./resources/js/diagnosis.js");
 
+__webpack_require__(/*! ./range */ "./resources/js/range.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -37337,16 +37339,20 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"),
     nodeName = _require.nodeName;
 
+var value = $('#js_getValue').data();
+console.log(value.chartvalue);
+$('#test').html(value.chartvalue);
+
 window.onload = function () {
-  var ctx = document.getElementById('resultChart').getContext('2d');
-  ;
-  var resultChart = new Chart(ctx, {
+  var chart = document.getElementById('resultChart');
+  console.log(chart);
+  window.myBar = new Chart(chart, {
     type: 'radar',
     data: {
       labels: ["成長意欲", "社会貢献", "安定", "仲間", "将来性"],
       datasets: [{
         label: '自己分析',
-        data: [3, 5, 5, 1, 4],
+        data: [value.chartvalue, 5, 5, 1, 4],
         backgroundColor: 'RGBA(255,255,255,0)',
         borderColor: 'RGB(212,204,237)',
         borderWidth: 2,
@@ -37399,6 +37405,7 @@ $('.diagnosis_future_btn').each(function () {
     var value = $(this).data('value');
     futureSum = futureSum + value;
     console.log(futureSum);
+    $('#result').val(futureSum);
   });
 });
 $('.diagnosis_self_btn').on('click', function () {
@@ -37415,6 +37422,34 @@ $('.diagnosis_self_btn').each(function () {
     selfSum = selfSum + value;
     console.log(selfSum);
   });
+});
+$('.diagnosis_company_btn').on('click', function () {
+  $(this).closest('.question_wrap').removeClass('show');
+  $(this).closest('.question_wrap').addClass('hidden');
+  id = $(this).attr("href");
+  $(id).addClass('show');
+  $(id).removeClass('hidden');
+});
+var companySum = 0;
+$('.diagnosis_company_btn').each(function () {
+  $(this).on('click', function () {
+    var value = $(this).data('value');
+    companySum = companySum + value;
+    console.log(companySum);
+  });
+});
+
+/***/ }),
+
+/***/ "./resources/js/range.js":
+/*!*******************************!*\
+  !*** ./resources/js/range.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$('.range').on('input', function (e) {
+  $(this).next('.range_value').html($(this).val());
 });
 
 /***/ }),
@@ -37473,3 +37508,4 @@ module.exports = __webpack_require__(/*! C:\xampp\htdocs\futureMind\resources\sa
 /***/ })
 
 /******/ });
+//# sourceMappingURL=app.js.map

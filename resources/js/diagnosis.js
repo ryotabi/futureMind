@@ -6,12 +6,13 @@ $('.diagnosis_future_btn').on('click',function(){
     $(id).removeClass('hidden')
 })
 
-let futureSum = 0
+let futureSum = 0;
 $('.diagnosis_future_btn').each(function(){
     $(this).on('click',function(){
         let value = $(this).data('value')
         futureSum = futureSum + value
         console.log(futureSum)
+        $('#result').val(futureSum)
     })
 })
 
@@ -31,6 +32,23 @@ $('.diagnosis_self_btn').each(function(){
         console.log(selfSum)
     })
 })
+$('.diagnosis_company_btn').on('click',function(){
+    $(this).closest('.question_wrap').removeClass('show')
+    $(this).closest('.question_wrap').addClass('hidden')
+    id = $(this).attr("href")
+    $(id).addClass('show')
+    $(id).removeClass('hidden')
+})
+
+let companySum = 0
+$('.diagnosis_company_btn').each(function(){
+    $(this).on('click',function(){
+        let value = $(this).data('value')
+        companySum = companySum + value
+        console.log(companySum)
+    })
+})
+
 
 
 

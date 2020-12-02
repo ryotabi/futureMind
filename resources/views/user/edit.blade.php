@@ -52,7 +52,7 @@
                                 <p><label for="university">在学学校</label></p>
                             </div>
                             <div class="info_content">
-                                <p><input type="text" id="university" name="university" value="{{$items->club}}"></p>
+                                <p><input type="text" id="university" name="university" value="{{$items->university}}"></p>
                             </div>
                         </div>
                     </div>

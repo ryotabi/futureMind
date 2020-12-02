@@ -11,10 +11,13 @@ $future_color:#30e3df;
         font-weight: bold;
     }
     .future_title{
-        text-shadow: 2px 2px 1px $future_color,
+        text-shadow: 2px 2px 1px $future_color;
     }
     .self_title{
-        text-shadow: 2px 2px 1px $self_color,
+        text-shadow: 2px 2px 1px $self_color;
+    }
+    .primary_title{
+        text-shadow: 2px 2px 1px $primary-color;
     }
     .companies{
         margin-top: 30px;
@@ -27,12 +30,16 @@ $future_color:#30e3df;
             height: 150px;
             margin: 0 auto;
             border-radius: 50%;
+            background-color: #fff;
         }
         .future_border{
             border: 1px solid $future_color;
         }
         .self_border{
             border: 1px solid $self_color;
+        }
+        .primary_border{
+            border: 1px solid $primary-color;
         }
         .company_name{
             margin-top: 10px;

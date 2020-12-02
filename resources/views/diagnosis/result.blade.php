@@ -1,6 +1,7 @@
 @extends('layouts.layout')
 @section('content')
     <main>
+        <span id="js_getValue" data-chartValue="{{$num}}"></span>
         <div class="result_wrap">
         <h3 class="diagnosis_title primary_title">分析結果</h3>
         <div class="result_content">

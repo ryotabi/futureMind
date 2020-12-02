@@ -1,12 +1,12 @@
 <?php
 
-namespace App\models;
+namespace App;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class Company extends Authenticatable
+class User extends Authenticatable
 {
     use Notifiable;
 
@@ -16,9 +16,9 @@ class Company extends Authenticatable
      * @var array
      */
 
-     protected $guard = 'company';
+     protected $guard = 'user';
     protected $fillable = [
-        'name', 'email', 'password','company_icon','industry','office','employee','homepage','comment'
+        'name', 'email', 'password','year','university','industry','hobby','club','hometown'
     ];
 
     /**
@@ -39,4 +39,3 @@ class Company extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 }
-
