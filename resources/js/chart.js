@@ -1,11 +1,10 @@
 const { nodeName } = require("jquery");
-const value = $('#js_getValue').data();
-console.log(value.chartvalue)
-$('#test').html(value.chartvalue)
 window.onload = function() {
     let chart = document.getElementById('resultChart');
     console.log(chart);
-
+    const value = $('#js_getValue').data();
+    console.log(value.chartvalue)
+    $('#test').html(value.chartvalue)
     window.myBar = new Chart(chart,{
     type:'radar',
     data:{

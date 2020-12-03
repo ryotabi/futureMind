@@ -37339,13 +37339,12 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"),
     nodeName = _require.nodeName;
 
-var value = $('#js_getValue').data();
-console.log(value.chartvalue);
-$('#test').html(value.chartvalue);
-
 window.onload = function () {
   var chart = document.getElementById('resultChart');
   console.log(chart);
+  var value = $('#js_getValue').data();
+  console.log(value.chartvalue);
+  $('#test').html(value.chartvalue);
   window.myBar = new Chart(chart, {
     type: 'radar',
     data: {
@@ -37399,13 +37398,46 @@ $('.diagnosis_future_btn').on('click', function () {
   $(id).addClass('show');
   $(id).removeClass('hidden');
 });
-var futureSum = 0;
+var developmentvalue = 0;
+var socialvalue = 0;
+var stablevalue = 0;
+var teammatevalue = 0;
+var futurevalue = 0;
 $('.diagnosis_future_btn').each(function () {
   $(this).on('click', function () {
-    var value = $(this).data('value');
-    futureSum = futureSum + value;
-    console.log(futureSum);
-    $('#result').val(futureSum);
+    if ($(this).data('developmentvalue') !== undefined) {
+      var development = $(this).data('developmentvalue');
+      developmentvalue = developmentvalue + development;
+      console.log(developmentvalue);
+      $('#developmentvalue').val(developmentvalue);
+    }
+
+    if ($(this).data('socialvalue') !== undefined) {
+      var social = $(this).data('socialvalue');
+      socialvalue = socialvalue + social;
+      $('#socialvalue').val(socialvalue);
+    }
+
+    if ($(this).data('stablevalue') !== undefined) {
+      var stable = $(this).data('stablevalue');
+      stablevalue = stablevalue + stable;
+      $('#stablevalue').val(stablevalue);
+    }
+
+    if ($(this).data('teammatevalue') !== undefined) {
+      var teammate = $(this).data('teammatevalue');
+      teammatevalue = teammatevalue + teammate;
+      $('#teammatevalue').val(teammatevalue);
+    }
+
+    if ($(this).data('futurevalue') !== undefined) {
+      var future = $(this).data('futurevalue');
+      futurevalue = futurevalue + future;
+      $('#futurevalue').val(futurevalue);
+    } // futureSum = futureSum + value
+    // console.log(futureSum)
+    // $('#result').val(futureSum)
+
   });
 });
 $('.diagnosis_self_btn').on('click', function () {
