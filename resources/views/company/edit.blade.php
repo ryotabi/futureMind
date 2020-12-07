@@ -2,6 +2,13 @@
 
 @section('content')
 <main>
+        @if(isset($chartCompanyData[0]))
+        <span id="js_company_developmentValue" data-companydevelopmentvalue="{{$chartCompanyData[0]}}"></span>
+        <span id="js_company_socialValue" data-companysocialvalue="{{$chartCompanyData[1]}}"></span>
+        <span id="js_company_stableValue" data-companystablevalue="{{$chartCompanyData[2]}}"></span>
+        <span id="js_company_teammateValue" data-companyteammatevalue="{{$chartCompanyData[3]}}"></span>
+        <span id="js_company_futureValue" data-companyfuturevalue="{{$chartCompanyData[4]}}"></span>
+        @endif
         <div class="singleCompany_wrap">
             <div class="companyProfile_title">プロフィール編集</div>
             <div class="singleCompany_content mt-0">

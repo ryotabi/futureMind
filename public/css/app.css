@@ -17829,6 +17829,31 @@ main .main_wrap .future_color:active {
   background-color: #000;
 }
 
+.diagnosis_wrap .diagnosis_submit {
+  display: block;
+  width: 30%;
+  margin: 22vh auto;
+  padding: 20px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.diagnosis_wrap .future_btn {
+  background-color: #30e3df;
+  box-shadow: 0px 4px 4px #27e9d1;
+}
+
+.diagnosis_wrap .self_btn {
+  background-color: #d4cced;
+  box-shadow: 0px 8px 4px #bbacec;
+}
+
+.diagnosis_wrap .diagnosis_submit:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
 .result_wrap {
   margin-top: 13vh;
 }
@@ -18354,6 +18379,16 @@ main .main_wrap .future_color:active {
 .company_admin {
   width: 100px !important;
   height: 100px !important;
+}
+
+.company_btn {
+  background-color: #f8fab0;
+  box-shadow: 0px 4px 4px #f6f7d6;
+}
+
+.self_btn {
+  background-color: #d4cced;
+  box-shadow: 0px 8px 4px #bbacec;
 }
 
 .search_wrap {

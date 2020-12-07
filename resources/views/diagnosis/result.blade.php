@@ -1,7 +1,16 @@
 @extends('layouts.layout')
 @section('content')
     <main>
-        <span id="js_getValue" data-chartValue="{{$num}}"></span>
+        <span id="js_future_developmentValue" data-futuredevelopmentvalue="{{$chartFutureData[0]}}"></span>
+        <span id="js_future_socialValue" data-futuresocialvalue="{{$chartFutureData[1]}}"></span>
+        <span id="js_future_stableValue" data-futurestablevalue="{{$chartFutureData[2]}}"></span>
+        <span id="js_future_teammateValue" data-futureteammatevalue="{{$chartFutureData[3]}}"></span>
+        <span id="js_future_futureValue" data-futurefuturevalue="{{$chartFutureData[4]}}"></span>
+        <span id="js_self_developmentValue" data-selfdevelopmentvalue="{{$chartSelfData[0]}}"></span>
+        <span id="js_self_socialValue" data-selfsocialvalue="{{$chartSelfData[1]}}"></span>
+        <span id="js_self_stableValue" data-selfstablevalue="{{$chartSelfData[2]}}"></span>
+        <span id="js_self_teammateValue" data-selfteammatevalue="{{$chartSelfData[3]}}"></span>
+        <span id="js_self_futureValue" data-selffuturevalue="{{$chartSelfData[4]}}"></span>
         <div class="result_wrap">
         <h3 class="diagnosis_title primary_title">分析結果</h3>
         <div class="result_content">
