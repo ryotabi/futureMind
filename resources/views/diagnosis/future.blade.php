@@ -760,7 +760,7 @@
                         <div id="submit" class="question_wrap hidden">
                             <form action="{{route('diagnosis.futurePost')}}" method="post" class="text-center">
                                 @csrf
-                                <input class=" diagnosis_submit future_btn" type="submit" value="送信">
+                                <input class="diagnosis_submit future_btn" type="submit" value="送信">
                                 <input type="hidden" id="developmentvalue" name="developmentvalue">
                                 <input type="hidden" id="socialvalue" name="socialvalue">
                                 <input type="hidden" id="stablevalue" name="stablevalue">

@@ -37341,17 +37341,25 @@ var _require = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jqu
 
 window.onload = function () {
   var chart = document.getElementById('resultChart');
-  console.log(chart);
-  var value = $('#js_getValue').data();
-  console.log(value.chartvalue);
-  $('#test').html(value.chartvalue);
+  var chartFutureValue = [];
+  var chartSelfValue = [];
+  chartFutureValue.push($('#js_future_developmentValue').data('futuredevelopmentvalue'));
+  chartFutureValue.push($('#js_future_socialValue').data('futuresocialvalue'));
+  chartFutureValue.push($('#js_future_stableValue').data('futurestablevalue'));
+  chartFutureValue.push($('#js_future_teammateValue').data('futureteammatevalue'));
+  chartFutureValue.push($('#js_future_futureValue').data('futurefuturevalue'));
+  chartSelfValue.push($('#js_self_developmentValue').data('selfdevelopmentvalue'));
+  chartSelfValue.push($('#js_self_socialValue').data('selfsocialvalue'));
+  chartSelfValue.push($('#js_self_stableValue').data('selfstablevalue'));
+  chartSelfValue.push($('#js_self_teammateValue').data('selfteammatevalue'));
+  chartSelfValue.push($('#js_self_futureValue').data('selffuturevalue'));
   window.myBar = new Chart(chart, {
     type: 'radar',
     data: {
       labels: ["成長意欲", "社会貢献", "安定", "仲間", "将来性"],
       datasets: [{
         label: '自己分析',
-        data: [value.chartvalue, 5, 5, 1, 4],
+        data: [chartSelfValue[0], chartSelfValue[1], chartSelfValue[2], chartSelfValue[3], chartSelfValue[4]],
         backgroundColor: 'RGBA(255,255,255,0)',
         borderColor: 'RGB(212,204,237)',
         borderWidth: 2,
@@ -37359,7 +37367,7 @@ window.onload = function () {
         pointBackgroundColor: '#000'
       }, {
         label: '理想分析',
-        data: [5, 4, 1, 3, 5],
+        data: [chartFutureValue[0], chartFutureValue[1], chartFutureValue[2], chartFutureValue[3], chartFutureValue[4]],
         backgroundColor: 'RGBA(255,255,255,0)',
         borderColor: 'RGB(48,227,223)',
         borderWidth: 2,
@@ -37408,7 +37416,6 @@ $('.diagnosis_future_btn').each(function () {
     if ($(this).data('developmentvalue') !== undefined) {
       var development = $(this).data('developmentvalue');
       developmentvalue = developmentvalue + development;
-      console.log(developmentvalue);
       $('#developmentvalue').val(developmentvalue);
     }
 
@@ -37434,10 +37441,7 @@ $('.diagnosis_future_btn').each(function () {
       var future = $(this).data('futurevalue');
       futurevalue = futurevalue + future;
       $('#futurevalue').val(futurevalue);
-    } // futureSum = futureSum + value
-    // console.log(futureSum)
-    // $('#result').val(futureSum)
-
+    }
   });
 });
 $('.diagnosis_self_btn').on('click', function () {
@@ -37447,12 +37451,37 @@ $('.diagnosis_self_btn').on('click', function () {
   $(id).addClass('show');
   $(id).removeClass('hidden');
 });
-var selfSum = 0;
 $('.diagnosis_self_btn').each(function () {
   $(this).on('click', function () {
-    var value = $(this).data('value');
-    selfSum = selfSum + value;
-    console.log(selfSum);
+    if ($(this).data('developmentvalue') !== undefined) {
+      var development = $(this).data('developmentvalue');
+      developmentvalue = developmentvalue + development;
+      $('#developmentvalue').val(developmentvalue);
+    }
+
+    if ($(this).data('socialvalue') !== undefined) {
+      var social = $(this).data('socialvalue');
+      socialvalue = socialvalue + social;
+      $('#socialvalue').val(socialvalue);
+    }
+
+    if ($(this).data('stablevalue') !== undefined) {
+      var stable = $(this).data('stablevalue');
+      stablevalue = stablevalue + stable;
+      $('#stablevalue').val(stablevalue);
+    }
+
+    if ($(this).data('teammatevalue') !== undefined) {
+      var teammate = $(this).data('teammatevalue');
+      teammatevalue = teammatevalue + teammate;
+      $('#teammatevalue').val(teammatevalue);
+    }
+
+    if ($(this).data('futurevalue') !== undefined) {
+      var future = $(this).data('futurevalue');
+      futurevalue = futurevalue + future;
+      $('#futurevalue').val(futurevalue);
+    }
   });
 });
 $('.diagnosis_company_btn').on('click', function () {
@@ -37462,12 +37491,42 @@ $('.diagnosis_company_btn').on('click', function () {
   $(id).addClass('show');
   $(id).removeClass('hidden');
 });
-var companySum = 0;
+var companydevelopmentvalue = 0;
+var companysocialvalue = 0;
+var companystablevalue = 0;
+var companyteammatevalue = 0;
+var companyfuturevalue = 0;
 $('.diagnosis_company_btn').each(function () {
   $(this).on('click', function () {
-    var value = $(this).data('value');
-    companySum = companySum + value;
-    console.log(companySum);
+    if ($(this).data('companydevelopmentvalue') !== undefined) {
+      var companydevelopment = $(this).data('companydevelopmentvalue');
+      companydevelopmentvalue = companydevelopmentvalue + companydevelopment;
+      $('#developmentvalue').val(companydevelopmentvalue);
+    }
+
+    if ($(this).data('companysocialvalue') !== undefined) {
+      var companysocial = $(this).data('companysocialvalue');
+      companysocialvalue = companysocialvalue + companysocial;
+      $('#socialvalue').val(companysocialvalue);
+    }
+
+    if ($(this).data('companystablevalue') !== undefined) {
+      var companystable = $(this).data('companystablevalue');
+      companystablevalue = companystablevalue + companystable;
+      $('#stablevalue').val(companystablevalue);
+    }
+
+    if ($(this).data('companyteammatevalue') !== undefined) {
+      var companyteammate = $(this).data('companyteammatevalue');
+      companyteammatevalue = companyteammatevalue + companyteammate;
+      $('#teammatevalue').val(companyteammatevalue);
+    }
+
+    if ($(this).data('companyfuturevalue') !== undefined) {
+      var companyfuture = $(this).data('companyfuturevalue');
+      companyfuturevalue = companyfuturevalue + companyfuture;
+      $('#futurevalue').val(companyfuturevalue);
+    }
   });
 });
 

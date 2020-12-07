@@ -20,6 +20,7 @@ Route::group(['namespace'=>'User','prefix'=>'diagnosis','middleware'=>'auth'],fu
     Route::get('future', 'DiagnosisController@future')->name('diagnosis.future');
     Route::post('future', 'DiagnosisController@futurePost')->name('diagnosis.futurePost');
     Route::get('self', 'DiagnosisController@self')->name('diagnosis.self');
+    Route::post('self', 'DiagnosisController@selfPost')->name('diagnosis.selfPost');
     Route::get('result', 'DiagnosisController@result')->name('diagnosis.result');
     Route::get('futureCompany', 'DiagnosisController@futureCompany')->name('diagnosis.futureCompany');
     Route::get('selfCompany', 'DiagnosisController@selfCompany')->name('diagnosis.selfCompany');
@@ -43,6 +44,7 @@ Route::get('/company', 'company\CompanyController@index')->middleware('auth:comp
 Route::get('/company/edit','company\CompanyController@edit')->middleware('auth:company')->name('company.edit');
 Route::post('/company/edit','company\CompanyController@update')->middleware('auth:company')->name('company.update');
 Route::get('/company/diagnosis','company\CompanyController@diagnosis')->middleware('auth:company')->name('company.diagnosis');
+Route::post('/company/diagnosis','company\CompanyController@diagnosisPost')->middleware('auth:company')->name('company.diagnosisPost');
 
 Route::get('/search','SearchCompanyController@search')->middleware('auth')->name('search.search');
 Route::get('/search/result','SearchCompanyController@result')->middleware('auth')->name('search.result');

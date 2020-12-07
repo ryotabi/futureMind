@@ -129,6 +129,10 @@ $future_color:#30e3df;
         background-color: $future_color;
         box-shadow: 0px 4px 4px #27e9d1;
     }
+    .self_btn{
+        background-color: $self_color;
+        box-shadow: 0px 8px 4px #bbacec;
+    }
     .diagnosis_submit:active{
         box-shadow: none;
         transform: translateY(4px);

@@ -16,7 +16,6 @@ $('.diagnosis_future_btn').each(function(){
         if($(this).data('developmentvalue') !== undefined){
             let development = $(this).data('developmentvalue')
             developmentvalue = developmentvalue + development
-            console.log(developmentvalue)
             $('#developmentvalue').val(developmentvalue)
         }
         if($(this).data('socialvalue') !== undefined){
@@ -39,10 +38,6 @@ $('.diagnosis_future_btn').each(function(){
             futurevalue = futurevalue + future
             $('#futurevalue').val(futurevalue)
         }
-
-        // futureSum = futureSum + value
-        // console.log(futureSum)
-        // $('#result').val(futureSum)
     })
 })
 
@@ -54,12 +49,33 @@ $('.diagnosis_self_btn').on('click',function(){
     $(id).removeClass('hidden')
 })
 
-let selfSum = 0
 $('.diagnosis_self_btn').each(function(){
     $(this).on('click',function(){
-        let value = $(this).data('value')
-        selfSum = selfSum + value
-        console.log(selfSum)
+        if($(this).data('developmentvalue') !== undefined){
+            let development = $(this).data('developmentvalue')
+            developmentvalue = developmentvalue + development
+            $('#developmentvalue').val(developmentvalue)
+        }
+        if($(this).data('socialvalue') !== undefined){
+            let social = $(this).data('socialvalue')
+            socialvalue = socialvalue + social
+            $('#socialvalue').val(socialvalue)
+        }
+        if($(this).data('stablevalue') !== undefined){
+            let stable = $(this).data('stablevalue')
+            stablevalue = stablevalue + stable
+            $('#stablevalue').val(stablevalue)
+        }
+        if($(this).data('teammatevalue') !== undefined){
+            let teammate = $(this).data('teammatevalue')
+            teammatevalue = teammatevalue + teammate
+            $('#teammatevalue').val(teammatevalue)
+        }
+        if($(this).data('futurevalue') !== undefined){
+            let future = $(this).data('futurevalue')
+            futurevalue = futurevalue + future
+            $('#futurevalue').val(futurevalue)
+        }
     })
 })
 $('.diagnosis_company_btn').on('click',function(){
@@ -70,14 +86,41 @@ $('.diagnosis_company_btn').on('click',function(){
     $(id).removeClass('hidden')
 })
 
-let companySum = 0
+let  companydevelopmentvalue= 0;
+let  companysocialvalue= 0;
+let  companystablevalue= 0;
+let  companyteammatevalue= 0;
+let  companyfuturevalue= 0;
 $('.diagnosis_company_btn').each(function(){
     $(this).on('click',function(){
-        let value = $(this).data('value')
-        companySum = companySum + value
-        console.log(companySum)
+        if($(this).data('companydevelopmentvalue') !== undefined){
+            let companydevelopment = $(this).data('companydevelopmentvalue')
+            companydevelopmentvalue = companydevelopmentvalue + companydevelopment
+            $('#developmentvalue').val(companydevelopmentvalue)
+        }
+        if($(this).data('companysocialvalue') !== undefined){
+            let companysocial = $(this).data('companysocialvalue')
+            companysocialvalue = companysocialvalue + companysocial
+            $('#socialvalue').val(companysocialvalue)
+        }
+        if($(this).data('companystablevalue') !== undefined){
+            let companystable = $(this).data('companystablevalue')
+            companystablevalue = companystablevalue + companystable
+            $('#stablevalue').val(companystablevalue)
+        }
+        if($(this).data('companyteammatevalue') !== undefined){
+            let companyteammate = $(this).data('companyteammatevalue')
+            companyteammatevalue = companyteammatevalue + companyteammate
+            $('#teammatevalue').val(companyteammatevalue)
+        }
+        if($(this).data('companyfuturevalue') !== undefined){
+            let companyfuture = $(this).data('companyfuturevalue')
+            companyfuturevalue = companyfuturevalue + companyfuture
+            $('#futurevalue').val(companyfuturevalue)
+        }
     })
-})
+    })
+
 
 
 

@@ -14,19 +14,19 @@
                         <div class="diagnosis_selects">
                             <div class="row">
                                 <div class="col-2 offset-1">
-                                    <a href="#q2" class="diagnosis_btn diagnosis_company_btn" data-value="1"><span class="circle circle_big circle_no"></span></a>
+                                    <a href="#q2" class="diagnosis_btn diagnosis_company_btn" data-companydevelopmentvalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q2" class="diagnosis_btn diagnosis_company_btn" data-value="2"><span class="circle circle_middle circle_no"></span></a>
+                                    <a href="#q2" class="diagnosis_btn diagnosis_company_btn" data-companydevelopmentvalue="2"><span class="circle circle_middle circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q2" class="diagnosis_btn diagnosis_company_btn" data-value="3"><span class="circle circle_small"></span></a>
+                                    <a href="#q2" class="diagnosis_btn diagnosis_company_btn" data-companydevelopmentvalue="3"><span class="circle circle_small"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q2" class="diagnosis_btn diagnosis_company_btn" data-value="4"><span class="circle circle_middle circle_yes"></span></a>
+                                    <a href="#q2" class="diagnosis_btn diagnosis_company_btn" data-companydevelopmentvalue="4"><span class="circle circle_middle circle_yes"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q2" class="diagnosis_btn diagnosis_company_btn" data-value="5"><span class="circle circle_big circle_yes"></span></a>
+                                    <a href="#q2" class="diagnosis_btn diagnosis_company_btn" data-companydevelopmentvalue="5"><span class="circle circle_big circle_yes"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -64,19 +64,19 @@
                         <div class="diagnosis_selects">
                         <div class="row">
                                 <div class="col-2 offset-1">
-                                    <a href="#q3" class="diagnosis_btn diagnosis_company_btn" data-value="1"><span class="circle circle_big circle_no"></span></a>
+                                    <a href="#q3" class="diagnosis_btn diagnosis_company_btn" data-companysocialvalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q3" class="diagnosis_btn diagnosis_company_btn" data-value="2"><span class="circle circle_middle circle_no"></span></a>
+                                    <a href="#q3" class="diagnosis_btn diagnosis_company_btn" data-companysocialvalue="2"><span class="circle circle_middle circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q3" class="diagnosis_btn diagnosis_company_btn" data-value="3"><span class="circle circle_small"></span></a>
+                                    <a href="#q3" class="diagnosis_btn diagnosis_company_btn" data-companysocialvalue="3"><span class="circle circle_small"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q3" class="diagnosis_btn diagnosis_company_btn" data-value="4"><span class="circle circle_middle circle_yes"></span></a>
+                                    <a href="#q3" class="diagnosis_btn diagnosis_company_btn" data-companysocialvalue="4"><span class="circle circle_middle circle_yes"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q3" class="diagnosis_btn diagnosis_company_btn" data-value="5"><span class="circle circle_big circle_yes"></span></a>
+                                    <a href="#q3" class="diagnosis_btn diagnosis_company_btn" data-companysocialvalue="5"><span class="circle circle_big circle_yes"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -114,19 +114,19 @@
                         <div class="diagnosis_selects">
                             <div class="row">
                                 <div class="col-2 offset-1">
-                                    <a href="#q4" class="diagnosis_btn diagnosis_company_btn" data-value="1"><span class="circle circle_big circle_no"></span></a>
+                                    <a href="#q4" class="diagnosis_btn diagnosis_company_btn" data-companystablevalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q4" class="diagnosis_btn diagnosis_company_btn" data-value="2"><span class="circle circle_middle circle_no"></span></a>
+                                    <a href="#q4" class="diagnosis_btn diagnosis_company_btn" data-companystablevalue="2"><span class="circle circle_middle circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q4" class="diagnosis_btn diagnosis_company_btn" data-value="3"><span class="circle circle_small"></span></a>
+                                    <a href="#q4" class="diagnosis_btn diagnosis_company_btn" data-companystablevalue="3"><span class="circle circle_small"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q4" class="diagnosis_btn diagnosis_company_btn" data-value="4"><span class="circle circle_middle circle_yes"></span></a>
+                                    <a href="#q4" class="diagnosis_btn diagnosis_company_btn" data-companystablevalue="4"><span class="circle circle_middle circle_yes"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q4" class="diagnosis_btn diagnosis_company_btn" data-value="5"><span class="circle circle_big circle_yes"></span></a>
+                                    <a href="#q4" class="diagnosis_btn diagnosis_company_btn" data-companystablevalue="5"><span class="circle circle_big circle_yes"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -164,19 +164,19 @@
                         <div class="diagnosis_selects">
                             <div class="row">
                                 <div class="col-2 offset-1">
-                                    <a href="#q5" class="diagnosis_btn diagnosis_company_btn" data-value="1"><span class="circle circle_big circle_no"></span></a>
+                                    <a href="#q5" class="diagnosis_btn diagnosis_company_btn" data-companyteammatevalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q5" class="diagnosis_btn diagnosis_company_btn" data-value="2"><span class="circle circle_middle circle_no"></span></a>
+                                    <a href="#q5" class="diagnosis_btn diagnosis_company_btn" data-companyteammatevalue="2"><span class="circle circle_middle circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q5" class="diagnosis_btn diagnosis_company_btn" data-value="3"><span class="circle circle_small"></span></a>
+                                    <a href="#q5" class="diagnosis_btn diagnosis_company_btn" data-companyteammatevalue="3"><span class="circle circle_small"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q5" class="diagnosis_btn diagnosis_company_btn" data-value="4"><span class="circle circle_middle circle_yes"></span></a>
+                                    <a href="#q5" class="diagnosis_btn diagnosis_company_btn" data-companyteammatevalue="4"><span class="circle circle_middle circle_yes"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q5" class="diagnosis_btn diagnosis_company_btn" data-value="5"><span class="circle circle_big circle_yes"></span></a>
+                                    <a href="#q5" class="diagnosis_btn diagnosis_company_btn" data-companyteammatevalue="5"><span class="circle circle_big circle_yes"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -214,19 +214,19 @@
                         <div class="diagnosis_selects">
                             <div class="row">
                                 <div class="col-2 offset-1">
-                                    <a href="#q6" class="diagnosis_btn diagnosis_company_btn" data-value="1"><span class="circle circle_big circle_no"></span></a>
+                                    <a href="#q6" class="diagnosis_btn diagnosis_company_btn" data-companyfuturevalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q6" class="diagnosis_btn diagnosis_company_btn" data-value="2"><span class="circle circle_middle circle_no"></span></a>
+                                    <a href="#q6" class="diagnosis_btn diagnosis_company_btn" data-companyfuturevalue="2"><span class="circle circle_middle circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q6" class="diagnosis_btn diagnosis_company_btn" data-value="3"><span class="circle circle_small"></span></a>
+                                    <a href="#q6" class="diagnosis_btn diagnosis_company_btn" data-companyfuturevalue="3"><span class="circle circle_small"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q6" class="diagnosis_btn diagnosis_company_btn" data-value="4"><span class="circle circle_middle circle_yes"></span></a>
+                                    <a href="#q6" class="diagnosis_btn diagnosis_company_btn" data-companyfuturevalue="4"><span class="circle circle_middle circle_yes"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q6" class="diagnosis_btn diagnosis_company_btn" data-value="5"><span class="circle circle_big circle_yes"></span></a>
+                                    <a href="#q6" class="diagnosis_btn diagnosis_company_btn" data-companyfuturevalue="5"><span class="circle circle_big circle_yes"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -264,19 +264,19 @@
                         <div class="diagnosis_selects">
                             <div class="row">
                                 <div class="col-2 offset-1">
-                                    <a href="#q7" class="diagnosis_btn diagnosis_company_btn" data-value="1"><span class="circle circle_big circle_no"></span></a>
+                                    <a href="#q7" class="diagnosis_btn diagnosis_company_btn" data-companydevelopmentvalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q7" class="diagnosis_btn diagnosis_company_btn" data-value="2"><span class="circle circle_middle circle_no"></span></a>
+                                    <a href="#q7" class="diagnosis_btn diagnosis_company_btn" data-companydevelopmentvalue="2"><span class="circle circle_middle circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q7" class="diagnosis_btn diagnosis_company_btn" data-value="3"><span class="circle circle_small"></span></a>
+                                    <a href="#q7" class="diagnosis_btn diagnosis_company_btn" data-companydevelopmentvalue="3"><span class="circle circle_small"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q7" class="diagnosis_btn diagnosis_company_btn" data-value="4"><span class="circle circle_middle circle_yes"></span></a>
+                                    <a href="#q7" class="diagnosis_btn diagnosis_company_btn" data-companydevelopmentvalue="4"><span class="circle circle_middle circle_yes"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q7" class="diagnosis_btn diagnosis_company_btn" data-value="5"><span class="circle circle_big circle_yes"></span></a>
+                                    <a href="#q7" class="diagnosis_btn diagnosis_company_btn" data-companydevelopmentvalue="5"><span class="circle circle_big circle_yes"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -314,19 +314,19 @@
                         <div class="diagnosis_selects">
                             <div class="row">
                                 <div class="col-2 offset-1">
-                                    <a href="#q8" class="diagnosis_btn diagnosis_company_btn" data-value="1"><span class="circle circle_big circle_no"></span></a>
+                                    <a href="#q8" class="diagnosis_btn diagnosis_company_btn" data-companysocialvalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q8" class="diagnosis_btn diagnosis_company_btn" data-value="2"><span class="circle circle_middle circle_no"></span></a>
+                                    <a href="#q8" class="diagnosis_btn diagnosis_company_btn" data-companysocialvalue="2"><span class="circle circle_middle circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q8" class="diagnosis_btn diagnosis_company_btn" data-value="3"><span class="circle circle_small"></span></a>
+                                    <a href="#q8" class="diagnosis_btn diagnosis_company_btn" data-companysocialvalue="3"><span class="circle circle_small"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q8" class="diagnosis_btn diagnosis_company_btn" data-value="4"><span class="circle circle_middle circle_yes"></span></a>
+                                    <a href="#q8" class="diagnosis_btn diagnosis_company_btn" data-companysocialvalue="4"><span class="circle circle_middle circle_yes"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q8" class="diagnosis_btn diagnosis_company_btn" data-value="5"><span class="circle circle_big circle_yes"></span></a>
+                                    <a href="#q8" class="diagnosis_btn diagnosis_company_btn" data-companysocialvalue="5"><span class="circle circle_big circle_yes"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -364,19 +364,19 @@
                         <div class="diagnosis_selects">
                             <div class="row">
                                 <div class="col-2 offset-1">
-                                    <a href="#q9" class="diagnosis_btn diagnosis_company_btn" data-value="1"><span class="circle circle_big circle_no"></span></a>
+                                    <a href="#q9" class="diagnosis_btn diagnosis_company_btn" data-companystablevalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q9" class="diagnosis_btn diagnosis_company_btn" data-value="2"><span class="circle circle_middle circle_no"></span></a>
+                                    <a href="#q9" class="diagnosis_btn diagnosis_company_btn" data-companystablevalue="2"><span class="circle circle_middle circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q9" class="diagnosis_btn diagnosis_company_btn" data-value="3"><span class="circle circle_small"></span></a>
+                                    <a href="#q9" class="diagnosis_btn diagnosis_company_btn" data-companystablevalue="3"><span class="circle circle_small"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q9" class="diagnosis_btn diagnosis_company_btn" data-value="4"><span class="circle circle_middle circle_yes"></span></a>
+                                    <a href="#q9" class="diagnosis_btn diagnosis_company_btn" data-companystablevalue="4"><span class="circle circle_middle circle_yes"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q9" class="diagnosis_btn diagnosis_company_btn" data-value="5"><span class="circle circle_big circle_yes"></span></a>
+                                    <a href="#q9" class="diagnosis_btn diagnosis_company_btn" data-companystablevalue="5"><span class="circle circle_big circle_yes"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -414,19 +414,19 @@
                         <div class="diagnosis_selects">
                             <div class="row">
                                 <div class="col-2 offset-1">
-                                    <a href="#q10" class="diagnosis_btn diagnosis_company_btn" data-value="1"><span class="circle circle_big circle_no"></span></a>
+                                    <a href="#q10" class="diagnosis_btn diagnosis_company_btn" data-companyteammatevalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q10" class="diagnosis_btn diagnosis_company_btn" data-value="2"><span class="circle circle_middle circle_no"></span></a>
+                                    <a href="#q10" class="diagnosis_btn diagnosis_company_btn" data-companyteammatevalue="2"><span class="circle circle_middle circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q10" class="diagnosis_btn diagnosis_company_btn" data-value="3"><span class="circle circle_small"></span></a>
+                                    <a href="#q10" class="diagnosis_btn diagnosis_company_btn" data-companyteammatevalue="3"><span class="circle circle_small"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q10" class="diagnosis_btn diagnosis_company_btn" data-value="4"><span class="circle circle_middle circle_yes"></span></a>
+                                    <a href="#q10" class="diagnosis_btn diagnosis_company_btn" data-companyteammatevalue="4"><span class="circle circle_middle circle_yes"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q10" class="diagnosis_btn diagnosis_company_btn" data-value="5"><span class="circle circle_big circle_yes"></span></a>
+                                    <a href="#q10" class="diagnosis_btn diagnosis_company_btn" data-companyteammatevalue="5"><span class="circle circle_big circle_yes"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -464,19 +464,19 @@
                         <div class="diagnosis_selects">
                             <div class="row">
                                 <div class="col-2 offset-1">
-                                    <a href="#q11" class="diagnosis_btn diagnosis_company_btn" data-value="1"><span class="circle circle_big circle_no"></span></a>
+                                    <a href="#q11" class="diagnosis_btn diagnosis_company_btn" data-companyfuturevalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q11" class="diagnosis_btn diagnosis_company_btn" data-value="2"><span class="circle circle_middle circle_no"></span></a>
+                                    <a href="#q11" class="diagnosis_btn diagnosis_company_btn" data-companyfuturevalue="2"><span class="circle circle_middle circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q11" class="diagnosis_btn diagnosis_company_btn" data-value="3"><span class="circle circle_small"></span></a>
+                                    <a href="#q11" class="diagnosis_btn diagnosis_company_btn" data-companyfuturevalue="3"><span class="circle circle_small"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q11" class="diagnosis_btn diagnosis_company_btn" data-value="4"><span class="circle circle_middle circle_yes"></span></a>
+                                    <a href="#q11" class="diagnosis_btn diagnosis_company_btn" data-companyfuturevalue="4"><span class="circle circle_middle circle_yes"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q11" class="diagnosis_btn diagnosis_company_btn" data-value="5"><span class="circle circle_big circle_yes"></span></a>
+                                    <a href="#q11" class="diagnosis_btn diagnosis_company_btn" data-companyfuturevalue="5"><span class="circle circle_big circle_yes"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -514,19 +514,19 @@
                         <div class="diagnosis_selects">
                             <div class="row">
                                 <div class="col-2 offset-1">
-                                    <a href="#q12" class="diagnosis_btn diagnosis_company_btn" data-value="1"><span class="circle circle_big circle_no"></span></a>
+                                    <a href="#q12" class="diagnosis_btn diagnosis_company_btn" data-companydevelopmentvalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q12" class="diagnosis_btn diagnosis_company_btn" data-value="2"><span class="circle circle_middle circle_no"></span></a>
+                                    <a href="#q12" class="diagnosis_btn diagnosis_company_btn" data-companydevelopmentvalue="2"><span class="circle circle_middle circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q12" class="diagnosis_btn diagnosis_company_btn" data-value="3"><span class="circle circle_small"></span></a>
+                                    <a href="#q12" class="diagnosis_btn diagnosis_company_btn" data-companydevelopmentvalue="3"><span class="circle circle_small"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q12" class="diagnosis_btn diagnosis_company_btn" data-value="4"><span class="circle circle_middle circle_yes"></span></a>
+                                    <a href="#q12" class="diagnosis_btn diagnosis_company_btn" data-companydevelopmentvalue="4"><span class="circle circle_middle circle_yes"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q12" class="diagnosis_btn diagnosis_company_btn" data-value="5"><span class="circle circle_big circle_yes"></span></a>
+                                    <a href="#q12" class="diagnosis_btn diagnosis_company_btn" data-companydevelopmentvalue="5"><span class="circle circle_big circle_yes"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -564,19 +564,19 @@
                         <div class="diagnosis_selects">
                             <div class="row">
                                 <div class="col-2 offset-1">
-                                    <a href="#q13" class="diagnosis_btn diagnosis_company_btn" data-value="1"><span class="circle circle_big circle_no"></span></a>
+                                    <a href="#q13" class="diagnosis_btn diagnosis_company_btn" data-companysocialvalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q13" class="diagnosis_btn diagnosis_company_btn" data-value="2"><span class="circle circle_middle circle_no"></span></a>
+                                    <a href="#q13" class="diagnosis_btn diagnosis_company_btn" data-companysocialvalue="2"><span class="circle circle_middle circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q13" class="diagnosis_btn diagnosis_company_btn" data-value="3"><span class="circle circle_small"></span></a>
+                                    <a href="#q13" class="diagnosis_btn diagnosis_company_btn" data-companysocialvalue="3"><span class="circle circle_small"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q13" class="diagnosis_btn diagnosis_company_btn" data-value="4"><span class="circle circle_middle circle_yes"></span></a>
+                                    <a href="#q13" class="diagnosis_btn diagnosis_company_btn" data-companysocialvalue="4"><span class="circle circle_middle circle_yes"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q13" class="diagnosis_btn diagnosis_company_btn" data-value="5"><span class="circle circle_big circle_yes"></span></a>
+                                    <a href="#q13" class="diagnosis_btn diagnosis_company_btn" data-companysocialvalue="5"><span class="circle circle_big circle_yes"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -614,19 +614,19 @@
                         <div class="diagnosis_selects">
                             <div class="row">
                                 <div class="col-2 offset-1">
-                                    <a href="#q14" class="diagnosis_btn diagnosis_company_btn" data-value="1"><span class="circle circle_big circle_no"></span></a>
+                                    <a href="#q14" class="diagnosis_btn diagnosis_company_btn" data-companystablevalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q14" class="diagnosis_btn diagnosis_company_btn" data-value="2"><span class="circle circle_middle circle_no"></span></a>
+                                    <a href="#q14" class="diagnosis_btn diagnosis_company_btn" data-companystablevalue="2"><span class="circle circle_middle circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q14" class="diagnosis_btn diagnosis_company_btn" data-value="3"><span class="circle circle_small"></span></a>
+                                    <a href="#q14" class="diagnosis_btn diagnosis_company_btn" data-companystablevalue="3"><span class="circle circle_small"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q14" class="diagnosis_btn diagnosis_company_btn" data-value="4"><span class="circle circle_middle circle_yes"></span></a>
+                                    <a href="#q14" class="diagnosis_btn diagnosis_company_btn" data-companystablevalue="4"><span class="circle circle_middle circle_yes"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q14" class="diagnosis_btn diagnosis_company_btn" data-value="5"><span class="circle circle_big circle_yes"></span></a>
+                                    <a href="#q14" class="diagnosis_btn diagnosis_company_btn" data-companystablevalue="5"><span class="circle circle_big circle_yes"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -664,19 +664,19 @@
                         <div class="diagnosis_selects">
                             <div class="row">
                                 <div class="col-2 offset-1">
-                                    <a href="#q15" class="diagnosis_btn diagnosis_company_btn" data-value="1"><span class="circle circle_big circle_no"></span></a>
+                                    <a href="#q15" class="diagnosis_btn diagnosis_company_btn" data-companyteammatevalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q15" class="diagnosis_btn diagnosis_company_btn" data-value="2"><span class="circle circle_middle circle_no"></span></a>
+                                    <a href="#q15" class="diagnosis_btn diagnosis_company_btn" data-companyteammatevalue="2"><span class="circle circle_middle circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q15" class="diagnosis_btn diagnosis_company_btn" data-value="3"><span class="circle circle_small"></span></a>
+                                    <a href="#q15" class="diagnosis_btn diagnosis_company_btn" data-companyteammatevalue="3"><span class="circle circle_small"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q15" class="diagnosis_btn diagnosis_company_btn" data-value="4"><span class="circle circle_middle circle_yes"></span></a>
+                                    <a href="#q15" class="diagnosis_btn diagnosis_company_btn" data-companyteammatevalue="4"><span class="circle circle_middle circle_yes"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="#q15" class="diagnosis_btn diagnosis_company_btn" data-value="5"><span class="circle circle_big circle_yes"></span></a>
+                                    <a href="#q15" class="diagnosis_btn diagnosis_company_btn" data-companyteammatevalue="5"><span class="circle circle_big circle_yes"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -714,19 +714,19 @@
                         <div class="diagnosis_selects">
                             <div class="row">
                                 <div class="col-2 offset-1">
-                                    <a href="{{route('diagnosis.result')}}" class="diagnosis_btn diagnosis_company_btn" data-value="1"><span class="circle circle_big circle_no"></span></a>
+                                    <a href="#submit" class="diagnosis_btn diagnosis_company_btn" data-companyfuturevalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="{{route('diagnosis.result')}}" class="diagnosis_btn diagnosis_company_btn" data-value="2"><span class="circle circle_middle circle_no"></span></a>
+                                    <a href="#submit" class="diagnosis_btn diagnosis_company_btn" data-companyfuturevalue="2"><span class="circle circle_middle circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="{{route('diagnosis.result')}}" class="diagnosis_btn diagnosis_company_btn" data-value="3"><span class="circle circle_small"></span></a>
+                                    <a href="#submit" class="diagnosis_btn diagnosis_company_btn" data-companyfuturevalue="3"><span class="circle circle_small"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="{{route('diagnosis.result')}}" class="diagnosis_btn diagnosis_company_btn" data-value="4"><span class="circle circle_middle circle_yes"></span></a>
+                                    <a href="#submit" class="diagnosis_btn diagnosis_company_btn" data-companyfuturevalue="4"><span class="circle circle_middle circle_yes"></span></a>
                                 </div>
                                 <div class="col-2">
-                                    <a href="{{route('diagnosis.result')}}" class="diagnosis_btn diagnosis_company_btn" data-value="5"><span class="circle circle_big circle_yes"></span></a>
+                                    <a href="#submit" class="diagnosis_btn diagnosis_company_btn" data-companyfuturevalue="5"><span class="circle circle_big circle_yes"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -758,6 +758,17 @@
                             <span class="diagnosis_count"></span>
                         </div>
                     </div>
+                    <div id="submit" class="question_wrap hidden">
+                            <form action="{{route('company.diagnosisPost')}}" method="post" class="text-center">
+                                @csrf
+                                <input class="diagnosis_submit company_btn" type="submit" value="送信">
+                                <input type="hidden" id="developmentvalue" name="developmentvalue">
+                                <input type="hidden" id="socialvalue" name="socialvalue">
+                                <input type="hidden" id="stablevalue" name="stablevalue">
+                                <input type="hidden" id="teammatevalue" name="teammatevalue">
+                                <input type="hidden" id="futurevalue" name="futurevalue">
+                            </form>
+                        </div>
                 </div>
             </div>
         </div>
