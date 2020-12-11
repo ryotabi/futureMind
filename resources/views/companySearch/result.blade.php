@@ -6,32 +6,19 @@
             <h3 class="companyList_title primary_title">検索結果</h3>
             <div class="companies">
                 <div class="row">
+                @if(!$companies->isEmpty())
+                    @foreach($companies as $company)
                     <div class="col-md-4">
-                        <a class="company_logo primary_border" href="#"></a>
-                        <p class="company_name">株式会社やる気</p>
+                        <a  href="{{route('search.single',['id'=>$company->id])}}"><img class="company_logo primary_border" src="/storage/images/{{$company->company_icon}}" alt=""></a>
+                        <p class="company_name">{{$company->name}}</p>
                     </div>
-                    <div class="col-md-4">
-                        <a class="company_logo primary_border" href="#"></a>
-                        <p class="company_name">株式会社元気</p>
-                    </div>
-                    <div class="col-md-4">
-                        <a class="company_logo primary_border" href="#"></a>
-                        <p class="company_name">株式会社根気</p>
-                    </div>
+                    @endforeach
+                @else
+                <div class="text-center" style="width:100%;">
+                    <p style="font-size:25px; font-weight:bold;">申し訳ございません。<br>該当の企業は見つかりませんでした。</p>
+                    <a href="{{route('search.search')}}" class="search_btn future_btn"><span>検索画面</span></a>
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <a class="company_logo primary_border" href="#"></a>
-                        <p class="company_name">株式会社いわき</p>
-                    </div>
-                    <div class="col-md-4">
-                        <a class="company_logo primary_border" href="#"></a>
-                        <p class="company_name">株式会社気合い</p>
-                    </div>
-                    <div class="col-md-4">
-                        <a class="company_logo primary_border" href="#"></a>
-                        <p class="company_name">株式会社活気</p>
-                    </div>
+                @endif
                 </div>
             </div>
             </div>

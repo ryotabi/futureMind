@@ -18489,5 +18489,23 @@ main .main_wrap .future_color:active {
   outline: none !important;
 }
 
+.companyList_wrap .search_btn {
+  width: 30%;
+  padding: 15px 10px;
+  font-size: 18px;
+  margin: 30px auto 0;
+  display: block;
+  border-radius: 30px;
+  text-align: center;
+  background-color: #Fdff83;
+  box-shadow: 0px 8px 4px rgba(209, 211, 39, 0.25);
+}
+
+.companyList_wrap .search_btn:active {
+  transform: translateY(8px);
+  box-shadow: none;
+  outline: none !important;
+}
+
 
 /*# sourceMappingURL=app.css.map*/

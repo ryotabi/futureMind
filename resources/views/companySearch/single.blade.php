@@ -1,8 +1,13 @@
 @extends('layouts.company_single')
 @section('content')
     <main>
+    <span id="js_company_developmentValue" data-companydevelopmentvalue="{{$company->diagnosis->developmentvalue}}"></span>
+        <span id="js_company_socialValue" data-companysocialvalue="{{$company->diagnosis->socialvalue}}"></span>
+        <span id="js_company_stableValue" data-companystablevalue="{{$company->diagnosis->stablevalue}}"></span>
+        <span id="js_company_teammateValue" data-companyteammatevalue="{{$company->diagnosis->teammatevalue}}"></span>
+        <span id="js_company_futureValue" data-companyfuturevalue="{{$company->diagnosis->futurevalue}}"></span>
         <div class="singleCompany_wrap">
-            <div class="singleCompany_title primary_color">株式会社やる気</div>
+            <div class="singleCompany_title primary_color">{{$company->name}}</div>
             <div class="singleCompany_content">
                 <div class="container">
                     <div class="row">
@@ -10,16 +15,16 @@
                             <canvas id="companyChart" width="60%" height="40%"></canvas>
                         </div>
                         <div class="col-md-6   company_details">
-                            <div class="company_logo"></div>
+                            <div class="text-center"><img class="company_logo" src="/storage/images/{{$company->company_icon}}" alt=""></div>
                             <div class="company_info">
                                 <ul>
-                                    <li>企業名：株式会社やる気</li>
-                                    <li>業界：不動産</li>
-                                    <li>場所：東京都港区〇〇ー○○</li>
-                                    <li>社員数：100人</li>
-                                    <li>ホームページ：https:test.com</li>
+                                    <li>企業名:{{$company->name}}</li>
+                                    <li>業界：{{$company->industry}}</li>
+                                    <li>場所：{{$company->office}}</li>
+                                    <li>社員数：{{$company->employee}}人</li>
+                                    <li>ホームページ：{{$company->homepage}}</li>
                                     <li>企業からのコメント<br>
-                                        株式会社やる気では、やる気に満ち溢れた成長意欲の高い人を求めています。一緒に日本の明日を作りましょう。
+                                        {{$company->comment}}
                                     </li>
                                 </ul>
                             </div>
