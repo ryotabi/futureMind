@@ -7,7 +7,8 @@
             <div class="container">
             <h3 class="search_title primary_title">企業検索</h3>
             <div class="search_form">
-                <form action="" method="POST">
+                <form action="{{route('search.searchPost')}}" method="POST">
+                    @csrf
                     <div class="row">
                         <div class="col-md-2 text-center">
                             <p class="form_item"><label for="industry">業種</label></p>
@@ -86,15 +87,15 @@
                         <div class="col-md-6 text-center range_wrap">
                             <p class="form_item">詳細条件</p>
                             <p class="range_label"><label for="development">成長意欲</label></p>
-                            <p><input class="range" type="range" id="development" name="development" min="0" max="5" step="1" value="0"><span class="range_value" style="margin-left:10px;">0</span></p>
+                            <p><input class="range" type="range" id="development" name="development" min="1" max="5" step="1" value="1"><span class="range_value" style="margin-left:10px;">1</span></p>
                             <p class="range_label"><label for="social">社会貢献</label></p>
-                            <p><input class="range" type="range" id="social" name="social" min="0" max="5" step="1" value="0"><span class="range_value" style="margin-left:10px;">0</span></p>
+                            <p><input class="range" type="range" id="social" name="social" min="1" max="5" step="1" value="1"><span class="range_value" style="margin-left:10px;">1</span></p>
                             <p class="range_label"><label for="stable">安定</label></p>
-                            <p><input class="range" type="range" id="stable" name="stable" min="0" max="5" step="1" value="0"><span class="range_value" style="margin-left:10px;">0</span></p>
+                            <p><input class="range" type="range" id="stable" name="stable" min="1" max="5" step="1" value="1"><span class="range_value" style="margin-left:10px;">1</span></p>
                             <p class="range_label"><label for="teammate">仲間</label></p>
-                            <p><input class="range" type="range" id="teammate" name="teammate" min="0" max="5" step="1" value="0"><span class="range_value" style="margin-left:10px;">0</span></p>
+                            <p><input class="range" type="range" id="teammate" name="teammate" min="1" max="5" step="1" value="1"><span class="range_value" style="margin-left:10px;">1</span></p>
                             <p class="range_label"><label for="future">将来性</label></p>
-                            <p><input class="range" type="range" id="future" name="future" min="0" max="5" step="1" value="0"><span class="range_value" style="margin-left:10px;">0</span></p>
+                            <p><input class="range" type="range" id="future" name="future" min="1" max="5" step="1" value="1"><span class="range_value" style="margin-left:10px;">1</span></p>
                         </div>
                     </div>
                     <div class="search_btn_wrap">

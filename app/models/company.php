@@ -10,6 +10,10 @@ class Company extends Authenticatable
 {
     use Notifiable;
 
+    public function diagnosis(){
+        return $this->hasOne('App\models\CompanyDiagnosisData','user_id');
+    }
+
     /**
      * The attributes that are mass assignable.
      *

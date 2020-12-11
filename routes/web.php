@@ -47,7 +47,8 @@ Route::get('/company/diagnosis','company\CompanyController@diagnosis')->middlewa
 Route::post('/company/diagnosis','company\CompanyController@diagnosisPost')->middleware('auth:company')->name('company.diagnosisPost');
 
 Route::get('/search','SearchCompanyController@search')->middleware('auth')->name('search.search');
+Route::post('/search','SearchCompanyController@searchPost')->middleware('auth')->name('search.searchPost');
 Route::get('/search/result','SearchCompanyController@result')->middleware('auth')->name('search.result');
-Route::get('/search/single','SearchCompanyController@single')->middleware('auth')->name('search.single');
+Route::get('/search/company/{id}','SearchCompanyController@single')->middleware('auth')->name('search.single');
 
 

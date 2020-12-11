@@ -18,28 +18,11 @@ class CompanyController extends Controller
         $chartCompanyData = array();
         if(CompanyDiagnosisData::where('user_id',Auth::user()->id)->first() !== null){
             $companyData = CompanyDiagnosisData::where('user_id',Auth::user()->id)->first();
-            $company_data[] = $companyData->developmentvalue;
-            $company_data[] = $companyData->socialvalue;
-            $company_data[] = $companyData->stablevalue;
-            $company_data[] = $companyData->teammatevalue;
-            $company_data[] = $companyData->futurevalue;
-            for($i = 0;$i<count($company_data);$i++){
-                if($company_data[$i]/3<=1){
-                    $chartCompanyData[$i] = 1;
-                }
-                if($company_data[$i]/3>1 && $company_data[$i]/3<=2){
-                    $chartCompanyData[$i] = 2;
-                }
-                if($company_data[$i]/3>2 && $company_data[$i]/3<=3){
-                    $chartCompanyData[$i] = 3;
-                }
-                if($company_data[$i]/3>3 && $company_data[$i]/3<=4){
-                    $chartCompanyData[$i] = 4;
-                }
-                if($company_data[$i]/3>4){
-                    $chartCompanyData[$i] = 5;
-                }
-            }
+            $chartCompanyData[] = $companyData->developmentvalue;
+            $chartCompanyData[] = $companyData->socialvalue;
+            $chartCompanyData[] = $companyData->stablevalue;
+            $chartCompanyData[] = $companyData->teammatevalue;
+            $chartCompanyData[] = $companyData->futurevalue;
         }
         return view('Company.index',compact('items','chartCompanyData'));
     }
@@ -119,20 +102,20 @@ class CompanyController extends Controller
     public function diagnosisPost(Request $request){
         if(CompanyDiagnosisData::where('user_id',Auth::user()->id)->first() === null){
             $companyData = new CompanyDiagnosisData;
-            $companyData->developmentvalue = $request->developmentvalue;
-            $companyData->socialvalue = $request->socialvalue;
-            $companyData->stablevalue = $request->stablevalue;
-            $companyData->teammatevalue = $request->teammatevalue;
-            $companyData->futurevalue = $request->futurevalue;
+            $companyData->developmentvalue = $request->developmentvalue/3;
+            $companyData->socialvalue = $request->socialvalue/3;
+            $companyData->stablevalue = $request->stablevalue/3;
+            $companyData->teammatevalue = $request->teammatevalue/3;
+            $companyData->futurevalue = $request->futurevalue/3;
             $companyData->user_id = Auth::user()->id;
             $companyData->save();
         }else{
             $companyData = CompanyDiagnosisData::where('user_id',Auth::user()->id)->first();
-            $companyData->developmentvalue = $request->developmentvalue;
-            $companyData->socialvalue = $request->socialvalue;
-            $companyData->stablevalue = $request->stablevalue;
-            $companyData->teammatevalue = $request->teammatevalue;
-            $companyData->futurevalue = $request->futurevalue;
+            $companyData->developmentvalue = $request->developmentvalue/3;
+            $companyData->socialvalue = $request->socialvalue/3;
+            $companyData->stablevalue = $request->stablevalue/3;
+            $companyData->teammatevalue = $request->teammatevalue/3;
+            $companyData->futurevalue = $request->futurevalue/3;
             $companyData->save();
         }
         return redirect('/company');
