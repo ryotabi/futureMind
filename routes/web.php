@@ -24,8 +24,8 @@ Route::group(['namespace'=>'User','prefix'=>'diagnosis','middleware'=>'auth'],fu
     Route::get('result', 'DiagnosisController@result')->name('diagnosis.result');
     Route::get('futureCompany', 'DiagnosisController@futureCompany')->name('diagnosis.futureCompany');
     Route::get('selfCompany', 'DiagnosisController@selfCompany')->name('diagnosis.selfCompany');
-    Route::get('futureSingleCompany', 'DiagnosisController@futureSingleCompany')->name('diagnosis.futureSingleCompany');
-    Route::get('selfSingleCompany', 'DiagnosisController@selfSingleCompany')->name('diagnosis.selfSingleCompany');
+    Route::get('futureSingleCompany/{id}', 'DiagnosisController@futureSingleCompany')->name('diagnosis.futureSingleCompany');
+    Route::get('selfSingleCompany/{id}', 'DiagnosisController@selfSingleCompany')->name('diagnosis.selfSingleCompany');
 });
 Route::group(['namespace'=>'User','prefix'=>'user','middleware'=>'auth'],function(){
         Route::get('','UserController@index')->name('user.index');

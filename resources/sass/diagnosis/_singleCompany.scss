@@ -30,6 +30,12 @@
             background-color: #fff;
             margin: 0 auto 10px;
         }
+        .future_logo{
+            border: 1px solid $primary-color;
+        }
+        .self_logo{
+            border: 1px solid $self-color;
+        }
         .company_info{
             padding: 20px;
             line-height: 30px;

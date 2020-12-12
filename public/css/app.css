@@ -18081,6 +18081,14 @@ main .main_wrap .future_color:active {
   margin: 0 auto 10px;
 }
 
+.singleCompany_wrap .singleCompany_content .future_logo {
+  border: 1px solid #Fdff83;
+}
+
+.singleCompany_wrap .singleCompany_content .self_logo {
+  border: 1px solid #d4cced;
+}
+
 .singleCompany_wrap .singleCompany_content .company_info {
   padding: 20px;
   line-height: 30px;
