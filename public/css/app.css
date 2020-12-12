@@ -18027,6 +18027,20 @@ main .main_wrap .future_color:active {
   margin-bottom: 25px;
 }
 
+.companyList_wrap .companies .future_btn {
+  background-color: #30e3df;
+  box-shadow: 0px 8px 4px #27e9d1;
+}
+
+.companyList_wrap .companies .page-link {
+  color: #000 !important;
+}
+
+.companyList_wrap .companies .page-item.active .page-link {
+  background-color: #Fdff83;
+  border-color: #Fdff83;
+}
+
 .singleCompany_wrap {
   margin-top: 14vh;
 }
@@ -18065,6 +18079,14 @@ main .main_wrap .future_color:active {
   border-radius: 50%;
   background-color: #fff;
   margin: 0 auto 10px;
+}
+
+.singleCompany_wrap .singleCompany_content .future_logo {
+  border: 1px solid #Fdff83;
+}
+
+.singleCompany_wrap .singleCompany_content .self_logo {
+  border: 1px solid #d4cced;
 }
 
 .singleCompany_wrap .singleCompany_content .company_info {
@@ -18497,6 +18519,9 @@ main .main_wrap .future_color:active {
   display: block;
   border-radius: 30px;
   text-align: center;
+}
+
+.companyList_wrap .primary_btn {
   background-color: #Fdff83;
   box-shadow: 0px 8px 4px rgba(209, 211, 39, 0.25);
 }

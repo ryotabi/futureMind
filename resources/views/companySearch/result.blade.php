@@ -16,7 +16,7 @@
                 @else
                 <div class="text-center" style="width:100%;">
                     <p style="font-size:25px; font-weight:bold;">申し訳ございません。<br>該当の企業は見つかりませんでした。</p>
-                    <a href="{{route('search.search')}}" class="search_btn future_btn"><span>検索画面</span></a>
+                    <a href="{{route('search.search')}}" class="search_btn primary_btn"><span>検索画面</span></a>
                 </div>
                 @endif
                 </div>

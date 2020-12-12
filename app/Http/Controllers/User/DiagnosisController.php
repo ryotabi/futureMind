@@ -98,22 +98,37 @@ class DiagnosisController extends Controller
         $future =$futureData->futurevalue;
         $companies = Company::whereHas('diagnosis',function($query) use($development,$social,$stable,$teammate,$future){
                                     $query->where('developmentvalue',$development);
-                                    $query->orWhere('socialvalue',$social);
-                                    $query->orWhere('stablevalue',$stable);
-                                    $query->orWhere('teammatevalue',$teammate);
-                                    $query->orWhere('futurevalue',$future);
+                                    // $query->orWhere('socialvalue',$social);
+                                    // $query->orWhere('stablevalue',$stable);
+                                    // $query->orWhere('teammatevalue',$teammate);
+                                    // $query->orWhere('futurevalue',$future);
                                 })
-                                ->get();
-        dd($companies);
-        return view('diagnosis.futureCompany');
+                                ->paginate(6);
+        return view('diagnosis.futureCompany',compact('companies'));
     }
     public function selfCompany(){
-        return view('diagnosis.selfCompany');
+        $selfData = SelfDiagnosisData::where('user_id',Auth::user()->id)->first();
+        $development =$selfData->developmentvalue;
+        $social =$selfData->socialvalue;
+        $stable =$selfData->stablevalue;
+        $teammate =$selfData->teammatevalue;
+        $future =$selfData->futurevalue;
+        $companies = Company::whereHas('diagnosis',function($query) use($development,$social,$stable,$teammate,$future){
+                                    $query->where('developmentvalue',$development);
+                                    // $query->orWhere('socialvalue',$social);
+                                    // $query->orWhere('stablevalue',$stable);
+                                    // $query->orWhere('teammatevalue',$teammate);
+                                    // $query->orWhere('futurevalue',$future);
+                                })
+                                ->paginate(6);
+        return view('diagnosis.selfCompany',compact('companies'));
     }
-    public function futureSingleCompany(){
-        return view('diagnosis.futureSingleCompany');
+    public function futureSingleCompany($id){
+        $company = Company::find($id);
+        return view('diagnosis.futureSingleCompany',compact('company'));
     }
-    public function selfSingleCompany(){
-        return view('diagnosis.selfSingleCompany');
+    public function selfSingleCompany($id){
+        $company = Company::find($id);
+        return view('diagnosis.selfSingleCompany',compact('company'));
     }
 }
