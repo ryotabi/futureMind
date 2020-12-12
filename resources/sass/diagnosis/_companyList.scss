@@ -45,5 +45,16 @@ $future_color:#30e3df;
             margin-top: 10px;
             margin-bottom: 25px;
         }
+        .future_btn{
+            background-color: $future_color;
+            box-shadow: 0px 8px 4px #27e9d1;
+        }
+        .page-link{
+            color: #000 !important;
+        }
+        .page-item.active .page-link{
+            background-color: $primary-color;
+            border-color: $primary-color;
+        }
     }
 }

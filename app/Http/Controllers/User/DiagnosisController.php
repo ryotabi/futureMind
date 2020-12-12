@@ -98,14 +98,13 @@ class DiagnosisController extends Controller
         $future =$futureData->futurevalue;
         $companies = Company::whereHas('diagnosis',function($query) use($development,$social,$stable,$teammate,$future){
                                     $query->where('developmentvalue',$development);
-                                    $query->orWhere('socialvalue',$social);
-                                    $query->orWhere('stablevalue',$stable);
-                                    $query->orWhere('teammatevalue',$teammate);
-                                    $query->orWhere('futurevalue',$future);
+                                    // $query->orWhere('socialvalue',$social);
+                                    // $query->orWhere('stablevalue',$stable);
+                                    // $query->orWhere('teammatevalue',$teammate);
+                                    // $query->orWhere('futurevalue',$future);
                                 })
-                                ->get();
-        dd($companies);
-        return view('diagnosis.futureCompany');
+                                ->paginate(6);
+        return view('diagnosis.futureCompany',compact('companies'));
     }
     public function selfCompany(){
         return view('diagnosis.selfCompany');
