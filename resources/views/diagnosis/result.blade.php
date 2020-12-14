@@ -28,8 +28,13 @@
                         <div class="self_text content_wrap active">
                             <div class="text_wrap">
                                 <h3 class="text_title">今の自分</h3>
+                                <h4>{{$selfCommentData->comment_type}}</h4>
                                 <p class="text_content">
-                                    サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+                                    {{$selfCommentData->comment}}
+                                </p>
+                                <h4 style="margin-top:30px;">{{$selfCommentData_sec->comment_type}}</h4>
+                                <p class="text_content">
+                                    {{$selfCommentData_sec->comment}}
                                 </p>
                             </div>
                             <div class="result_btn_wrap">
@@ -39,9 +44,9 @@
                         <div class="future_text content_wrap">
                             <div class="text_wrap">
                                 <h3 class="text_title">理想の自分</h3>
+                                <h4>{{$futureCommentData->comment_type}}</h4>
                                 <p class="text_content">
-                                成長意欲が高く、将来性があることを望んでいるあなたは、高い壁に果敢に挑戦し、それを乗り越えることを望んでいます。
-                                生活が目まぐるしく変わり、仲間と共に切磋琢磨しながら、仕事をするのがあなたの理想です。
+                                    {{$futureCommentData->comment}}
                                 </p>
                             </div>
                             <div class="result_btn_wrap">
@@ -50,9 +55,9 @@
                         </div>
                         <div class="gap_text content_wrap">
                             <div class="text_wrap">
-                                <h3 class="text_title">理想の自分</h3>
+                                <h3 class="text_title">理想の自分へ</h3>
                                 <p class="text_content">
-                                サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+                                {{$toFutureCommentData->comment}}
                                 </p>
                             </div>
                         </div>
