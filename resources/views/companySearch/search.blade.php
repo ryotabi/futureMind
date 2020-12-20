@@ -99,8 +99,8 @@
                         </div>
                     </div>
                     <div class="search_btn_wrap">
-                                <button type="submit" class="search_btn future_btn"><span>検索</span></button>
-                            </div>
+                        <button type="submit" class="search_btn future_btn"><span>検索</span></button>
+                    </div>
                 </form>
             </div>
             </div>

@@ -10,8 +10,8 @@
                             <div class="analysis_title self_color">あなたに物足りない点</div>
                             <div class="analysis_content">
                                 <ul>
-                                    <li>〇安定<br>
-                                    　この企業は、新しい技術や新規事業に積極的に挑戦しています。そのため、毎日の業務が忙しい上に新しい技術を常に吸収しなければいけないため、あなたが求める安定は手に入りにくいかもしれません。
+                                    <li>〇{{$companyValue->comment_type}}<br>
+                                    　{{$companyValue->comment}}
                                     </li>
                                 </ul>
                             </div>

@@ -6,8 +6,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\models\FutureDiagnosisData;
 use App\models\SelfDiagnosisData;
+use App\models\CompanyDiagnosisData;
 use App\models\FutureDiagnosisComment;
 use App\models\SelfDiagnosisComment;
+use App\models\FutureSingleCompanyComment;
+use App\models\SelfSingleCompanyComment;
 use App\models\ToFutureComment;
 use App\models\Company;
 use Illuminate\Support\Facades\Auth;
@@ -206,10 +209,126 @@ class DiagnosisController extends Controller
     }
     public function futureSingleCompany($id){
         $company = Company::find($id);
-        return view('diagnosis.futureSingleCompany',compact('company'));
+        $companyData = CompanyDiagnosisData::where('user_id',$id)->first();
+        $selfData = selfDiagnosisData::where('user_id',Auth::user()->id)->first();
+        $forCompanyData = array();
+        $forCompanyData[] = $companyData->developmentvalue;
+        $forCompanyData[] = $companyData->socialvalue;
+        $forCompanyData[] = $companyData->stablevalue;
+        $forCompanyData[] = $companyData->teammatevalue;
+        $forCompanyData[] = $companyData->futurevalue;
+        $forSelfData = array();
+        $forSelfData[] = $selfData->developmentvalue;
+        $forSelfData[] = $selfData->socialvalue;
+        $forSelfData[] = $selfData->stablevalue;
+        $forSelfData[] = $selfData->teammatevalue;
+        $forSelfData[] = $selfData->futurevalue;
+        $forCompanyValue = array();
+        for($i = 0;$i<count($forCompanyData);$i++){
+            $forCompanyValue[$i] = $forCompanyData[$i] - $forSelfData[$i];
+        }
+        $forCompanyMaxes   = array_keys($forCompanyValue, max($forCompanyValue));
+        $forCompanyKey_max = $forCompanyMaxes[0];
+        // $forCompanyKey_max_sec = $forCompanyMaxes[1];
+        if($forCompanyKey_max === 0){
+            $forCompanyValue = '成長意欲';
+        }
+        if($forCompanyKey_max === 1){
+            $forCompanyValue = '社会貢献';
+        }
+        if($forCompanyKey_max === 2){
+            $forCompanyValue = '安定';
+        }
+        if($forCompanyKey_max === 3){
+            $forCompanyValue = '仲間';
+        }
+        if($forCompanyKey_max === 4){
+            $forCompanyValue = '将来性';
+        }
+        if(max($forCompanyData) <= 0){
+            $forCompanyValue = 'なし';
+        }
+        // if($forCompanyKey_max_sec === 0){
+        //     $forCompanyValue_sec = '成長意欲';
+        // }
+        // if($forCompanyKey_max_sec === 1){
+        //     $forCompanyValue_sec = '社会貢献';
+        // }
+        // if($forCompanyKey_max_sec === 2){
+        //     $forCompanyValue_sec = '安定';
+        // }
+        // if($forCompanyKey_max_sec === 3){
+        //     $forCompanyValue_sec = '仲間';
+        // }
+        // if($forCompanyKey_max_sec === 4){
+        //     $forCompanyValue_sec = '将来性';
+        // }
+        // if(max($forCompanyData) <= 0){
+        //     $forCompanyValue_sec = 'なし';
+        // }
+        $companyValue = FutureSingleCompanyComment::where('comment_type',$forCompanyValue)->first();
+        return view('diagnosis.futureSingleCompany',compact('company','companyValue'));
     }
     public function selfSingleCompany($id){
         $company = Company::find($id);
-        return view('diagnosis.selfSingleCompany',compact('company'));
+        $companyData = CompanyDiagnosisData::where('user_id',$id)->first();
+        $futureData = futureDiagnosisData::where('user_id',Auth::user()->id)->first();
+        $forCompanyData = array();
+        $forCompanyData[] = $companyData->developmentvalue;
+        $forCompanyData[] = $companyData->socialvalue;
+        $forCompanyData[] = $companyData->stablevalue;
+        $forCompanyData[] = $companyData->teammatevalue;
+        $forCompanyData[] = $companyData->futurevalue;
+        $forFutureData = array();
+        $forFutureData[] = $futureData->developmentvalue;
+        $forFutureData[] = $futureData->socialvalue;
+        $forFutureData[] = $futureData->stablevalue;
+        $forFutureData[] = $futureData->teammatevalue;
+        $forFutureData[] = $futureData->futurevalue;
+        $forCompanyValue = array();
+        for($i = 0;$i<count($forCompanyData);$i++){
+            $forCompanyValue[$i] = $forFutureData[$i] - $forCompanyData[$i];
+        }
+        $forCompanyMaxes   = array_keys($forCompanyValue, max($forCompanyValue));
+        $forCompanyKey_max = $forCompanyMaxes[0];
+        // $forCompanyKey_max_sec = $forCompanyMaxes[1];
+        if($forCompanyKey_max === 0){
+            $forCompanyValue = '成長意欲';
+        }
+        if($forCompanyKey_max === 1){
+            $forCompanyValue = '社会貢献';
+        }
+        if($forCompanyKey_max === 2){
+            $forCompanyValue = '安定';
+        }
+        if($forCompanyKey_max === 3){
+            $forCompanyValue = '仲間';
+        }
+        if($forCompanyKey_max === 4){
+            $forCompanyValue = '将来性';
+        }
+        if(max($forCompanyData) <= 0){
+            $forCompanyValue = 'なし';
+        }
+        // if($forCompanyKey_max_sec === 0){
+        //     $forCompanyValue_sec = '成長意欲';
+        // }
+        // if($forCompanyKey_max_sec === 1){
+        //     $forCompanyValue_sec = '社会貢献';
+        // }
+        // if($forCompanyKey_max_sec === 2){
+        //     $forCompanyValue_sec = '安定';
+        // }
+        // if($forCompanyKey_max_sec === 3){
+        //     $forCompanyValue_sec = '仲間';
+        // }
+        // if($forCompanyKey_max_sec === 4){
+        //     $forCompanyValue_sec = '将来性';
+        // }
+        // if(max($forCompanyData) <= 0){
+        //     $forCompanyValue_sec = 'なし';
+        // }
+        $companyValue = SelfSingleCompanyComment::where('comment_type',$forCompanyValue)->first();
+        return view('diagnosis.selfSingleCompany',compact('company','companyValue'));
     }
 }

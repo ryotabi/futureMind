@@ -54,4 +54,9 @@ class UserController extends Controller
         $user->save();
         return redirect('/user');
     }
+
+    public function likesCompany(){
+        $likeCompanies = User::find(Auth::user()->id)->likesCompany()->paginate(6);
+        return view('user.likes',compact('likeCompanies'));
+    }
 }

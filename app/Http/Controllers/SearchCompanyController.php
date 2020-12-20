@@ -58,4 +58,8 @@ class SearchCompanyController extends Controller
         $company = Company::find($id);
         return view('companySearch.single',compact('company'));
     }
+
+    public function likeCompany($id){
+        dd($id);
+    }
 }

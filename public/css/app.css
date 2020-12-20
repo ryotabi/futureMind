@@ -18095,6 +18095,33 @@ main .main_wrap .future_color:active {
   background-color: #fff;
 }
 
+.singleCompany_wrap .likes_btn_wrap {
+  text-align: center;
+}
+
+.singleCompany_wrap .likes_btn_wrap .likes_btn {
+  width: 15%;
+  padding: 10px 5px;
+  font-size: 18px;
+  margin: 10px auto 0;
+  display: block;
+  border-radius: 30px;
+  text-align: center;
+  background-color: #Fdff83;
+  box-shadow: 0px 8px 4px rgba(209, 211, 39, 0.25);
+}
+
+.singleCompany_wrap .likes_btn_wrap .likes_btn span {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.singleCompany_wrap .likes_btn_wrap .likes_btn:active {
+  transform: translateY(8px);
+  box-shadow: none;
+  outline: none !important;
+}
+
 .register_wrap {
   background-color: #30e3df;
 }

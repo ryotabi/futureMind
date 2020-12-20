@@ -30,6 +30,9 @@
                             </div>
                         </div>
                     </div>
+                    <form method="post" action="" class="likes_btn_wrap text-center">
+                        <button type="submit" class="likes_btn future_btn"><span>お気に入りに追加</span></button>
+                    </form>
                 </div>
             </div>
         </div>

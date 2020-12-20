@@ -31,6 +31,7 @@ Route::group(['namespace'=>'User','prefix'=>'user','middleware'=>'auth'],functio
         Route::get('','UserController@index')->name('user.index');
         Route::get('edit','UserController@edit')->name('user.edit');
         Route::post('edit','UserController@update')->name('user.update');
+        Route::get('likes','UserController@likesCompany')->name('user.likes');
 });
 
 Route::get('/company/login', 'Auth\LoginController@showCompanyLoginForm');

@@ -10,11 +10,8 @@
                             <div class="analysis_title future_color">あなたが足りない点</div>
                             <div class="analysis_content">
                                 <ul>
-                                    <li>〇成長意欲<br>
-                                    　この企業は、自分の成長にどん欲になれる人が向いています。あなたにはそのどん欲さがまだ足りません。自分がどう成長したいのかをじっくり考えて見ましょう。
-                                    </li>
-                                    <li>〇仲間意識<br>
-                                    　この企業は、働く仲間を大切にしています。どんな仲間と働くことが出来れば楽しいかを考えてみましょう。
+                                    <li>〇{{$companyValue->comment_type}}<br>
+                                    　{{$companyValue->comment}}
                                     </li>
                                 </ul>
                             </div>
