@@ -25,12 +25,16 @@ Route::group(['namespace'=>'User','prefix'=>'diagnosis','middleware'=>'auth'],fu
     Route::get('futureCompany', 'DiagnosisController@futureCompany')->name('diagnosis.futureCompany');
     Route::get('selfCompany', 'DiagnosisController@selfCompany')->name('diagnosis.selfCompany');
     Route::get('futureSingleCompany/{id}', 'DiagnosisController@futureSingleCompany')->name('diagnosis.futureSingleCompany');
+    Route::post('futureSingleCompany/{id}', 'DiagnosisController@futureLikeCompany')->name('diagnosis.futureLikeCompany');
     Route::get('selfSingleCompany/{id}', 'DiagnosisController@selfSingleCompany')->name('diagnosis.selfSingleCompany');
+    Route::post('selfSingleCompany/{id}', 'DiagnosisController@selfLikeCompany')->name('diagnosis.selfLikeCompany');
+
 });
 Route::group(['namespace'=>'User','prefix'=>'user','middleware'=>'auth'],function(){
         Route::get('','UserController@index')->name('user.index');
         Route::get('edit','UserController@edit')->name('user.edit');
         Route::post('edit','UserController@update')->name('user.update');
+        Route::get('likes','UserController@likesCompany')->name('user.likes');
 });
 
 Route::get('/company/login', 'Auth\LoginController@showCompanyLoginForm');
@@ -50,5 +54,6 @@ Route::get('/search','SearchCompanyController@search')->middleware('auth')->name
 Route::post('/search','SearchCompanyController@searchPost')->middleware('auth')->name('search.searchPost');
 Route::get('/search/result','SearchCompanyController@result')->middleware('auth')->name('search.result');
 Route::get('/search/company/{id}','SearchCompanyController@single')->middleware('auth')->name('search.single');
+Route::post('/search/company/{id}','SearchCompanyController@likeCompany')->middleware('auth')->name('search.likeCompany');
 
 

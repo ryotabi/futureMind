@@ -1,88 +1,88 @@
-$primary-color:#Fdff83;
-$self_color:#d4cced;
-$future_color:#30e3df;
+$primary-color: #fdff83;
+$self_color: #d4cced;
+$future_color: #30e3df;
 
-body{
+body {
     height: 100%;
 }
 
-header{
+header {
     background-color: #fff;
     box-shadow: 0px 4px 4px #f3f3f3;
     position: fixed;
     width: 100%;
     z-index: 10;
 
-    .header_logo{
+    .header_logo {
         padding: 20px;
         font-size: 40px;
         line-height: 40px;
-        h1{
+        h1 {
             text-shadow: 0px 15px 4px rgba(0, 0, 0, 0.25);
         }
     }
 
-    .header_nav{
+    .header_nav {
         padding: 20px;
-        ul{
+        ul {
             display: flex;
             justify-content: space-between;
             line-height: 40px;
             font-size: 20px;
-            a:hover{
+            a:hover {
                 color: $primary-color;
                 text-decoration: none;
             }
         }
     }
 
-    .header_icon{
+    .header_icon {
         padding: 20px;
         font-size: 40px;
         line-height: 40px;
         text-align: center;
-        a:hover{
+        a:hover {
             color: $primary-color;
         }
     }
 }
 
-main{
+main {
     background-color: #f2f4f5;
-    height: 100vh;
-    position:relative;
+    min-height: 100vh;
+    position: relative;
     overflow: hidden;
 
-    .bg_line{
+    .bg_line {
         width: 100%;
         position: absolute;
         transform: skewY(-25deg);
     }
 
-    .top{
+    .top {
         height: 15vh;
         top: -8%;
     }
 
-    .center{
+    .center {
         height: 25vh;
         top: 40%;
     }
 
-    .bottom{
+    .bottom {
         height: 15vh;
         top: 98%;
     }
 
-    .main_wrap{
+    .main_wrap {
         margin: 35vh 0;
 
-        a:hover{
+        a:hover {
             color: #000;
             text-decoration: none;
         }
 
-        h2{
+        h2 {
             background-color: #fff;
             border-radius: 50%;
             width: 43%;
@@ -91,15 +91,16 @@ main{
             margin: 0 auto;
             text-align: center;
         }
-        .self_color{
+        .self_color {
             background-color: $self_color;
             box-shadow: 0px 8px 4px #bbacec;
         }
-        .future_color{
+        .future_color {
             background-color: $future_color;
             box-shadow: 0px 8px 4px #27e9d1;
         }
-        .self_color:active,.future_color:active{
+        .self_color:active,
+        .future_color:active {
             box-shadow: none;
             transform: translateY(8px);
         }

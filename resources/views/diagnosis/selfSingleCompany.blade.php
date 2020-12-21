@@ -2,7 +2,7 @@
 @section('content')
     <main>
         <div class="singleCompany_wrap">
-            <div class="singleCompany_title self_color">株式会社やる気</div>
+            <div class="singleCompany_title self_color">{{$company->name}}</div>
             <div class="singleCompany_content">
                 <div class="container">
                     <div class="row">
@@ -10,8 +10,8 @@
                             <div class="analysis_title self_color">あなたに物足りない点</div>
                             <div class="analysis_content">
                                 <ul>
-                                    <li>〇安定<br>
-                                    　この企業は、新しい技術や新規事業に積極的に挑戦しています。そのため、毎日の業務が忙しい上に新しい技術を常に吸収しなければいけないため、あなたが求める安定は手に入りにくいかもしれません。
+                                    <li>〇{{$companyValue->comment_type}}<br>
+                                    　{{$companyValue->comment}}
                                     </li>
                                 </ul>
                             </div>
@@ -32,6 +32,17 @@
                             </div>
                         </div>
                     </div>
+                    @if($isLiked === false)
+                    <form method="POST" action="{{ route('diagnosis.selfLikeCompany',['id'=>$company->id])}}" class="likes_btn_wrap text-center">
+                    @csrf
+                        <input type="hidden" name="company_id" value="{{$company->id}}"/>
+                        <button type="submit" class="likes_btn future_btn"><span>お気に入りに追加</span></button>
+                    </form>
+                    @else
+                    <div  class="likes_btn_wrap text-center">
+                        <p type="submit" class="likes_btn liked_btn"><span>お気に入りに追加済み</span></p>
+                    </div>
+                    @endif
                 </div>
             </div>
         </div>
