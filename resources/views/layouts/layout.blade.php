@@ -20,7 +20,7 @@
                             <li><a href="#">理想分析について</a></li>
                             <li><a href="{{route('diagnosis.result')}}">結果を見る</a></li>
                             <li><a href="{{route('search.search')}}">企業を探す</a></li>
-                            <li><a href="#">企業を見る</a></li>
+                            <li><a href="{{route('user.likes')}}">お気に入り企業を見る</a></li>
                         </ul>
                     </nav>
                 </div>

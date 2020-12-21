@@ -59,8 +59,18 @@
             font-size: 13px;
             font-weight: bold;
         }
+        .liked_btn {
+            background-color: #c5c5a1bb;
+            box-shadow: none !important;
+            cursor: default;
+        }
         .likes_btn:active {
             transform: translateY(8px);
+            box-shadow: none;
+            outline: none !important;
+        }
+        .liked_btn:active {
+            transform: translateY(0px);
             box-shadow: none;
             outline: none !important;
         }

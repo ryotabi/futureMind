@@ -17627,7 +17627,7 @@ header .header_nav ul {
 }
 
 header .header_nav ul a:hover {
-  color: #Fdff83;
+  color: #fdff83;
   text-decoration: none;
 }
 
@@ -17639,12 +17639,12 @@ header .header_icon {
 }
 
 header .header_icon a:hover {
-  color: #Fdff83;
+  color: #fdff83;
 }
 
 main {
   background-color: #f2f4f5;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -18116,8 +18116,20 @@ main .main_wrap .future_color:active {
   font-weight: bold;
 }
 
+.singleCompany_wrap .likes_btn_wrap .liked_btn {
+  background-color: #c5c5a1bb;
+  box-shadow: none !important;
+  cursor: default;
+}
+
 .singleCompany_wrap .likes_btn_wrap .likes_btn:active {
   transform: translateY(8px);
+  box-shadow: none;
+  outline: none !important;
+}
+
+.singleCompany_wrap .likes_btn_wrap .liked_btn:active {
+  transform: translateY(0px);
   box-shadow: none;
   outline: none !important;
 }

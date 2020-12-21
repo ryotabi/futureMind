@@ -18,9 +18,9 @@
                     <p style="font-size:25px; font-weight:bold;">お気に入りの企業がありません。</p>
                 </div>
                 @endif
-                <div class="text-center" style="margin:0 auto;;">
-                    {{$likeCompanies->links()}}
                 </div>
+                <div class="text-center" style="margin:0 auto; width:12%;">
+                    {{$likeCompanies->links()}}
                 </div>
             </div>
             </div>

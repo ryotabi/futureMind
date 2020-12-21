@@ -30,9 +30,17 @@
                             </div>
                         </div>
                     </div>
-                    <form method="post" action="" class="likes_btn_wrap text-center">
+                    @if($isLiked === false)
+                    <form method="POST" action="{{ route('search.likeCompany',['id'=>$company->id])}}" class="likes_btn_wrap text-center">
+                    @csrf
+                        <input type="hidden" name="company_id" value="{{$company->id}}"/>
                         <button type="submit" class="likes_btn future_btn"><span>お気に入りに追加</span></button>
                     </form>
+                    @else
+                    <div  class="likes_btn_wrap text-center">
+                        <p type="submit" class="likes_btn liked_btn"><span>お気に入りに追加済み</span></p>
+                    </div>
+                    @endif
                 </div>
             </div>
         </div>
