@@ -42,5 +42,9 @@ class Company extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-}
+
+    public function likesStudent(){
+        return $this->belongsToMany('App\models\User','likes','company_id','user_id');
+    }
+    }
 

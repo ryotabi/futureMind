@@ -12,12 +12,13 @@
         <div class="container">
             <div class="row">
                 <div class="header_logo col-md-3">
-                    <h1><a href="{{route('diagnosis.index')}}">FutureMind</a></h1>
+                    <h1><a href="{{route('company-home')}}">FutureMind</a></h1>
                 </div>
                 <div class="header_nav col-md-7">
                     <nav>
                         <ul>
                             <li><a href="{{route('company.diagnosis')}}">診断をする</a></li>
+                            <li><a href="{{route('company.student')}}">学生を見る</a></li>
                             <li><a href="#">ログアウト</a></li>
                         </ul>
                     </nav>

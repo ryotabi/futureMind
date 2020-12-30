@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Auth;
 use App\models\CompanyDiagnosisData;
 use Illuminate\Http\Request;
 use App\models\Company;
+use App\models\User;
+use App\models\Like;
+use App\models\ChatRoom;
+use App\models\Message;
 use Intervention\Image\Facades\Image;
 
 class CompanyController extends Controller
@@ -119,5 +123,49 @@ class CompanyController extends Controller
             $companyData->save();
         }
         return redirect('/company');
+    }
+    public function student(){
+        $likeUsers = Company::find(Auth::user()->id)->likesStudent()->paginate(6);
+        return view('Company.student',compact('likeUsers'));
+    }
+    public function singleStudent($id){
+        $user = User::find($id);
+        $Room = Like::where('company_id',Auth::user()->id)->where('user_id',$user->id)->first();
+        $Room_id = $Room->id;
+        return view('Company.single',compact('user','Room_id'));
+    }
+    public function chat(Request $request){
+        $student_id = $request->input('student_id');
+        if(ChatRoom::where('company_id',Auth::user()->id)->where('user_id',$student_id)->first() === null){
+            $chatRoom = New ChatRoom;
+            $chatRoom->company_id = Auth::user()->id; 
+            $chatRoom->user_id = $student_id; 
+            $chatRoom->save();
+            $room = ChatRoom::where('company_id',Auth::user()->id)->where('user_id',$student_id)->first();
+            $room_id = $room->id;
+            $company_user = Company::where('id',Auth::user()->id)->first();
+            $student_user = User::where('id',$student_id)->first();
+        }else{
+            $room = ChatRoom::where('company_id',Auth::user()->id)->where('user_id',$student_id)->first();
+            $room_id = $room->id;
+            $company_user = Company::where('id',Auth::user()->id)->first();
+            $student_user = User::where('id',$student_id)->first();
+        }
+        if(Message::where('room_id',$room_id)->first() !== null){
+            $messages = Message::where('room_id',$room_id)->get(['message','company_user','student_user']);
+        }else{
+            $messages = null;
+        }
+        return view('Company.chat',compact('room_id','messages','company_user','student_user'));
+    }
+
+    public function postMessage(Request $request,$id){
+        $message = New Message;
+        $message->room_id = $id;
+        $message->company_user = Auth::user()->id;
+        $message->student_user = 0;
+        $message->message = $request->message;
+        $message->save();
+        return redirect()->back();
     }
 }
