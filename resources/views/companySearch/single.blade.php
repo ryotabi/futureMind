@@ -38,7 +38,11 @@
                     </form>
                     @else
                     <div  class="likes_btn_wrap text-center">
+                        @if($chat == true)
+                        <p type="submit" class="likes_btn future_btn"><a href="{{route('user.chat',['id'=>$room_id])}}">チャット</a></p>
+                        @else
                         <p type="submit" class="likes_btn liked_btn"><span>お気に入りに追加済み</span></p>
+                        @endif
                     </div>
                     @endif
                 </div>

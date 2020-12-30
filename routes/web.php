@@ -35,6 +35,9 @@ Route::group(['namespace'=>'User','prefix'=>'user','middleware'=>'auth'],functio
         Route::get('edit','UserController@edit')->name('user.edit');
         Route::post('edit','UserController@update')->name('user.update');
         Route::get('likes','UserController@likesCompany')->name('user.likes');
+        Route::get('chat/{id}','UserController@chat')->name('user.chat');
+        Route::post('chat/{id}','UserController@postMessage')->name('user.postMessage');
+
 });
 
 Route::get('/company/login', 'Auth\LoginController@showCompanyLoginForm');
@@ -49,11 +52,19 @@ Route::get('/company/edit','company\CompanyController@edit')->middleware('auth:c
 Route::post('/company/edit','company\CompanyController@update')->middleware('auth:company')->name('company.update');
 Route::get('/company/diagnosis','company\CompanyController@diagnosis')->middleware('auth:company')->name('company.diagnosis');
 Route::post('/company/diagnosis','company\CompanyController@diagnosisPost')->middleware('auth:company')->name('company.diagnosisPost');
+Route::get('/company/student','company\CompanyController@student')->middleware('auth:company')->name('company.student');
+Route::get('/company/student/{id}','company\CompanyController@singleStudent')->middleware('auth:company')->name('company.singleStudent');
+Route::get('/company/chat/{id}','company\CompanyController@chat')->middleware('auth:company')->name('company.chat');
+Route::post('/company/chat/{id}','company\CompanyController@postMessage')->middleware('auth:company')->name('company.postMessage');
+
+
 
 Route::get('/search','SearchCompanyController@search')->middleware('auth')->name('search.search');
 Route::post('/search','SearchCompanyController@searchPost')->middleware('auth')->name('search.searchPost');
 Route::get('/search/result','SearchCompanyController@result')->middleware('auth')->name('search.result');
 Route::get('/search/company/{id}','SearchCompanyController@single')->middleware('auth')->name('search.single');
 Route::post('/search/company/{id}','SearchCompanyController@likeCompany')->middleware('auth')->name('search.likeCompany');
+
+
 
 

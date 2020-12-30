@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\models\Company;
+use App\models\ChatRoom;
+use App\models\Message;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Builder;
 use Illuminate\Support\Facades\DB;
@@ -63,7 +65,19 @@ class SearchCompanyController extends Controller
         }else{
             $isLiked=false;
         }
-        return view('companySearch.single',compact('company','isLiked'));
+        if(ChatRoom::where('user_id',Auth::user()->id)->where('company_id',$id)->exists()){
+            $chat = true;
+            $room_id_column = ChatRoom::where('user_id',Auth::user()->id)->where('company_id',$id)->get(['id']);
+            $room = $room_id_column->pluck('id');
+            $room_id = $room[0];
+        }else{
+            $chat = false;
+            $room_id = 0;
+        }
+        $company_id = $id;
+
+
+        return view('companySearch.single',compact('company','isLiked','chat','room_id','company_id'));
     }
 
     public function likeCompany(Request $request){
@@ -76,7 +90,12 @@ class SearchCompanyController extends Controller
         }else{
             $isLiked=false;
         }
+        if(ChatRoom::where('user_id',Auth::user()->id)->where('company_id',$company_id)->first()->exists()){
+            $chat = true;
+        }else{
+            $chat = false;
+        }
         $company = Company::find($company_id);
-        return view('companySearch.single',compact('company','isLiked'));
+        return view('companySearch.single',compact('company','isLiked','chat'));
     }
 }
