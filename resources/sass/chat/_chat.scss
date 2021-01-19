@@ -97,9 +97,12 @@ $future_color: #30e3df;
                 border: none;
                 background-color: $primary-color;
             }
-            .chat_btn:active {
-                border-color: #fff !important;
+            .chat_btn:hover {
+                color: #fff;
             }
+            // .chat_btn:active {
+            //     border-color: #fff !important;
+            // }
         }
     }
 }

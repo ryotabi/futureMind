@@ -12,7 +12,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="message_wrap">
+                        <div class="message_wrap message_wrap_company">
                             @if(isset($messages))
                             @foreach($messages as $message)
                             @if($message->company_user !== 0)
@@ -47,7 +47,6 @@
                         <button class="btn btn-outline-secondary chat_btn" type="submit" >送信</button>
                     </div>
                 </div>
-
                 </form>
             </div>
         </div>
