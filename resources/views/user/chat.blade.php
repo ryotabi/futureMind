@@ -12,7 +12,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="message_wrap">
+                        <div class="message_wrap message_wrap_student">
                             @if(isset($messages))
                             @foreach($messages as $message)
                             @if($message->student_user !== 0)
@@ -39,15 +39,14 @@
                         </div>
                     </div>
                 </div>
-                <form action="{{route('user.postMessage',['id'=>$room_id])}}" method="POST" class="chat_form_wrap">
+                <form action="{{route('user.postMessage',['id'=>$room_id])}}" method="POST" class="chat_form_wrap ">
                     @csrf
-                <div class="input-group mb-3 chat_form">
-                    <input type="text" class="form-control chat_input" name="message" aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <div class="input-group-append chat_btn_wrap">
-                        <button class="btn btn-outline-secondary chat_btn" type="submit" >送信</button>
+                    <div class="input-group mb-3 chat_form">
+                        <input type="text" class="form-control chat_input" name="message" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <div class="input-group-append chat_btn_wrap">
+                            <button class="btn btn-outline-secondary chat_btn" type="submit" >送信</button>
+                        </div>
                     </div>
-                </div>
-
                 </form>
             </div>
         </div>

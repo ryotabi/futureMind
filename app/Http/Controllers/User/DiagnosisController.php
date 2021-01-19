@@ -153,7 +153,7 @@ class DiagnosisController extends Controller
             $toFutureMyself[$i] = $chartFutureData[$i] - $chartSelfData[$i];
         }
         $toFutureMaxes   = array_keys($toFutureMyself, max($toFutureMyself));
-        $toFutureKey_max = $selfMaxes[0];
+        $toFutureKey_max = $toFutureMaxes[0];
         if($toFutureKey_max === 0){
             $toFutureComment = '成長意欲';
         }

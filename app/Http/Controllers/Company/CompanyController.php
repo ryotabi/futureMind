@@ -12,6 +12,7 @@ use App\models\Like;
 use App\models\ChatRoom;
 use App\models\Message;
 use Intervention\Image\Facades\Image;
+use App\Events\ChatPusher;
 
 class CompanyController extends Controller
 {
@@ -166,6 +167,7 @@ class CompanyController extends Controller
         $message->student_user = 0;
         $message->message = $request->message;
         $message->save();
-        return redirect()->back();
+        event(new ChatPusher($message));
+        // return redirect()->back();
     }
 }

@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
 
+
+use App\Events\ChatPusher;
+
+
 class UserController extends Controller
 {
     public function index(){
@@ -84,6 +88,6 @@ class UserController extends Controller
         $message->company_user = 0;
         $message->message = $request->message;
         $message->save();
-        return redirect()->back();
+        event(new ChatPusher($message));
     }
 }
