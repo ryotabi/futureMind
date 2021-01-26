@@ -3,12 +3,18 @@
     <main>
         <div class="user_wrap">
             <div class="container">
+            @if(count($errors) > 0)
+            <p>エラーがあります</p>
+            @endif
                 <form action="{{route('user.update')}}" enctype="multipart/form-data" method="POST">
                 @csrf
                     <div class="row row_wrap">
                         <div class="col-md-3 info_wrap">
                             <div class="info_title border_future">
                                 <p><label for="industry">志望業界</label></p>
+                                @if($errors->has('industry'))
+                                <p class="error_text">{{$errors->first('industry')}}</p>
+                                @endif
                             </div>
                             <div class="info_content">
                                 <p><input type="text" id="industry" name="industry" value="{{$items->industry}}"></p>
@@ -17,6 +23,9 @@
                         <div class="col-md-3 info_wrap">
                             <div class="info_title border_future">
                                 <p><label for="name">氏名</label></p>
+                                @if($errors->has('name'))
+                                <p class="error-text">{{$errors->first('name')}}</p>
+                                @endif
                             </div>
                             <div class="info_content">
                                 <p><input type="text" id="name" name="name" value="{{$items->name}}"></p>
@@ -27,7 +36,12 @@
                                 <p><label for="year">卒業年度</label></p>
                             </div>
                             <div class="info_content">
-                                <p><input type="text" id="year" name="year" value="{{$items->year}}"></p>
+                                <select id="year" name="year" >
+                                    <option value="{{$items->year}}" selected>{{$items->year}}</option>
+                                    @foreach($optionYears as $year)
+                                    <option value="{{$year}}" >{{$year}}</option>
+                                    @endforeach
+                                </select>
                             </div> 
                         </div>
                     </div>

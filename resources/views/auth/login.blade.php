@@ -18,10 +18,16 @@
             @csrf
                 <div class="form-group">
                     <label for="exampleInputPassword1">メールアドレス</label>
-                    <input type="email" class="form-control" id="exampleInputPassword1" name="email" placeholder="test@test.com">
+                    @if($errors->has('email'))
+                    <p class="error-text">{{$errors->first('email')}}</p>
+                    @endif
+                    <input type="email" class="form-control" id="exampleInputPassword1" name="email" placeholder="test@test.com" value="{{old('email')}}">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">パスワード</label>
+                    @if($errors->has('password'))
+                    <p class="error-text">{{$errors->first('password')}}</p>
+                    @endif
                     <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="*********">
                 </div>
                 <div class="text-center">

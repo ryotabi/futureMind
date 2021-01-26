@@ -17960,11 +17960,15 @@ main .main_wrap .future_color:active {
   font-size: 18px;
 }
 
+.user_wrap .info_wrap .info_content select {
+  cursor: pointer;
+}
+
 .user_wrap .info_wrap .info_img {
   width: 65%;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid #Fdff83;
+  border: 3px solid #fdff83;
   text-align: center;
   margin: 0 auto;
 }
@@ -17975,7 +17979,7 @@ main .main_wrap .future_color:active {
   border-radius: 30px;
   padding: 5px 0;
   background-color: #fff;
-  border: 1px solid #Fdff83;
+  border: 1px solid #fdff83;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   margin: 5px auto 0;
 }
@@ -18369,6 +18373,10 @@ main .main_wrap .future_color:active {
 
 .chat_wrap .chat_form_wrap .chat_form .chat_btn:hover {
   color: #fff;
+}
+
+.error-text {
+  color: red;
 }
 
 

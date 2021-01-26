@@ -2,12 +2,18 @@
     <main>
         <div class="user_wrap">
             <div class="container">
+            <?php if(count($errors) > 0): ?>
+            <p>エラーがあります</p>
+            <?php endif; ?>
                 <form action="<?php echo e(route('user.update')); ?>" enctype="multipart/form-data" method="POST">
                 <?php echo csrf_field(); ?>
                     <div class="row row_wrap">
                         <div class="col-md-3 info_wrap">
                             <div class="info_title border_future">
                                 <p><label for="industry">志望業界</label></p>
+                                <?php if($errors->has('industry')): ?>
+                                <p class="error_text"><?php echo e($errors->first('industry')); ?></p>
+                                <?php endif; ?>
                             </div>
                             <div class="info_content">
                                 <p><input type="text" id="industry" name="industry" value="<?php echo e($items->industry); ?>"></p>
@@ -16,6 +22,9 @@
                         <div class="col-md-3 info_wrap">
                             <div class="info_title border_future">
                                 <p><label for="name">氏名</label></p>
+                                <?php if($errors->has('name')): ?>
+                                <p class="error-text"><?php echo e($errors->first('name')); ?></p>
+                                <?php endif; ?>
                             </div>
                             <div class="info_content">
                                 <p><input type="text" id="name" name="name" value="<?php echo e($items->name); ?>"></p>
@@ -26,7 +35,12 @@
                                 <p><label for="year">卒業年度</label></p>
                             </div>
                             <div class="info_content">
-                                <p><input type="text" id="year" name="year" value="<?php echo e($items->year); ?>"></p>
+                                <select id="year" name="year" >
+                                    <option value="<?php echo e($items->year); ?>" selected><?php echo e($items->year); ?></option>
+                                    <?php $__currentLoopData = $optionYears; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $year): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <option value="<?php echo e($year); ?>" ><?php echo e($year); ?></option>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                </select>
                             </div> 
                         </div>
                     </div>

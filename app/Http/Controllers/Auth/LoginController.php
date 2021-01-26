@@ -54,19 +54,4 @@ class LoginController extends Controller
         }
         return back()->withInput($request->only('email','remember'));
     }
-    // protected function guard(){
-    //     return Auth::guard('user');
-    // }
-    // public function showLoginForm()
-    // {
-    //     return view('auth.login');
-    // }
-    // public function logout(Request $request){
-    //     Auth::guard('user')->logout();
-    //     return $this->loggedOut($request);
-    // }
-    // public function loggedOut(Request $request)
-    // {
-    //     return redirect('/login');
-    // }
 }
