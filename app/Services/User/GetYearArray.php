@@ -1,5 +1,5 @@
 <?php
-namespace App\Services;
+namespace App\Services\User;
 
 class GetYearArray {
     public static function GetYearArray($selectedYear) {

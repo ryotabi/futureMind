@@ -13,7 +13,7 @@ use App\models\ChatRoom;
 use App\models\Message;
 use Intervention\Image\Facades\Image;
 use App\Events\ChatPusher;
-use App\Services\GetIndustryArray;
+use App\Services\User\GetIndustryArray;
 
 
 class CompanyController extends Controller
