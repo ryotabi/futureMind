@@ -12,12 +12,19 @@
                         <div class="col-md-2 text-center">
                             <p class="form_item"><label for="industry">業種</label></p>
                             <select name="industry" id="industry">
-                                <option value="アパレル">アパレル</option>
-                                <option value="不動産">不動産</option>
-                                <option value="飲食">飲食</option>
-                                <option value="IT">IT</option>
-                                <option value="金融">金融</option>
+                                <option value="メーカー">メーカー</option>
+                                <option value="商社">商社</option>
                                 <option value="マスコミ">マスコミ</option>
+                                <option value="物流">物流</option>
+                                <option value="不動産">不動産</option>
+                                <option value="IT">IT</option>
+                                <option value="医療">医療</option>
+                                <option value="教育">教育</option>
+                                <option value="流通">流通</option>
+                                <option value="金融">金融</option>
+                                <option value="コンサルティング">コンサルティング</option>
+                                <option value="環境">環境</option>
+                                <option value="その他">その他</option>
                             </select>
                         </div>
                         <div class="col-md-2 text-center">

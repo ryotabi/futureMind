@@ -2,9 +2,6 @@
     <main>
         <div class="user_wrap">
             <div class="container">
-            <?php if(count($errors) > 0): ?>
-            <p>エラーがあります</p>
-            <?php endif; ?>
                 <form action="<?php echo e(route('user.update')); ?>" enctype="multipart/form-data" method="POST">
                 <?php echo csrf_field(); ?>
                     <div class="row row_wrap">
@@ -12,11 +9,16 @@
                             <div class="info_title border_future">
                                 <p><label for="industry">志望業界</label></p>
                                 <?php if($errors->has('industry')): ?>
-                                <p class="error_text"><?php echo e($errors->first('industry')); ?></p>
+                                <p class="error-text"><?php echo e($errors->first('industry')); ?></p>
                                 <?php endif; ?>
                             </div>
                             <div class="info_content">
-                                <p><input type="text" id="industry" name="industry" value="<?php echo e($items->industry); ?>"></p>
+                                <select id="industry" name="industry" >
+                                    <option value="<?php echo e($items->industry); ?>" selected><?php echo e($items->industry); ?></option>
+                                    <?php $__currentLoopData = $optionIndustry; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $industry): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <option value="<?php echo e($industry); ?>" ><?php echo e($industry); ?></option>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-3 info_wrap">
@@ -33,11 +35,14 @@
                         <div class="col-md-3 info_wrap">
                             <div class="info_title border_future">
                                 <p><label for="year">卒業年度</label></p>
+                                <?php if($errors->has('year')): ?>
+                                <p class="error-text"><?php echo e($errors->first('year')); ?></p>
+                                <?php endif; ?>
                             </div>
                             <div class="info_content">
                                 <select id="year" name="year" >
                                     <option value="<?php echo e($items->year); ?>" selected><?php echo e($items->year); ?></option>
-                                    <?php $__currentLoopData = $optionYears; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $year): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <?php $__currentLoopData = $optionYear; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $year): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <option value="<?php echo e($year); ?>" ><?php echo e($year); ?></option>
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </select>
@@ -63,6 +68,9 @@
                         <div class="col-md-3 info_wrap text-center">
                             <div class="info_title border_self">
                                 <p><label for="university">在学学校</label></p>
+                                <?php if($errors->has('university')): ?>
+                                <p class="error-text"><?php echo e($errors->first('university')); ?></p>
+                                <?php endif; ?>
                             </div>
                             <div class="info_content">
                                 <p><input type="text" id="university" name="university" value="<?php echo e($items->university); ?>"></p>
@@ -73,6 +81,9 @@
                         <div class="col-md-3 info_wrap">
                             <div class="info_title border_self">
                                 <p><label for="hobby">趣味</label></p>
+                                <?php if($errors->has('hobby')): ?>
+                                <p class="error-text"><?php echo e($errors->first('hobby')); ?></p>
+                                <?php endif; ?>
                             </div>
                             <div class="info_content">
                                 <p><input type="text" id="hobby" name="hobby" value="<?php echo e($items->hobby); ?>"></p>
@@ -81,14 +92,25 @@
                         <div class="col-md-3 info_wrap">
                             <div class="info_title border_self">
                                 <p><label for="hometown">出身</label></p>
+                                <?php if($errors->has('hometown')): ?>
+                                <p class="error-text"><?php echo e($errors->first('hometown')); ?></p>
+                                <?php endif; ?>
                             </div>
                             <div class="info_content">
-                                <p><input type="text" id="hometown" name="hometown" value="<?php echo e($items->hometown); ?>"></p>
+                                <select id="hometown" name="hometown" >
+                                    <option value="<?php echo e($items->hometown); ?>" selected><?php echo e($items->hometown); ?></option>
+                                    <?php $__currentLoopData = $optionPrefecture; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $hometown): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <option value="<?php echo e($hometown); ?>" ><?php echo e($hometown); ?></option>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-3 info_wrap">
                             <div class="info_title border_self">
                                 <p><label for="email">メールアドレス</label></p>
+                                <?php if($errors->has('email')): ?>
+                                <p class="error-text"><?php echo e($errors->first('email')); ?></p>
+                                <?php endif; ?>
                             </div>
                             <div class="info_content">
                                 <p><input type="email" id="email" name="email" value="<?php echo e($items->email); ?>"></p>

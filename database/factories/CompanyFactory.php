@@ -12,7 +12,7 @@ $factory->define(Company::class, function (Faker $faker) {
         'email' => $faker->unique()->safeEmail,
         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         'company_icon' => 'DailyUI day11 flash message_1606489740.png',
-        'industry' => $faker->randomElement(['アパレル','不動産','飲食','IT','金融','マスコミ']),
+        'industry' => $faker->randomElement(['メーカー','商社','マスコミ','物流','不動産','IT','医療','教育','流通','金融','コンサルティング','環境','その他']),
         'office' => $faker->address,
         'employee' => $faker->numberBetween($min=10,$max=10000),
         'homepage' => $faker->url,

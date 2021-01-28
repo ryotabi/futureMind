@@ -10,7 +10,9 @@ use App\models\Message;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
-
+use App\Services\GetYearArray;
+use App\Services\GetPrefectureArray;
+use App\Services\GetIndustryArray;
 
 use App\Events\ChatPusher;
 
@@ -25,22 +27,24 @@ class UserController extends Controller
     public function edit(){
         $UserId = Auth::user()->id;
         $items = User::find($UserId);
-        $years = ["2022年", "2023年", "2024年", "2025年" , "2026年", "2027年"];
-        $optionYears = [];
-        for($i = 0; $i<count($years); $i++){
-            if($years[$i] === $items->year){
-                continue;
-            }
-            array_push($optionYears,$years[$i]);
-        }
-        return view('user.edit',compact('items', 'optionYears'));
+        // $years = ["2022年", "2023年", "2024年", "2025年" , "2026年", "2027年"];
+        // $optionYears = [];
+        // for($i = 0; $i<count($years); $i++){
+        //     if($years[$i] === $items->year){
+        //         continue;
+        //     }
+        //     array_push($optionYears,$years[$i]);
+        // }
+        $optionYear = GetYearArray::GetYearArray($items->year);
+        $optionPrefecture = GetPrefectureArray::GetPrefectureArray($items->hometown);
+        $optionIndustry = GetIndustryArray::GetIndustryArray($items->industry);
+        return view('user.edit',compact('items', 'optionYear','optionPrefecture','optionIndustry'));
     }
     public function update(Request $request){
         $validate_rule = [
             'industry' => 'required',
             'name' => 'required',
             'year' => 'required',
-            'club' => 'required',
             'university' => 'required',
             'hobby' => 'required',
             'hometown' => 'required',
