@@ -13,6 +13,8 @@ use App\models\ChatRoom;
 use App\models\Message;
 use Intervention\Image\Facades\Image;
 use App\Events\ChatPusher;
+use App\Services\GetIndustryArray;
+
 
 class CompanyController extends Controller
 {
@@ -60,9 +62,19 @@ class CompanyController extends Controller
                 }
             }
         }
-        return view('Company.edit',compact('items','chartCompanyData'));
+        $optionIndustry = GetIndustryArray::GetIndustryArray($items->industry);
+        return view('Company.edit',compact('items','chartCompanyData','optionIndustry'));
     }
     public function update(Request $request){
+        $validate_rules = [
+            'name' => 'required',   
+            'industry' => 'required',   
+            'office' => 'required',   
+            'employee' => 'required|integer',   
+            'homepage' => 'required|url',   
+            'comment' => 'required',   
+        ];
+        $this->validate($request,$validate_rules);
         $UserId = Auth::user()->id;
         $company = Company::find($UserId);
         if(isset($request->company_icon)){
@@ -168,6 +180,5 @@ class CompanyController extends Controller
         $message->message = $request->message;
         $message->save();
         event(new ChatPusher($message));
-        // return redirect()->back();
     }
 }

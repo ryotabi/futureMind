@@ -9,14 +9,25 @@
                         <div class="col-md-3 info_wrap">
                             <div class="info_title border_future">
                                 <p><label for="industry">志望業界</label></p>
+                                @if($errors->has('industry'))
+                                <p class="error-text">{{$errors->first('industry')}}</p>
+                                @endif
                             </div>
                             <div class="info_content">
-                                <p><input type="text" id="industry" name="industry" value="{{$items->industry}}"></p>
+                                <select id="industry" name="industry" >
+                                    <option value="{{$items->industry}}" selected>{{$items->industry}}</option>
+                                    @foreach($optionIndustry as $industry)
+                                    <option value="{{$industry}}" >{{$industry}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-3 info_wrap">
                             <div class="info_title border_future">
                                 <p><label for="name">氏名</label></p>
+                                @if($errors->has('name'))
+                                <p class="error-text">{{$errors->first('name')}}</p>
+                                @endif
                             </div>
                             <div class="info_content">
                                 <p><input type="text" id="name" name="name" value="{{$items->name}}"></p>
@@ -25,9 +36,17 @@
                         <div class="col-md-3 info_wrap">
                             <div class="info_title border_future">
                                 <p><label for="year">卒業年度</label></p>
+                                @if($errors->has('year'))
+                                <p class="error-text">{{$errors->first('year')}}</p>
+                                @endif
                             </div>
                             <div class="info_content">
-                                <p><input type="text" id="year" name="year" value="{{$items->year}}"></p>
+                                <select id="year" name="year" >
+                                    <option value="{{$items->year}}" selected>{{$items->year}}</option>
+                                    @foreach($optionYear as $year)
+                                    <option value="{{$year}}" >{{$year}}</option>
+                                    @endforeach
+                                </select>
                             </div> 
                         </div>
                     </div>
@@ -50,6 +69,9 @@
                         <div class="col-md-3 info_wrap text-center">
                             <div class="info_title border_self">
                                 <p><label for="university">在学学校</label></p>
+                                @if($errors->has('university'))
+                                <p class="error-text">{{$errors->first('university')}}</p>
+                                @endif
                             </div>
                             <div class="info_content">
                                 <p><input type="text" id="university" name="university" value="{{$items->university}}"></p>
@@ -60,6 +82,9 @@
                         <div class="col-md-3 info_wrap">
                             <div class="info_title border_self">
                                 <p><label for="hobby">趣味</label></p>
+                                @if($errors->has('hobby'))
+                                <p class="error-text">{{$errors->first('hobby')}}</p>
+                                @endif
                             </div>
                             <div class="info_content">
                                 <p><input type="text" id="hobby" name="hobby" value="{{$items->hobby}}"></p>
@@ -68,14 +93,25 @@
                         <div class="col-md-3 info_wrap">
                             <div class="info_title border_self">
                                 <p><label for="hometown">出身</label></p>
+                                @if($errors->has('hometown'))
+                                <p class="error-text">{{$errors->first('hometown')}}</p>
+                                @endif
                             </div>
                             <div class="info_content">
-                                <p><input type="text" id="hometown" name="hometown" value="{{$items->hometown}}"></p>
+                                <select id="hometown" name="hometown" >
+                                    <option value="{{$items->hometown}}" selected>{{$items->hometown}}</option>
+                                    @foreach($optionPrefecture as $hometown)
+                                    <option value="{{$hometown}}" >{{$hometown}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-3 info_wrap">
                             <div class="info_title border_self">
                                 <p><label for="email">メールアドレス</label></p>
+                                @if($errors->has('email'))
+                                <p class="error-text">{{$errors->first('email')}}</p>
+                                @endif
                             </div>
                             <div class="info_content">
                                 <p><input type="email" id="email" name="email" value="{{$items->email}}"></p>

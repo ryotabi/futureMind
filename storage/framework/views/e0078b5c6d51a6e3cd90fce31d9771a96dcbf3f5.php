@@ -25,13 +25,38 @@
                                 <div class="company_info company_edit">
                                     <ul>
                                         <li><label for="company">企業名</label>：<input type="text" id="company" name="name" value="<?php echo e($items->name); ?>"></li>
-                                        <li><label for="industry">業界</label>：<input type="text" id="industry" name="industry" value="<?php echo e($items->industry); ?>"></li>
+                                        <?php if($errors->has('name')): ?>
+                                        <p class="error-text" style="margin-top: -10px"><?php echo e($errors->first('name')); ?></p>
+                                        <?php endif; ?>
+                                        <li><label for="industry">業界</label>：
+                                            <select id="industry" name="industry" >
+                                                <option value="<?php echo e($items->industry); ?>" selected><?php echo e($items->industry); ?></option>
+                                                <?php $__currentLoopData = $optionIndustry; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $industry): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <option value="<?php echo e($industry); ?>" ><?php echo e($industry); ?></option>
+                                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                            </select>
+                                        </li>
+                                        <?php if($errors->has('industry')): ?>
+                                        <p class="error-text" style="margin-top: -10px"><?php echo e($errors->first('industry')); ?></p>
+                                        <?php endif; ?>
                                         <li><label for="office">場所</label>：<input type="text" id="office" name="office" value="<?php echo e($items->office); ?>"></li>
+                                        <?php if($errors->has('office')): ?>
+                                        <p class="error-text" style="margin-top: -10px"><?php echo e($errors->first('office')); ?></p>
+                                        <?php endif; ?>
                                         <li><label for="employee">社員数</label>：約<input type="text" id="employee" name="employee" value="<?php echo e($items->employee); ?>">人</li>
+                                        <?php if($errors->has('employee')): ?>
+                                        <p class="error-text" style="margin-top: -10px"><?php echo e($errors->first('employee')); ?></p>
+                                        <?php endif; ?>
                                         <li><label for="homepage">ホームページ</label>：<input type="text" id="homepage" name="homepage" value="<?php echo e($items->homepage); ?>"></li>
+                                        <?php if($errors->has('homepage')): ?>
+                                        <p class="error-text" style="margin-top: -10px"><?php echo e($errors->first('homepage')); ?></p>
+                                        <?php endif; ?>
                                         <li><label for="comment">企業からのコメント</label><br>
                                             <textarea type="text" id="comment" name="comment" style="width:100%;"><?php echo e($items->comment); ?></textarea>
                                         </li> 
+                                        <?php if($errors->has('comment')): ?>
+                                        <p class="error-text" style="margin-top: -10px"><?php echo e($errors->first('comment')); ?></p>
+                                        <?php endif; ?>
                                     </ul>
                                 </div>
                         </div>

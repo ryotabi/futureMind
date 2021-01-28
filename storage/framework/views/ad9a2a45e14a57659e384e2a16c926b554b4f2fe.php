@@ -16,10 +16,16 @@
             <?php echo csrf_field(); ?>
                 <div class="form-group">
                     <label for="exampleInputPassword1">メールアドレス</label>
+                    <?php if($errors->has('email')): ?>
+                    <p class="error-text"><?php echo e($errors->first('email')); ?></p>
+                    <?php endif; ?>
                     <input type="email" class="form-control" id="exampleInputPassword1" name="email" placeholder="test@test.com">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">パスワード</label>
+                    <?php if($errors->has('password')): ?>
+                    <p class="error-text"><?php echo e($errors->first('password')); ?></p>
+                    <?php endif; ?>
                     <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="*********">
                 </div>
                 <div class="text-center">

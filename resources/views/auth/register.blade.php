@@ -18,11 +18,18 @@
             @csrf
                 <div class="form-group">
                     <label for="exampleInputEmail1">氏名</label>
+                    @if($errors->has('name'))
+                    <p class="error-text">{{$errors->first('name')}}</p>
+                    @endif
                     <input type="text" class="form-control" id="exampleInputEmail1" name="name"  placeholder="山田太郎">
                 </div>
                 <div class="form-group">
                     <label for="disabledSelect">卒業年度</label>
+                    @if($errors->has('year'))
+                    <p class="error-text">{{$errors->first('year')}}</p>
+                    @endif
                     <select id="disabledSelect" name="year" class="form-control">
+                        <option value="" selected></option>
                         <option value="2022年">2022年</option>
                         <option value="2023年">2023年</option>
                         <option value="2024年">2024年</option>
@@ -33,14 +40,23 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">在学大学</label>
+                    @if($errors->has('university'))
+                    <p class="error-text">{{$errors->first('university')}}</p>
+                    @endif
                     <input type="text" class="form-control" id="exampleInputPassword1" name="university" placeholder="○○大学">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">メールアドレス</label>
+                    @if($errors->has('email'))
+                    <p class="error-text">{{$errors->first('email')}}</p>
+                    @endif
                     <input type="email" class="form-control" id="exampleInputPassword1" name="email" placeholder="test@test.com">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">パスワード</label>
+                    @if($errors->has('password'))
+                    <p class="error-text">{{$errors->first('password')}}</p>
+                    @endif
                     <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="*********">
                 </div>
                 <div class="text-center">
