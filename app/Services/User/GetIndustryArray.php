@@ -1,5 +1,5 @@
 <?php
-namespace App\Services;
+namespace App\Services\User;
 
 class GetIndustryArray {
     public static function GetIndustryArray($selectedIndustry) {

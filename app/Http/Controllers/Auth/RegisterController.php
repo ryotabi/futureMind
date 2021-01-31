@@ -13,6 +13,8 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Auth;
 use App\models\Company;
 use Intervention\Image\Facades\Image;
+use App\Services\ImgToDatabase;
+
 
 class RegisterController extends Controller
 {
@@ -96,28 +98,7 @@ class RegisterController extends Controller
 
     protected function createCompany(Request $request)
     {
-        $imageFile = $request->company_icon;
-            if($imageFile !== null){
-                $filenameWithExt = $imageFile->getClientOriginalName();
-                $fileName = pathinfo($filenameWithExt,PATHINFO_FILENAME);
-                $extension = $imageFile->getClientOriginalExtension();
-                $fileNameToStore = $fileName . '_' . time() . '.' . $extension;
-                $fileData = file_get_contents($imageFile->getRealPath());
-                if($extension == 'jpg'){
-                    $data_url = 'data:image/jpg;base64,' . base64_encode($fileData);
-                }
-                if($extension == 'jpeg'){
-                    $data_url = 'data:image/jpg;base64,' . base64_encode($fileData);
-                }
-                if($extension == 'png'){
-                    $data_url = 'data:image/png;base64,' . base64_encode($fileData);
-                }
-                if($extension == 'gif'){
-                    $data_url = 'data:image/gif;base64,' . base64_encode($fileData);
-                }
-                $image = Image::make($data_url);
-                $image->resize(150,150)->save(storage_path().'/app/public/images/'.$fileNameToStore);
-            }
+        $fileNameToStore = ImgToDatabase::ImgToDatabase($request->company_icon);
         $this->companyValidator($request->all())->validate();
         $company = Company::create([
             'name' => $request['name'],
