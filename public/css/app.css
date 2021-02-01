@@ -17841,6 +17841,13 @@ main .main_wrap .future_color:active {
   font-family: fantasy;
 }
 
+@media only screen and (max-width: 414px) {
+  .register_wrap .register_title {
+    font-size: 55px;
+    margin-top: 50px;
+  }
+}
+
 .register_wrap .register_form_wrap {
   background-color: #fff;
   border-radius: 30px;
@@ -17848,6 +17855,13 @@ main .main_wrap .future_color:active {
   width: 65%;
   margin: 0 auto;
   padding: 10px 25px;
+}
+
+@media only screen and (max-width: 414px) {
+  .register_wrap .register_form_wrap {
+    width: 90%;
+    margin: 30px auto;
+  }
 }
 
 .register_wrap .form-control {
@@ -17861,6 +17875,12 @@ main .main_wrap .future_color:active {
   border-radius: 30px;
   border: none;
   color: #000;
+}
+
+@media only screen and (max-width: 414px) {
+  .register_wrap .btn {
+    width: 60%;
+  }
 }
 
 .register_wrap .btn:active {
@@ -17887,6 +17907,13 @@ main .main_wrap .future_color:active {
   font-family: fantasy;
 }
 
+@media only screen and (max-width: 414px) {
+  .login_wrap .login_title {
+    font-size: 55px;
+    margin-top: 50px;
+  }
+}
+
 .login_wrap .login_form_wrap {
   background-color: #fff;
   border-radius: 30px;
@@ -17896,24 +17923,36 @@ main .main_wrap .future_color:active {
   padding: 10px 25px;
 }
 
+@media only screen and (max-width: 414px) {
+  .login_wrap .login_form_wrap {
+    width: 90%;
+  }
+}
+
 .login_wrap .form-control {
   border-radius: 30px;
 }
 
 .login_wrap .btn {
   width: 30%;
-  background-color: #Fdff83;
+  background-color: #fdff83;
   box-shadow: 0px 4px 4px #d1d327;
   border-radius: 30px;
   border: none;
   color: #000;
 }
 
+@media only screen and (max-width: 414px) {
+  .login_wrap .btn {
+    width: 60%;
+  }
+}
+
 .login_wrap .btn:active {
   box-shadow: none;
   transform: translateY(4px);
-  background-color: #Fdff83 !important;
-  border-color: #Fdff83 !important;
+  background-color: #fdff83 !important;
+  border-color: #fdff83 !important;
   border: none;
   color: #000 !important;
 }
