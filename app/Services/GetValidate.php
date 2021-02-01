@@ -14,4 +14,17 @@ class GetValidate {
         ];
         return $validate_rules;
     }
+
+    public static function GetStudentEditData(){
+        $validate_rule = [
+            'industry' => 'required',
+            'name' => 'required',
+            'year' => 'required',
+            'university' => 'required',
+            'hobby' => 'required',
+            'hometown' => 'required',
+            'email' => 'required|email',
+        ];
+        return $validate_rule;
+    }
 }
