@@ -17,6 +17,7 @@ $fa-font-path: "../webfonts";
 //pages
 @import "reset";
 @import "lib";
+@import "responsive";
 @import "diagnosis/top";
 @import "diagnosis/diagnosis";
 @import "diagnosis/result";

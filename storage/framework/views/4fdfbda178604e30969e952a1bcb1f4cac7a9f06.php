@@ -31,7 +31,7 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 auth_profile">
                         <div class="text-center">
                             <p class="chat_name">あなた</p>
                             <img class="chat_img" src="/storage/images/<?php echo e($student_user->img_name); ?>" alt="画像">

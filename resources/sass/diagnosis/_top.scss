@@ -19,6 +19,20 @@ header {
         line-height: 40px;
         h1 {
             text-shadow: 0px 15px 4px rgba(0, 0, 0, 0.25);
+            @include sp {
+                display: flex;
+                justify-content: space-between;
+            }
+            span {
+                display: none;
+                @include sp {
+                    display: inline;
+                    text-shadow: none !important;
+                }
+            }
+            .hum_close {
+                display: none;
+            }
         }
     }
 
@@ -34,6 +48,9 @@ header {
                 text-decoration: none;
             }
         }
+        @include sp {
+            display: none;
+        }
     }
 
     .header_icon {
@@ -43,6 +60,30 @@ header {
         text-align: center;
         a:hover {
             color: $primary-color;
+        }
+        @include sp {
+            display: none;
+        }
+    }
+
+    .hum_wrap {
+        display: none;
+
+        @include sp {
+            background-color: rgba(253, 255, 131, 0.5);
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            @include sp {
+                width: 55%;
+                margin: 0 auto;
+                text-align: left;
+                font-size: 20px;
+                font-weight: bold;
+            }
         }
     }
 }
@@ -76,6 +117,9 @@ main {
 
     .main_wrap {
         margin: 35vh 0;
+        @include sp {
+            margin: 20vh 0;
+        }
 
         a:hover {
             color: #000;
@@ -90,6 +134,10 @@ main {
             padding: 90px;
             margin: 0 auto;
             text-align: center;
+            @include sp {
+                width: 70%;
+                margin: 20px auto;
+            }
         }
         .self_color {
             background-color: $self_color;

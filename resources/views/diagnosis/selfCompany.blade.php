@@ -19,7 +19,7 @@
                         <a href="{{route('diagnosis.result')}}" class="search_btn future_btn"><span>結果へ戻る</span></a>
                     </div>
                     @endif
-                    <div class="text-center" style="margin:0 auto;;">
+                    <div class="text-center" style="margin:0 auto 30px;">
                         {{$companies->links()}}
                     </div>
             </div>

@@ -13,7 +13,11 @@
         <div class="container">
             <div class="row">
                 <div class="header_logo col-md-3">
-                    <h1><a href="{{route('diagnosis.index')}}">FutureMind</a></h1>
+                    <h1>
+                        <a href="{{route('diagnosis.index')}}">FutureMind</a>
+                        <span class="hum_btn"><i class="fas fa-bars"></i></span>
+                        <span class="hum_close"><i class="fas fa-times"></i></span>
+                    </h1>
                 </div>
                 <div class="header_nav col-md-7">
                     <nav>
@@ -29,6 +33,17 @@
                     <div>
                         <span><a href="{{route('user.index')}}"><i class="far fa-user"></i></a></span>
                     </div>
+                </div>
+                <div class="hum_wrap">
+                    <nav>
+                        <ul>
+                            <li><a href="#">理想分析について</a></li>
+                            <li><a href="{{route('diagnosis.result')}}">結果を見る</a></li>
+                            <li><a href="{{route('search.search')}}">企業を探す</a></li>
+                            <li><a href="{{route('user.likes')}}">お気に入り企業を見る</a></li>
+                            <li><a href="{{route('user.index')}}">プロフィール</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>

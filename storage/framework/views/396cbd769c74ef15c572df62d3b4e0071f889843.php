@@ -5,18 +5,7 @@
             <div class="singleCompany_content">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 singleCompany_analysis">
-                            <div class="analysis_title future_color">あなたが足りない点</div>
-                            <div class="analysis_content">
-                                <ul>
-                                    <li>〇<?php echo e($companyValue->comment_type); ?><br>
-                                    　<?php echo e($companyValue->comment); ?>
-
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6   company_details">
+                        <div class="col-md-6 order-md-2 company_details">
                             <div class="text-center"><img class="company_logo future_logo" src="/storage/images/<?php echo e($company->company_icon); ?>" alt=""></div>
                             <div class="company_info">
                                 <ul>
@@ -27,6 +16,17 @@
                                     <li>ホームページ：<?php echo e($company->homepage); ?></li>
                                     <li>企業からのコメント<br>
                                         <?php echo e($company->comment); ?>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 order-md-1 singleCompany_analysis">
+                            <div class="analysis_title future_color">あなたが足りない点</div>
+                            <div class="analysis_content">
+                                <ul>
+                                    <li>〇<?php echo e($companyValue->comment_type); ?><br>
+                                        <?php echo e($companyValue->comment); ?>
 
                                     </li>
                                 </ul>

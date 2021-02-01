@@ -18,7 +18,7 @@
                     <a href="<?php echo e(route('diagnosis.result')); ?>" class="search_btn future_btn"><span>結果へ戻る</span></a>
                 </div>
                 <?php endif; ?>
-                <div class="text-center" style="margin:0 auto;;">
+                <div class="text-center" style="margin:0 auto 30px;">
                     <?php echo e($companies->links()); ?>
 
                 </div>
