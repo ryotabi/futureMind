@@ -11,6 +11,12 @@ use App\Events\CompanyProfileData;
 use App\Listeners\UpdateCompanyProfileData;
 use App\Events\CompanyDiagnosisDataEvent;
 use App\Listeners\SetCompanyDiagnosisData;
+use App\Events\StudentProfileData;
+use App\Listeners\UpdateStudentProfileData;
+use App\Events\StudentFutureDiagnosisData;
+use App\Listeners\SetStudentFutureDiagnosisData;
+use App\Events\StudentSelfDiagnosisData;
+use App\Listeners\SetStudentSelfDiagnosisData;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -28,6 +34,15 @@ class EventServiceProvider extends ServiceProvider
         ],
         CompanyDiagnosisDataEvent::class => [
             SetCompanyDiagnosisData::class,
+        ],
+        StudentProfileData::class => [
+            UpdateStudentProfileData::class,
+        ],
+        StudentFutureDiagnosisData::class => [
+            SetStudentFutureDiagnosisData::class,
+        ],
+        StudentSelfDiagnosisData::class => [
+            SetStudentSelfDiagnosisData::class,
         ],
     ];
 

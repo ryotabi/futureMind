@@ -10,7 +10,7 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class DiagnosisData
+class StudentFutureDiagnosisData
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -19,9 +19,12 @@ class DiagnosisData
      *
      * @return void
      */
-    public function __construct()
+    public $userId;
+    public $request;
+    public function __construct($userId,$request)
     {
-        //
+        $this->userId = $userId;
+        $this->request = $request;
     }
 
     /**

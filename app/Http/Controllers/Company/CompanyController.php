@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers\company;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\models\CompanyDiagnosisData;
@@ -16,7 +15,6 @@ use App\Events\ChatPusher;
 use App\Events\CompanyProfileData;
 use App\Events\CompanyDiagnosisDataEvent;
 use App\Services\User\GetIndustryArray;
-
 use App\Services\ImgToDatabase;
 use App\Services\GetValidate;
 use App\Services\Diagnosis\GetDiagnosisData;

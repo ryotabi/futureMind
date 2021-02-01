@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers\User;
-
 use App\Http\Controllers\Controller;
 use App\models\User;
 use App\models\Company;
@@ -14,9 +13,9 @@ use App\Services\User\GetYearArray;
 use App\Services\User\GetPrefectureArray;
 use App\Services\User\GetIndustryArray;
 use App\Services\ImgToDatabase;
-
+use App\Services\GetValidate;
 use App\Events\ChatPusher;
-
+use App\Events\StudentProfileData;
 
 class UserController extends Controller
 {
@@ -36,28 +35,11 @@ class UserController extends Controller
     }
 
     public function update(Request $request){
-        $validate_rule = [
-            'industry' => 'required',
-            'name' => 'required',
-            'year' => 'required',
-            'university' => 'required',
-            'hobby' => 'required',
-            'hometown' => 'required',
-            'email' => 'required|email',
-        ];
+        $validate_rule = GetValidate::GetStudentEditData();
         $this->validate($request, $validate_rule);
-        if(isset($request->img_name)){
-                $fileNameToStore = ImgToDatabase::ImgToDatabase($request->img_name);
-        }
-        $UserId = Auth::user()->id;
-        $user = User::find($UserId);
+        $user = User::find(Auth::user()->id);
         $data = $request->all();
-        unset($data['_token']);
-        $user->fill($data);
-        if(isset($request->img_name)){
-            $user->img_name = $fileNameToStore;
-        }
-        $user->save();
+        event(new StudentProfileData($request,$data, $user));
         return redirect('/user');
     }
 
