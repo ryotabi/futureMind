@@ -43401,6 +43401,8 @@ __webpack_require__(/*! ./range */ "./resources/js/range.js");
 
 __webpack_require__(/*! ./chat */ "./resources/js/chat.js");
 
+__webpack_require__(/*! ./hum */ "./resources/js/hum.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -43692,6 +43694,26 @@ $('.diagnosis_company_btn').each(function () {
       $('#futurevalue').val(companyfuturevalue);
     }
   });
+});
+
+/***/ }),
+
+/***/ "./resources/js/hum.js":
+/*!*****************************!*\
+  !*** ./resources/js/hum.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$('.hum_btn').on('click', function () {
+  $('.hum_wrap').hide().fadeIn();
+  $('.hum_btn').hide();
+  $('.hum_close').show();
+});
+$('.hum_close').on('click', function () {
+  $('.hum_wrap').fadeOut();
+  $('.hum_btn').show();
+  $('.hum_close').hide();
 });
 
 /***/ }),

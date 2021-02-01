@@ -13,7 +13,7 @@
                         <p class="diagnosis_content">パンは最高の朝食である</p>
                         <div class="diagnosis_selects">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <a href="#q2" class="diagnosis_btn diagnosis_company_btn" data-companydevelopmentvalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
@@ -32,10 +32,10 @@
                         </div>
                         <div class="diagnosis_select_text">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <p>そう思わない</p>
                                 </div>
-                                <div class="col-2 offset-6">
+                                <div class="col-2 offset-md-6 offset-8">
                                     <p>そう思う</p>
                                 </div>
                             </div>
@@ -63,7 +63,7 @@
                         <p class="diagnosis_content">朝食は7時に食べる</p>
                         <div class="diagnosis_selects">
                         <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <a href="#q3" class="diagnosis_btn diagnosis_company_btn" data-companysocialvalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
@@ -82,10 +82,10 @@
                         </div>
                         <div class="diagnosis_select_text">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <p>そう思わない</p>
                                 </div>
-                                <div class="col-2 offset-6">
+                                <div class="col-2 offset-md-6 offset-8">
                                     <p>そう思う</p>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@
                         <p class="diagnosis_content">設問３サンプルテキスト</p>
                         <div class="diagnosis_selects">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <a href="#q4" class="diagnosis_btn diagnosis_company_btn" data-companystablevalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
@@ -132,10 +132,10 @@
                         </div>
                         <div class="diagnosis_select_text">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <p>そう思わない</p>
                                 </div>
-                                <div class="col-2 offset-6">
+                                <div class="col-2 offset-md-6 offset-8">
                                     <p>そう思う</p>
                                 </div>
                             </div>
@@ -163,7 +163,7 @@
                         <p class="diagnosis_content">設問４サンプルテキスト</p>
                         <div class="diagnosis_selects">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <a href="#q5" class="diagnosis_btn diagnosis_company_btn" data-companyteammatevalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
@@ -182,10 +182,10 @@
                         </div>
                         <div class="diagnosis_select_text">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <p>そう思わない</p>
                                 </div>
-                                <div class="col-2 offset-6">
+                                <div class="col-2 offset-md-6 offset-8">
                                     <p>そう思う</p>
                                 </div>
                             </div>
@@ -213,7 +213,7 @@
                         <p class="diagnosis_content">設問５サンプルテキスト</p>
                         <div class="diagnosis_selects">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <a href="#q6" class="diagnosis_btn diagnosis_company_btn" data-companyfuturevalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
@@ -232,10 +232,10 @@
                         </div>
                         <div class="diagnosis_select_text">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <p>そう思わない</p>
                                 </div>
-                                <div class="col-2 offset-6">
+                                <div class="col-2 offset-md-6 offset-8">
                                     <p>そう思う</p>
                                 </div>
                             </div>
@@ -263,7 +263,7 @@
                         <p class="diagnosis_content">設問６サンプルテキスト</p>
                         <div class="diagnosis_selects">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <a href="#q7" class="diagnosis_btn diagnosis_company_btn" data-companydevelopmentvalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
@@ -282,12 +282,12 @@
                         </div>
                         <div class="diagnosis_select_text">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <p>そう思わない</p>
                                 </div>
-                                <div class="col-2 offset-6">
+                                <div class="col-2 offset-md-6 offset-8">
                                     <p>そう思う</p>
-                                </div>
+                                </div>  
                             </div>
                         </div>
                         <div class="diagnosis_counts">
@@ -313,7 +313,7 @@
                         <p class="diagnosis_content">設問７サンプルテキスト</p>
                         <div class="diagnosis_selects">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <a href="#q8" class="diagnosis_btn diagnosis_company_btn" data-companysocialvalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
@@ -332,10 +332,10 @@
                         </div>
                         <div class="diagnosis_select_text">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <p>そう思わない</p>
                                 </div>
-                                <div class="col-2 offset-6">
+                                <div class="col-2 offset-md-6 offset-8">
                                     <p>そう思う</p>
                                 </div>
                             </div>
@@ -363,7 +363,7 @@
                         <p class="diagnosis_content">設問８サンプルテキスト</p>
                         <div class="diagnosis_selects">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <a href="#q9" class="diagnosis_btn diagnosis_company_btn" data-companystablevalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
@@ -382,10 +382,10 @@
                         </div>
                         <div class="diagnosis_select_text">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <p>そう思わない</p>
                                 </div>
-                                <div class="col-2 offset-6">
+                                <div class="col-2 offset-md-6 offset-8">
                                     <p>そう思う</p>
                                 </div>
                             </div>
@@ -413,7 +413,7 @@
                         <p class="diagnosis_content">設問９サンプルテキスト</p>
                         <div class="diagnosis_selects">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <a href="#q10" class="diagnosis_btn diagnosis_company_btn" data-companyteammatevalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
@@ -432,10 +432,10 @@
                         </div>
                         <div class="diagnosis_select_text">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <p>そう思わない</p>
                                 </div>
-                                <div class="col-2 offset-6">
+                                <div class="col-2 offset-md-6 offset-8">
                                     <p>そう思う</p>
                                 </div>
                             </div>
@@ -463,7 +463,7 @@
                         <p class="diagnosis_content">設問１０サンプルテキスト</p>
                         <div class="diagnosis_selects">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <a href="#q11" class="diagnosis_btn diagnosis_company_btn" data-companyfuturevalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
@@ -482,10 +482,10 @@
                         </div>
                         <div class="diagnosis_select_text">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <p>そう思わない</p>
                                 </div>
-                                <div class="col-2 offset-6">
+                                <div class="col-2 offset-md-6 offset-8">
                                     <p>そう思う</p>
                                 </div>
                             </div>
@@ -513,7 +513,7 @@
                         <p class="diagnosis_content">設問１１サンプルテキスト</p>
                         <div class="diagnosis_selects">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <a href="#q12" class="diagnosis_btn diagnosis_company_btn" data-companydevelopmentvalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
@@ -532,10 +532,10 @@
                         </div>
                         <div class="diagnosis_select_text">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <p>そう思わない</p>
                                 </div>
-                                <div class="col-2 offset-6">
+                                <div class="col-2 offset-md-6 offset-8">
                                     <p>そう思う</p>
                                 </div>
                             </div>
@@ -563,7 +563,7 @@
                         <p class="diagnosis_content">設問１２サンプルテキスト</p>
                         <div class="diagnosis_selects">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <a href="#q13" class="diagnosis_btn diagnosis_company_btn" data-companysocialvalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
@@ -582,10 +582,10 @@
                         </div>
                         <div class="diagnosis_select_text">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <p>そう思わない</p>
                                 </div>
-                                <div class="col-2 offset-6">
+                                <div class="col-2 offset-md-6 offset-8">
                                     <p>そう思う</p>
                                 </div>
                             </div>
@@ -613,7 +613,7 @@
                         <p class="diagnosis_content">設問１３サンプルテキスト</p>
                         <div class="diagnosis_selects">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <a href="#q14" class="diagnosis_btn diagnosis_company_btn" data-companystablevalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
@@ -632,10 +632,10 @@
                         </div>
                         <div class="diagnosis_select_text">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <p>そう思わない</p>
                                 </div>
-                                <div class="col-2 offset-6">
+                                <div class="col-2 offset-md-6 offset-8">
                                     <p>そう思う</p>
                                 </div>
                             </div>
@@ -663,7 +663,7 @@
                         <p class="diagnosis_content">設問１４サンプルテキスト</p>
                         <div class="diagnosis_selects">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <a href="#q15" class="diagnosis_btn diagnosis_company_btn" data-companyteammatevalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
@@ -682,10 +682,10 @@
                         </div>
                         <div class="diagnosis_select_text">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <p>そう思わない</p>
                                 </div>
-                                <div class="col-2 offset-6">
+                                <div class="col-2 offset-md-6 offset-8">
                                     <p>そう思う</p>
                                 </div>
                             </div>
@@ -713,7 +713,7 @@
                         <p class="diagnosis_content">設問１５サンプルテキスト</p>
                         <div class="diagnosis_selects">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <a href="#submit" class="diagnosis_btn diagnosis_company_btn" data-companyfuturevalue="1"><span class="circle circle_big circle_no"></span></a>
                                 </div>
                                 <div class="col-2">
@@ -732,10 +732,10 @@
                         </div>
                         <div class="diagnosis_select_text">
                             <div class="row">
-                                <div class="col-2 offset-1">
+                                <div class="col-2 offset-md-1">
                                     <p>そう思わない</p>
                                 </div>
-                                <div class="col-2 offset-6">
+                                <div class="col-2 offset-md-6 offset-8">
                                     <p>そう思う</p>
                                 </div>
                             </div>

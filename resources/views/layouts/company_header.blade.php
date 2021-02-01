@@ -13,7 +13,11 @@
         <div class="container">
             <div class="row">
                 <div class="header_logo col-md-3">
-                    <h1><a href="{{route('company-home')}}">FutureMind</a></h1>
+                    <h1>
+                        <a href="{{route('company-home')}}">FutureMind</a>
+                        <span class="hum_btn"><i class="fas fa-bars"></i></span>
+                        <span class="hum_close"><i class="fas fa-times"></i></span>
+                    </h1>
                 </div>
                 <div class="header_nav col-md-7">
                     <nav>
@@ -28,6 +32,15 @@
                     <div>
                         <span><a href="{{route('company-home')}}"><i class="far fa-user"></i></a></span>
                     </div>
+                </div>
+                <div class="hum_wrap">
+                <nav>
+                        <ul>
+                            <li><a href="{{route('company.diagnosis')}}">診断をする</a></li>
+                            <li><a href="{{route('company.student')}}">学生を見る</a></li>
+                            <li><a href="#">ログアウト</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>

@@ -23,6 +23,9 @@ $future_color: #30e3df;
         border: 3px solid $primary-color;
         text-align: center;
         margin: 20px auto 0;
+        @include sp {
+            height: 225px;
+        }
     }
 
     .message_wrap {
@@ -89,6 +92,9 @@ $future_color: #30e3df;
         .chat_form {
             width: 50%;
             margin: 60px auto 0;
+            @include sp {
+                width: 100%;
+            }
 
             .chat_input {
                 border: none;
@@ -100,9 +106,12 @@ $future_color: #30e3df;
             .chat_btn:hover {
                 color: #fff;
             }
-            // .chat_btn:active {
-            //     border-color: #fff !important;
-            // }
+        }
+    }
+
+    .auth_profile {
+        @include sp {
+            display: none;
         }
     }
 }
