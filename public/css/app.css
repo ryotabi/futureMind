@@ -17344,6 +17344,12 @@ header .header_nav ul {
   font-size: 20px;
 }
 
+@media only screen and (max-width: 1025px) {
+  header .header_nav ul {
+    font-size: 18px;
+  }
+}
+
 header .header_nav ul a:hover {
   color: #fdff83;
   text-decoration: none;
@@ -17446,6 +17452,12 @@ main .main_wrap h2 {
   padding: 90px;
   margin: 0 auto;
   text-align: center;
+}
+
+@media only screen and (max-width: 1025px) {
+  main .main_wrap h2 {
+    width: 54%;
+  }
 }
 
 @media only screen and (max-width: 414px) {
@@ -17617,7 +17629,7 @@ main .main_wrap .future_color:active {
   font-size: 25px;
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 1025px) {
   .diagnosis_wrap .diagnosis_select_text p {
     font-size: 20px;
   }
@@ -17660,10 +17672,16 @@ main .main_wrap .future_color:active {
   font-weight: bold;
 }
 
+@media only screen and (max-width: 1025px) {
+  .diagnosis_wrap .diagnosis_submit {
+    width: 50%;
+    margin: 10vh auto;
+  }
+}
+
 @media only screen and (max-width: 414px) {
   .diagnosis_wrap .diagnosis_submit {
     width: 80%;
-    margin: 10vh auto;
   }
 }
 
@@ -17709,7 +17727,7 @@ main .main_wrap .future_color:active {
   padding: 50px 30px;
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 1025px) {
   .result_wrap .result_content .result_chart {
     width: 100%;
   }
@@ -17722,7 +17740,7 @@ main .main_wrap .future_color:active {
   height: auto;
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 1025px) {
   .result_wrap .result_content .result_text {
     width: 100%;
     margin: 30px 0 0 0;
@@ -17898,7 +17916,7 @@ main .main_wrap .future_color:active {
   margin-top: 30px;
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 1025px) {
   .singleCompany_wrap .singleCompany_content .company_details {
     margin-bottom: 30px;
   }
@@ -17958,7 +17976,7 @@ main .main_wrap .future_color:active {
   box-shadow: 0px 8px 4px rgba(209, 211, 39, 0.25);
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 1025px) {
   .singleCompany_wrap .likes_btn_wrap .likes_btn {
     width: 85%;
     margin: 30px auto;
@@ -17999,6 +18017,12 @@ main .main_wrap .future_color:active {
   font-family: fantasy;
 }
 
+@media only screen and (max-width: 1025px) {
+  .register_wrap .register_title {
+    font-size: 130px;
+  }
+}
+
 @media only screen and (max-width: 414px) {
   .register_wrap .register_title {
     font-size: 55px;
@@ -18015,7 +18039,7 @@ main .main_wrap .future_color:active {
   padding: 10px 25px;
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 1025px) {
   .register_wrap .register_form_wrap {
     width: 90%;
     margin: 30px auto;
@@ -18065,6 +18089,12 @@ main .main_wrap .future_color:active {
   font-family: fantasy;
 }
 
+@media only screen and (max-width: 1025px) {
+  .login_wrap .login_title {
+    font-size: 130px;
+  }
+}
+
 @media only screen and (max-width: 414px) {
   .login_wrap .login_title {
     font-size: 55px;
@@ -18081,7 +18111,7 @@ main .main_wrap .future_color:active {
   padding: 10px 25px;
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 1025px) {
   .login_wrap .login_form_wrap {
     width: 90%;
   }
