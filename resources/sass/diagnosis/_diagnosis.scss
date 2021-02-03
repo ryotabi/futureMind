@@ -123,7 +123,7 @@ $future_color: #30e3df;
         p {
             text-align: center;
             font-size: 25px;
-            @include sp {
+            @include tab {
                 font-size: 20px;
             }
         }
@@ -159,9 +159,12 @@ $future_color: #30e3df;
         border-radius: 30px;
         font-size: 20px;
         font-weight: bold;
+        @include tab {
+            width: 50%;
+            margin: 10vh auto;
+        }
         @include sp {
             width: 80%;
-            margin: 10vh auto;
         }
     }
     .future_btn {

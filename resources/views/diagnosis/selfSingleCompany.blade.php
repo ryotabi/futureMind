@@ -6,7 +6,7 @@
             <div class="singleCompany_content">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 order-md-2  company_details">
+                        <div class="col-xl-6 order-xl-2  company_details">
                             <div class="text-center"><img class="company_logo self_logo" src="/storage/images/{{$company->company_icon}}" alt=""></div>
                             <div class="company_info">
                                 <ul>
@@ -22,7 +22,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6 order-md-1 singleCompany_analysis">
+                        <div class="col-xl-6 order-xl-1 singleCompany_analysis">
                             <div class="analysis_title self_color">あなたに物足りない点</div>
                             <div class="analysis_content">
                                 <ul>

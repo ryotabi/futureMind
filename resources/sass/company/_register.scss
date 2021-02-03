@@ -23,7 +23,7 @@ $future_color: #30e3df;
         width: 65%;
         margin: 0 auto;
         padding: 10px 25px;
-        @include sp {
+        @include tab {
             width: 90%;
         }
     }

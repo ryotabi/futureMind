@@ -9,7 +9,7 @@
                 <form action="<?php echo e(route('search.searchPost')); ?>" method="POST">
                     <?php echo csrf_field(); ?>
                     <div class="row">
-                        <div class="col-md-2 text-center form_item_wrap">
+                        <div class="col-xl-2 text-center form_item_wrap">
                             <p class="form_item"><label for="industry">業種</label></p>
                             <select name="industry" id="industry">
                                 <option value="メーカー">メーカー</option>
@@ -27,8 +27,8 @@
                                 <option value="その他">その他</option>
                             </select>
                         </div>
-                        <div class="col-md-2 text-center form_item_wrap">
-                        <p class="form_item"><label for="area">地域</label></p>
+                        <div class="col-xl-2 text-center form_item_wrap">
+                            <p class="form_item"><label for="area">地域</label></p>
                             <select name="area" id="area">
                                 <option value="北海道">北海道</option>
                                 <option value="青森県">青森県</option>
@@ -79,7 +79,7 @@
                                 <option value="沖縄県">沖縄県</option>
                             </select>
                         </div>
-                        <div class="col-md-2 text-center form_item_wrap">
+                        <div class="col-xl-2 text-center form_item_wrap">
                             <p class="form_item"><label for="employee">規模</label></p>
                             <select name="employee" id="employee">
                                 <option value="~50">~50人</option>
@@ -90,7 +90,7 @@
                                 <option value="1000~">1000人~</option>
                             </select>
                         </div>
-                        <div class="col-md-6 text-center range_wrap form_item_wrap">
+                        <div class="col-xl-6 text-center range_wrap form_item_wrap">
                             <p class="form_item">詳細条件</p>
                             <p class="range_label"><label for="development">成長意欲</label></p>
                             <p><input class="range" type="range" id="development" name="development" min="1" max="5" step="1" value="1"><span class="range_value" style="margin-left:10px;">1</span></p>
