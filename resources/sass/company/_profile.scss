@@ -30,9 +30,12 @@
         background-color: #fff;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
         margin: 10px auto 0;
+        @include tab {
+            width: 50%;
+            margin-bottom: 30px;
+        }
         @include sp {
             width: 70%;
-            margin-bottom: 30px;
         }
     }
 

@@ -18276,7 +18276,7 @@ main .main_wrap .future_color:active {
   padding: 10px 25px;
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 1025px) {
   .company_login_wrap .login_form_wrap {
     width: 90%;
   }
@@ -18344,7 +18344,7 @@ main .main_wrap .future_color:active {
   padding: 10px 25px;
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 1025px) {
   .company_register_wrap .register_form_wrap {
     width: 90%;
   }
@@ -18425,10 +18425,16 @@ main .main_wrap .future_color:active {
   margin: 10px auto 0;
 }
 
+@media only screen and (max-width: 1025px) {
+  .singleCompany_content .toEdit_btn {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
 @media only screen and (max-width: 414px) {
   .singleCompany_content .toEdit_btn {
     width: 70%;
-    margin-bottom: 30px;
   }
 }
 
