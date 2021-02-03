@@ -16,6 +16,9 @@
     .company_chart {
         background-color: #fff;
         padding: 40px;
+        @include tab {
+            margin-bottom: 30px;
+        }
     }
 
     .toEdit_btn {

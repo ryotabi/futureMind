@@ -4,6 +4,12 @@ $future_color: #30e3df;
 
 .user_wrap {
     margin-top: 20vh;
+    @include tab {
+        margin-top: 10vh;
+    }
+    @include sp {
+        margin-top: 25vh;
+    }
 
     .row_wrap {
         justify-content: space-between;

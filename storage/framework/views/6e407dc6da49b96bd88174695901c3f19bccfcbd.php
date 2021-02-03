@@ -10,10 +10,10 @@
             <div class="singleCompany_content">
                 <div class="container">
                     <div class="row">
-                        <div class="company_chart col-md-6">
+                        <div class="col-xl-6 company_chart">
                             <canvas id="companyChart" width="60%" height="40%"></canvas>
                         </div>
-                        <div class="col-md-6   company_details">
+                        <div class="col-xl-6 company_details">
                             <div class="text-center"><img class="company_logo" src="/storage/images/<?php echo e($company->company_icon); ?>" alt=""></div>
                             <div class="company_info">
                                 <ul>
