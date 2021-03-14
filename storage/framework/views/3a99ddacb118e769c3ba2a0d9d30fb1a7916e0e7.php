@@ -24,7 +24,7 @@
                         <ul>
                             <li><a href="<?php echo e(route('company.diagnosis')); ?>">診断をする</a></li>
                             <li><a href="<?php echo e(route('company.student')); ?>">学生を見る</a></li>
-                            <li><a href="#">ログアウト</a></li>
+                            <li><a href="<?php echo e(route('company.logout')); ?>">ログアウト</a></li>
                         </ul>
                     </nav>
                 </div>

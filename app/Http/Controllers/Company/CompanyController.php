@@ -104,4 +104,9 @@ class CompanyController extends Controller
         $message->save();
         event(new ChatPusher($message));
     }
+
+    public function logout(){
+        Auth::logout();
+        return redirect('/company/login');
+    }
 }

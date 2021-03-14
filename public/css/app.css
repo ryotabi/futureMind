@@ -17448,6 +17448,7 @@ main .main_wrap h2 {
   background-color: #fff;
   border-radius: 50%;
   width: 43%;
+  max-width: 265px;
   font-size: 30px;
   padding: 90px;
   margin: 0 auto;
@@ -17994,6 +17995,10 @@ main .main_wrap .future_color:active {
   font-weight: bold;
 }
 
+.singleCompany_wrap .likes_btn_wrap .likes_btn a {
+  display: block;
+}
+
 .singleCompany_wrap .likes_btn_wrap .liked_btn {
   background-color: #c5c5a1bb;
   box-shadow: none !important;
@@ -18438,6 +18443,10 @@ main .main_wrap .future_color:active {
   }
 }
 
+.singleCompany_content .company_comment {
+  white-space: pre-wrap;
+}
+
 @media only screen and (max-width: 414px) {
   .singleCompany_content .company_details {
     margin-top: 30px;
@@ -18644,6 +18653,16 @@ main .main_wrap .future_color:active {
   font-weight: bold;
 }
 
+.chat_wrap .chat_user {
+  position: fixed;
+}
+
+@media only screen and (max-width: 1025px) {
+  .chat_wrap .chat_user {
+    position: relative;
+  }
+}
+
 .chat_wrap .chat_name {
   font-size: 23px;
   font-weight: bold;
@@ -18651,7 +18670,7 @@ main .main_wrap .future_color:active {
 }
 
 .chat_wrap .chat_img {
-  width: 65%;
+  width: 165px;
   height: 165px;
   border-radius: 50%;
   border: 3px solid #fdff83;
@@ -18661,6 +18680,7 @@ main .main_wrap .future_color:active {
 
 @media only screen and (max-width: 1025px) {
   .chat_wrap .chat_img {
+    width: 65%;
     height: 140px;
   }
 }

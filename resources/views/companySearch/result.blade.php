@@ -20,6 +20,9 @@
                 </div>
                 @endif
                 </div>
+                <div class="text-center" style="margin:0 auto; display: table;">
+                {{ $companies->appends(request()->input())->links() }}
+                </div>
             </div>
             </div>
         </div>

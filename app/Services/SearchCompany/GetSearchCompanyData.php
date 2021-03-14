@@ -39,7 +39,7 @@ class GetSearchCompanyData {
                                 $query->orWhere('teammatevalue',$teammate);
                                 $query->orWhere('futurevalue',$future);
                             })
-                            ->get();
+                            ->paginate(6);
         return $companies; 
     }
 }

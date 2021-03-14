@@ -6,7 +6,7 @@
             <h3 class="chat_title">チャット</h3>
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="text-center">
+                        <div class="text-center chat_user">
                             <p class="chat_name">{{$student_user->name}}</p>
                             <img class="chat_img" src="/storage/images/{{$student_user->img_name}}" alt="画像">
                         </div>
@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     <div class="col-md-3 auth_profile">
-                        <div class="text-center">
+                        <div class="text-center chat_user">
                             <p class="chat_name">あなた</p>
                             <img class="chat_img" src="/storage/images/{{$company_user->company_icon}}" alt="画像">
                         </div>

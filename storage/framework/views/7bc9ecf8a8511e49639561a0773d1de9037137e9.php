@@ -27,10 +27,7 @@
                                     <li>場所：<?php echo e($items->office); ?></li>
                                     <li>社員数：<?php echo e($items->employee); ?>人</li>
                                     <li>ホームページ：<?php echo e($items->homepage); ?></li>
-                                    <li>企業からのコメント<br>
-                                        <?php echo e($items->comment); ?>
-
-                                    </li>
+                                    <li class="company_comment">企業からのコメント<br><?php echo e($items->comment); ?></li>
                                 </ul>
                             </div>
                         </div>
