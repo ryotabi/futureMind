@@ -39,6 +39,10 @@
         }
     }
 
+    .company_comment {
+        white-space: pre-wrap;
+    }
+
     .company_details {
         @include sp {
             margin-top: 30px;

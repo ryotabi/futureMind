@@ -29,9 +29,7 @@
                                     <li>場所：{{$items->office}}</li>
                                     <li>社員数：{{$items->employee}}人</li>
                                     <li>ホームページ：{{$items->homepage}}</li>
-                                    <li>企業からのコメント<br>
-                                        {{$items->comment}}
-                                    </li>
+                                    <li class="company_comment">企業からのコメント<br>{{$items->comment}}</li>
                                 </ul>
                             </div>
                         </div>

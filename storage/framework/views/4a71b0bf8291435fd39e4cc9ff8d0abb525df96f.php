@@ -19,6 +19,10 @@
                 </div>
                 <?php endif; ?>
                 </div>
+                <div class="text-center" style="margin:0 auto; display: table;">
+                <?php echo e($companies->appends(request()->input())->links()); ?>
+
+                </div>
             </div>
             </div>
         </div>

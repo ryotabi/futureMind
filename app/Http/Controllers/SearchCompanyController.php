@@ -22,10 +22,6 @@ class SearchCompanyController extends Controller
         return view('companySearch.result',compact('companies'));
     }
 
-    public function result(){
-        return view('companySearch.result');
-    }
-
     public function single($id){
         $company = Company::find($id);
         if(DB::table('likes')->where('user_id',Auth::user()->id)->where('company_id',$id)->exists()){
