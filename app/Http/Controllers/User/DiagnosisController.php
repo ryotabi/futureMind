@@ -56,13 +56,11 @@ class DiagnosisController extends Controller
             return view('diagnosis.future');
         }
         $chartFutureData = GetDiagnosisData::GetStudentFutureDiagnosisData($userId);
-        $futureCommentData = GetDiagnosisCommentData::GetFutureDiagnosisCommentData($chartFutureData);
+        $futureComments = GetDiagnosisCommentData::GetFutureDiagnosisCommentData($chartFutureData);
         $chartSelfData = GetDiagnosisData::GetStudentSelfDiagnosisData($userId);
-        $selfCommentList = GetDiagnosisCommentData::GetSelfDiagnosisCommentData($chartSelfData);
-        $selfCommentData = $selfCommentList[0];
-        $selfCommentData_sec = $selfCommentList[1];
-        $toFutureCommentData = GetDiagnosisCommentData::GetToFutureCommentData($chartFutureData,$chartSelfData);
-        return view('diagnosis.result',compact('chartFutureData','chartSelfData','futureCommentData','selfCommentData','selfCommentData_sec','toFutureCommentData'));
+        $selfComments = GetDiagnosisCommentData::GetSelfDiagnosisCommentData($chartSelfData);
+        $toFutureComments = GetDiagnosisCommentData::GetToFutureCommentData($chartFutureData,$chartSelfData);
+        return view('diagnosis.result',compact('chartFutureData','chartSelfData','futureComments','selfComments','toFutureComments'));
     }
 
     public function futureCompany(){

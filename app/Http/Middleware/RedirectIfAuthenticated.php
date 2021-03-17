@@ -20,7 +20,7 @@ class RedirectIfAuthenticated
     {
         
         if (Auth::guard($guard)->check() && $guard === 'comapny') {
-            return redirect(route('company-home'));
+            return redirect(route('company.home'));
         }
 
         if (Auth::guard($guard)->check() && $guard === 'user') {

@@ -17748,6 +17748,11 @@ main .main_wrap .future_color:active {
   }
 }
 
+.result_wrap .result_content .result_text .comment_type {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
 .result_wrap .result_content .result_tabs {
   display: flex;
   width: 100%;

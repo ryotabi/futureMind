@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="header_logo col-md-3">
                     <h1>
-                        <a href="<?php echo e(route('company-home')); ?>">FutureMind</a>
+                        <a href="<?php echo e(route('company.home')); ?>">FutureMind</a>
                         <span class="hum_btn"><i class="fas fa-bars"></i></span>
                         <span class="hum_close"><i class="fas fa-times"></i></span>
                     </h1>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="header_icon col-md-2">
                     <div>
-                        <span><a href="<?php echo e(route('company-home')); ?>"><i class="far fa-user"></i></a></span>
+                        <span><a href="<?php echo e(route('company.home')); ?>"><i class="far fa-user"></i></a></span>
                     </div>
                 </div>
                 <div class="hum_wrap">

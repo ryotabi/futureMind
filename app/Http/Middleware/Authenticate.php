@@ -13,15 +13,15 @@ class Authenticate extends Middleware
      * @param  \Illuminate\Http\Request  $request
      * @return string|null
      */
-    protected $user_route = 'user.login';
-    protected $company_route = 'company.login';
     protected function redirectTo($request)
     {
+        $user_route = 'login';
+        $company_route = 'company.login';
         if (! $request->expectsJson()) {
-            if(Route::is('user.*')) {
-                return route('login');
+            if(Route::is('user.*') || Route::is('diagnosis.*')) {
+                return route($user_route);
             } elseif (Route::is('company.*')) {
-                return route($this->company_route);
+                return route($company_route);
             }
         }
     }

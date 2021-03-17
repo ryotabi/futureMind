@@ -29,9 +29,10 @@ class GetSearchCompanyData {
         $stable =$request->stable;
         $teammate =$request->teammate;
         $future =$request->future;
+        // 業種・地域・規模が当てはまり、詳細条件のどれか1つが当てはまるものを検索
         $companies = Company::where('industry',$request->industry)
                             ->Where('office','LIKE',"%{$request->area}%")
-                            ->orWhereBetween('employee',$employee)
+                            ->WhereBetween('employee',$employee)
                             ->whereHas('diagnosis',function($query) use($development,$social,$stable,$teammate,$future){
                                 $query->where('developmentvalue',$development);
                                 $query->orWhere('socialvalue',$social);

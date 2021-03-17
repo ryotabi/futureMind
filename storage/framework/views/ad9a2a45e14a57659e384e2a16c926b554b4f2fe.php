@@ -12,7 +12,7 @@
         <h1 class="login_title text-center">futureMind</h1>
         <p class="company_title text-center">（企業様ページ）</p>
         <div class="login_form_wrap">
-            <form action="<?php echo e(url("login/$authgroup")); ?>" method="POST">
+            <form action="<?php echo e(url("$authgroup/login")); ?>" method="POST">
             <?php echo csrf_field(); ?>
                 <div class="form-group">
                     <label for="exampleInputPassword1">メールアドレス</label>

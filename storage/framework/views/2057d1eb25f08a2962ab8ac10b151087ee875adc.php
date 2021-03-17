@@ -27,16 +27,13 @@
                         <div class="self_text content_wrap active">
                             <div class="text_wrap">
                                 <h3 class="text_title">今の自分</h3>
-                                <h4><?php echo e($selfCommentData->comment_type); ?></h4>
+                                <?php $__currentLoopData = $selfComments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $selfComment): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <h4 class="comment_type"><?php echo e($selfComment->comment_type); ?></h4>
                                 <p class="text_content">
-                                    <?php echo e($selfCommentData->comment); ?>
+                                    <?php echo e($selfComment->comment); ?>
 
                                 </p>
-                                <h4 style="margin-top:30px;"><?php echo e($selfCommentData_sec->comment_type); ?></h4>
-                                <p class="text_content">
-                                    <?php echo e($selfCommentData_sec->comment); ?>
-
-                                </p>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </div>
                             <div class="result_btn_wrap">
                                 <a href="<?php echo e(route('diagnosis.selfCompany')); ?>" class="result_btn self_btn"><span>オススメの企業</span></a>
@@ -45,11 +42,13 @@
                         <div class="future_text content_wrap">
                             <div class="text_wrap">
                                 <h3 class="text_title">理想の自分</h3>
-                                <h4><?php echo e($futureCommentData->comment_type); ?></h4>
+                                <?php $__currentLoopData = $futureComments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $futureComment): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <h4 class="comment_type"><?php echo e($futureComment->comment_type); ?></h4>
                                 <p class="text_content">
-                                    <?php echo e($futureCommentData->comment); ?>
+                                    <?php echo e($futureComment->comment); ?>
 
                                 </p>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </div>
                             <div class="result_btn_wrap">
                                 <a href="<?php echo e(route('diagnosis.futureCompany')); ?>" class="result_btn future_btn"><span>オススメの企業</span></a>
@@ -58,10 +57,13 @@
                         <div class="gap_text content_wrap">
                             <div class="text_wrap">
                                 <h3 class="text_title">理想の自分へ</h3>
+                                <?php $__currentLoopData = $toFutureComments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $toFutureComment): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <h4 class="comment_type"><?php echo e($toFutureComment->comment_type); ?></h4>
                                 <p class="text_content">
-                                <?php echo e($toFutureCommentData->comment); ?>
+                                    <?php echo e($toFutureComment->comment); ?>
 
                                 </p>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </div>
                         </div>
                     </div>

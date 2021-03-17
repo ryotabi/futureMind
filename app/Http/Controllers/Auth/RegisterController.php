@@ -98,7 +98,9 @@ class RegisterController extends Controller
 
     protected function createCompany(Request $request)
     {
-        $fileNameToStore = ImgToDatabase::ImgToDatabase($request->company_icon);
+        if(isset($request->company_icon)){
+            $fileNameToStore = ImgToDatabase::ImgToDatabase($request->company_icon);
+        }
         $this->companyValidator($request->all())->validate();
         $company = Company::create([
             'name' => $request['name'],

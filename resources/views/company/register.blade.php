@@ -12,7 +12,7 @@
         <h1 class="register_title text-center">futureMind</h1>
         <p class="company_title text-center">（企業様ページ）</p>
         <div class="register_form_wrap">
-            <form action="{{ url("register/$authgroup")}}" enctype="multipart/form-data" method="POST">
+            <form action="{{ url("$authgroup/register")}}" enctype="multipart/form-data" method="POST">
             @csrf
                 <div class="form-group">
                     <label for="exampleInputPassword1">企業名</label>

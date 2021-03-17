@@ -9,95 +9,97 @@ use App\models\ToFutureComment;
 
 
 class GetDiagnosisCommentData {
-
     public static function GetFutureDiagnosisCommentData ($chartFutureData) {
-        $futureMaxes   = array_keys($chartFutureData, max($chartFutureData));
-        $futureKey_max = $futureMaxes[0];
-        if($futureKey_max === 0){
-            $futureComment = '成長意欲';
+        $futureMaxes = array_keys($chartFutureData, max($chartFutureData));
+        $futureCommentTypes = [];
+        for ($i = 0; $i < count($futureMaxes); $i++) {
+            $futureCommentType;
+            if($futureMaxes[$i] === 0){
+                $futureCommentType = '成長意欲';
+            }
+            if($futureMaxes[$i] === 1){
+                $futureCommentType = '社会貢献';
+            }
+            if($futureMaxes[$i] === 2){
+                $futureCommentType = '安定';
+            }
+            if($futureMaxes[$i] === 3){
+                $futureCommentType = '仲間';
+            }
+            if($futureMaxes[$i] === 4){
+                $futureCommentType = '将来性';
+            }
+            array_push($futureCommentTypes, $futureCommentType);
         }
-        if($futureKey_max === 1){
-            $futureComment = '社会貢献';
+        $futureComments = [];
+        for ($i = 0; $i < count($futureCommentTypes); $i++) {
+            $futureComment = FutureDiagnosisComment::where('comment_type',$futureCommentTypes[$i])->first();
+            array_push($futureComments, $futureComment);
         }
-        if($futureKey_max === 2){
-            $futureComment = '安定';
-        }
-        if($futureKey_max === 3){
-            $futureComment = '仲間';
-        }
-        if($futureKey_max === 4){
-            $futureComment = '将来性';
-        }
-        $futureCommentData = FutureDiagnosisComment::where('comment_type',$futureComment)->first();
-        return $futureCommentData;
+        return $futureComments;
     }
 
     public static function GetSelfDiagnosisCommentData ($chartSelfData) {
         $selfMaxes   = array_keys($chartSelfData, max($chartSelfData));
-        $selfKey_max = $selfMaxes[0];
-        $selfKey_max_sec = $selfMaxes[1];
-        if($selfKey_max === 0){
-            $selfComment = '成長意欲';
+        $selfCommentTypes = [];
+        for ($i = 0; $i < count($selfMaxes); $i++) {
+            $selfCommentType;
+            if($selfMaxes[$i] === 0){
+                $selfCommentType = '成長意欲';
+            }
+            if($selfMaxes[$i] === 1){
+                $selfCommentType = '社会貢献';
+            }
+            if($selfMaxes[$i] === 2){
+                $selfCommentType = '安定';
+            }
+            if($selfMaxes[$i] === 3){
+                $selfCommentType = '仲間';
+            }
+            if($selfMaxes[$i] === 4){
+                $selfCommentType = '将来性';
+            }
+            array_push($selfCommentTypes, $selfCommentType);
         }
-        if($selfKey_max === 1){
-            $selfComment = '社会貢献';
+        $selfComments = [];
+        for ($i = 0; $i < count($selfCommentTypes); $i++) {
+            $selfComment = SelfDiagnosisComment::where('comment_type',$selfCommentTypes[$i])->first();
+            array_push($selfComments, $selfComment);
         }
-        if($selfKey_max === 2){
-            $selfComment = '安定';
-        }
-        if($selfKey_max === 3){
-            $selfComment = '仲間';
-        }
-        if($selfKey_max === 4){
-            $selfComment = '将来性';
-        }
-        if($selfKey_max_sec === 0){
-            $selfComment_sec = '成長意欲';
-        }
-        if($selfKey_max_sec === 1){
-            $selfComment_sec = '社会貢献';
-        }
-        if($selfKey_max_sec === 2){
-            $selfComment_sec = '安定';
-        }
-        if($selfKey_max_sec === 3){
-            $selfComment_sec = '仲間';
-        }
-        if($selfKey_max_sec === 4){
-            $selfComment_sec = '将来性';
-        }
-        $selfCommentData = SelfDiagnosisComment::where('comment_type',$selfComment)->first();
-        $selfCommentData_sec = SelfDiagnosisComment::where('comment_type',$selfComment_sec)->first();
-
-        return [$selfCommentData, $selfCommentData_sec];
+        return $selfComments;
     }
 
     public static function GetToFutureCommentData($chartFutureData, $chartSelfData) {
-        $toFutureMyself = array();
+        $comparedFutureAndSelfData = array();
         for($i = 0;$i<count($chartFutureData);$i++){
-            $toFutureMyself[$i] = $chartFutureData[$i] - $chartSelfData[$i];
+            $comparedFutureAndSelfData[$i] = $chartFutureData[$i] - $chartSelfData[$i];
         }
-        $toFutureMaxes   = array_keys($toFutureMyself, max($toFutureMyself));
-        $toFutureKey_max = $toFutureMaxes[0];
-        if($toFutureKey_max === 0){
-            $toFutureComment = '成長意欲';
+        $toFutureMaxes   = array_keys($comparedFutureAndSelfData, max($comparedFutureAndSelfData));
+        $toFutureCommentTypes = [];
+        for ($i = 0; $i < count($toFutureMaxes); $i++) {
+            $toFutureCommentType;
+            if($toFutureMaxes[$i] === 0){
+                $toFutureCommentType = '成長意欲';
+            }
+            if($toFutureMaxes[$i] === 1){
+                $toFutureCommentType = '社会貢献';
+            }
+            if($toFutureMaxes[$i] === 2){
+                $toFutureCommentType = '安定';
+            }
+            if($toFutureMaxes[$i] === 3){
+                $toFutureCommentType = '仲間';
+            }
+            if($toFutureMaxes[$i] === 4){
+                $toFutureCommentType = '将来性';
+            }
+            array_push($toFutureCommentTypes, $toFutureCommentType);
         }
-        if($toFutureKey_max === 1){
-            $toFutureComment = '社会貢献';
+        $toFutureComments = [];
+        for ($i = 0; $i < count($toFutureCommentTypes); $i++) {
+            $toFutureComment = ToFutureComment::where('comment_type',$toFutureCommentTypes[$i])->first();
+            array_push($toFutureComments, $toFutureComment);
         }
-        if($toFutureKey_max === 2){
-            $toFutureComment = '安定';
-        }
-        if($toFutureKey_max === 3){
-            $toFutureComment = '仲間';
-        }
-        if($toFutureKey_max === 4){
-            $toFutureComment = '将来性';
-        }
-        if(max($toFutureMyself) <= 0){
-            $toFutureComment = 'なし';
-        }
-        $toFutureCommentData = ToFutureComment::where('comment_type',$toFutureComment)->first();
-        return $toFutureCommentData;
+        return $toFutureComments;
     }
 }

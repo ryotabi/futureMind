@@ -51,8 +51,6 @@ class LoginController extends Controller
         ]);
         if(Auth::guard('company')->attempt(['email' => $request->email,'password'=>$request->password],$request->get('remember'))){
             return redirect('/company');
-        } else {
-            return redirect('/company/login');
         }
         return back()->withInput($request->only('email','remember'));
     }

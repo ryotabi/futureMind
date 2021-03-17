@@ -28,14 +28,12 @@
                         <div class="self_text content_wrap active">
                             <div class="text_wrap">
                                 <h3 class="text_title">今の自分</h3>
-                                <h4>{{$selfCommentData->comment_type}}</h4>
+                                @foreach ($selfComments as $selfComment)
+                                <h4 class="comment_type">{{$selfComment->comment_type}}</h4>
                                 <p class="text_content">
-                                    {{$selfCommentData->comment}}
+                                    {{$selfComment->comment}}
                                 </p>
-                                <h4 style="margin-top:30px;">{{$selfCommentData_sec->comment_type}}</h4>
-                                <p class="text_content">
-                                    {{$selfCommentData_sec->comment}}
-                                </p>
+                                @endforeach
                             </div>
                             <div class="result_btn_wrap">
                                 <a href="{{route('diagnosis.selfCompany')}}" class="result_btn self_btn"><span>オススメの企業</span></a>
@@ -44,10 +42,12 @@
                         <div class="future_text content_wrap">
                             <div class="text_wrap">
                                 <h3 class="text_title">理想の自分</h3>
-                                <h4>{{$futureCommentData->comment_type}}</h4>
+                                @foreach ($futureComments as $futureComment)
+                                <h4 class="comment_type">{{$futureComment->comment_type}}</h4>
                                 <p class="text_content">
-                                    {{$futureCommentData->comment}}
+                                    {{$futureComment->comment}}
                                 </p>
+                                @endforeach
                             </div>
                             <div class="result_btn_wrap">
                                 <a href="{{route('diagnosis.futureCompany')}}" class="result_btn future_btn"><span>オススメの企業</span></a>
@@ -56,9 +56,12 @@
                         <div class="gap_text content_wrap">
                             <div class="text_wrap">
                                 <h3 class="text_title">理想の自分へ</h3>
+                                @foreach ($toFutureComments as $toFutureComment)
+                                <h4 class="comment_type">{{$toFutureComment->comment_type}}</h4>
                                 <p class="text_content">
-                                {{$toFutureCommentData->comment}}
+                                    {{$toFutureComment->comment}}
                                 </p>
+                                @endforeach
                             </div>
                         </div>
                     </div>

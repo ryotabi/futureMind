@@ -39,13 +39,12 @@ Route::group(['namespace'=>'User','prefix'=>'user','middleware'=>'auth'],functio
 });
 
 Route::get('/company/login', 'Auth\LoginController@showCompanyLoginForm')->name('company.login');
-Route::get('/company/register', 'Auth\RegisterController@showCompanyRegisterForm');
+Route::get('/login/company', 'Auth\LoginController@showCompanyLoginForm');
+Route::get('/company/register', 'Auth\RegisterController@showCompanyRegisterForm')->name('company.register');
 
-// Route::get('/login/company', 'Auth\LoginController@companyLogin');
-Route::get('/register/company', 'Auth\RegisterController@createCompany')->name('company.register');
-Route::post('/login/company', 'Auth\LoginController@companyLogin');
-Route::post('/register/company', 'Auth\RegisterController@createCompany')->name('company-register');
-Route::get('/company', 'company\CompanyController@index')->middleware('auth:company')->name('company-home');
+Route::post('/company/login', 'Auth\LoginController@companyLogin');
+Route::post('/company/register', 'Auth\RegisterController@createCompany');
+Route::get('/company', 'company\CompanyController@index')->middleware('auth:company')->name('company.home');
 Route::get('/company/edit','company\CompanyController@edit')->middleware('auth:company')->name('company.edit');
 Route::get('/company/logout','company\CompanyController@logout')->middleware('auth:company')->name('company.logout');
 Route::post('/company/edit','company\CompanyController@update')->middleware('auth:company')->name('company.update');
