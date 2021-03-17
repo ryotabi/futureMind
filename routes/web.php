@@ -14,6 +14,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'User\DiagnosisController@index')->name('diagnosis.index')->middleware('auth');
+Route::get('/about', 'User\DiagnosisController@about')->name('diagnosis.about')->middleware('auth');
 Route::group(['namespace'=>'User','prefix'=>'diagnosis','middleware'=>'auth'],function(){
     Route::get('future', 'DiagnosisController@future')->name('diagnosis.future');
     Route::post('future', 'DiagnosisController@futurePost')->name('diagnosis.futurePost');

@@ -3,6 +3,9 @@
     @include tab {
         margin-top: 10vh;
     }
+    @include sp {
+        margin-top: 20vh;
+    }
     .singleCompany_title {
         align-items: center;
         text-align: center;

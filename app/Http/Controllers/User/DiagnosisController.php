@@ -27,6 +27,11 @@ class DiagnosisController extends Controller
         return view('diagnosis.index');
     }
 
+    public function about() {
+        return view('user.about');
+    }
+
+
     public function future(){
         return view('diagnosis.future');
     }
