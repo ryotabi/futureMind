@@ -26,7 +26,7 @@ class CompanyController extends Controller
         $userId = Auth::user()->id;
         $items = Company::find($userId);
         $chartCompanyData = GetDiagnosisData::GetCompanyDiagnosisData($userId);
-        return view('Company.index',compact('items','chartCompanyData'));
+        return view('company.index',compact('items','chartCompanyData'));
     }
 
     public function edit(){
@@ -34,7 +34,7 @@ class CompanyController extends Controller
         $items = Company::find($userId);
         $chartCompanyData = GetDiagnosisData::GetCompanyDiagnosisData($userId);
         $optionIndustry = GetIndustryArray::GetIndustryArray($items->industry);
-        return view('Company.edit',compact('items','chartCompanyData','optionIndustry'));
+        return view('company.edit',compact('items','chartCompanyData','optionIndustry'));
     }
 
     public function update(Request $request){
@@ -48,7 +48,7 @@ class CompanyController extends Controller
     }
 
     public function diagnosis(){
-        return view('Company.diagnosis');
+        return view('company.diagnosis');
     }
 
     public function diagnosisPost(Request $request){
@@ -60,14 +60,14 @@ class CompanyController extends Controller
 
     public function student(){
         $likeUsers = Company::find(Auth::user()->id)->likesStudent()->paginate(6);
-        return view('Company.student',compact('likeUsers'));
+        return view('company.student',compact('likeUsers'));
     }
 
     public function singleStudent($id){
         $user = User::find($id);
         $Room = Like::where('company_id',Auth::user()->id)->where('user_id',$user->id)->first();
         $Room_id = $Room->id;
-        return view('Company.single',compact('user','Room_id'));
+        return view('company.single',compact('user','Room_id'));
     }
 
     public function chat(Request $request){
@@ -92,7 +92,7 @@ class CompanyController extends Controller
         }else{
             $messages = null;
         }
-        return view('Company.chat',compact('room_id','messages','company_user','student_user'));
+        return view('company.chat',compact('room_id','messages','company_user','student_user'));
     }
 
     public function postMessage(Request $request,$id){
