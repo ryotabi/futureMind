@@ -17,7 +17,7 @@
                 <div class="header_nav col-md-7">
                     <nav>
                         <ul>
-                        <li><a href="#">理想分析について</a></li>
+                            <li><a href="<?php echo e(route('diagnosis.about')); ?>">FutureMindについて</a></li>
                             <li><a href="<?php echo e(route('diagnosis.result')); ?>">結果を見る</a></li>
                             <li><a href="<?php echo e(route('search.search')); ?>">企業を探す</a></li>
                             <li><a href="<?php echo e(route('user.likes')); ?>">お気に入り企業を見る</a></li>

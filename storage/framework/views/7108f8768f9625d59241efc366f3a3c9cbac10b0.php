@@ -6,7 +6,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-6 order-xl-2  company_details">
-                            <div class="text-center"><img class="company_logo self_logo" src="/storage/images/<?php echo e($company->company_icon); ?>" alt=""></div>
+                            <div class="text-center"><img class="company_logo self_logo" src="http://s-ryota.sakura.ne.jp/futureMind/storage/images/<?php echo e($company->company_icon); ?>" alt=""></div>
                             <div class="company_info">
                                 <ul>
                                     <li>企業名：<?php echo e($company->name); ?></li>

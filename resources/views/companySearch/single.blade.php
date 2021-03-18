@@ -18,7 +18,7 @@
                             <div class="text-center"><img class="company_logo" src="http://s-ryota.sakura.ne.jp/futureMind/storage/images/{{$company->company_icon}}" alt=""></div>
                             <div class="company_info">
                                 <ul>
-                                    <li>企業名:{{$company->name}}</li>
+                                    <li>企業:{{$company->name}}</li>
                                     <li>業界：{{$company->industry}}</li>
                                     <li>場所：{{$company->office}}</li>
                                     <li>社員数：{{$company->employee}}人</li>

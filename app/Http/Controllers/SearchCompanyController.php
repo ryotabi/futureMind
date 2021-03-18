@@ -54,11 +54,7 @@ class SearchCompanyController extends Controller
         }else{
             $isLiked=false;
         }
-        if(ChatRoom::where('user_id',Auth::user()->id)->where('company_id',$company_id)->first()->exists()){
-            $chat = true;
-        }else{
-            $chat = false;
-        }
+        $chat = false;
         $company = Company::find($company_id);
         return view('companySearch.single',compact('company','isLiked','chat'));
     }

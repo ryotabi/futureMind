@@ -14,10 +14,10 @@
                             <canvas id="companyChart" width="60%" height="40%"></canvas>
                         </div>
                         <div class="col-xl-6 company_details">
-                            <div class="text-center"><img class="company_logo" src="/storage/images/<?php echo e($company->company_icon); ?>" alt=""></div>
+                            <div class="text-center"><img class="company_logo" src="http://s-ryota.sakura.ne.jp/futureMind/storage/images/<?php echo e($company->company_icon); ?>" alt=""></div>
                             <div class="company_info">
                                 <ul>
-                                    <li>企業名:<?php echo e($company->name); ?></li>
+                                    <li>企業:<?php echo e($company->name); ?></li>
                                     <li>業界：<?php echo e($company->industry); ?></li>
                                     <li>場所：<?php echo e($company->office); ?></li>
                                     <li>社員数：<?php echo e($company->employee); ?>人</li>

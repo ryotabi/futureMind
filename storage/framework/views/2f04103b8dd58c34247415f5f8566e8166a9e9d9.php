@@ -8,7 +8,7 @@
                 <?php if(!$likeCompanies->isEmpty()): ?>
                     <?php $__currentLoopData = $likeCompanies; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $company): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-md-4">
-                        <a  href="<?php echo e(route('search.single',['id'=>$company->id])); ?>"><img class="company_logo primary_border" src="/storage/images/<?php echo e($company->company_icon); ?>" alt=""></a>
+                        <a  href="<?php echo e(route('search.single',['id'=>$company->id])); ?>"><img class="company_logo primary_border" src="http://s-ryota.sakura.ne.jp/futureMind/storage/images/<?php echo e($company->company_icon); ?>" alt=""></a>
                         <p class="company_name"><?php echo e($company->name); ?></p>
                     </div>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
