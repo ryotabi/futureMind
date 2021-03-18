@@ -8,7 +8,7 @@
                     <div class="col-md-3">
                         <div class="text-center">
                             <p class="chat_name">{{$student_user->name}}</p>
-                            <img class="chat_img" src="storage/images/{{$student_user->img_name}}" alt="画像">
+                            <img class="chat_img" src="http://s-ryota.sakura.ne.jp/futureMind/storage/images/{{$student_user->img_name}}" alt="画像">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -35,7 +35,7 @@
                     <div class="col-md-3">
                         <div class="text-center">
                             <p class="chat_name">あなた</p>
-                            <img class="chat_img" src="storage/images/{{$company_user->company_icon}}" alt="画像">
+                            <img class="chat_img" src="http://s-ryota.sakura.ne.jp/futureMind/storage/images/{{$company_user->company_icon}}" alt="画像">
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,7 @@
                 @if(!$likeUsers->isEmpty())
                     @foreach($likeUsers as $user)
                     <div class="col-md-4">
-                        <a  href="{{route('company.singleStudent',['id'=>$user->id])}}"><img class="company_logo primary_border" src="storage/images/{{$user->img_name}}" alt=""></a>
+                        <a  href="{{route('company.singleStudent',['id'=>$user->id])}}"><img class="company_logo primary_border" src="http://s-ryota.sakura.ne.jp/futureMind/storage/images/{{$user->img_name}}" alt=""></a>
                         <p class="company_name">{{$user->name}}</p>
                     </div>
                     @endforeach

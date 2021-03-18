@@ -20,7 +20,7 @@
                         </div>
                         <div class="col-xl-6 company_details">
                             <div class="text-center">
-                                <img class="company_logo" src="storage/images/{{$items->company_icon}}" alt="">
+                                <img class="company_logo" src="http://s-ryota.sakura.ne.jp/futureMind/storage/images/{{$items->company_icon}}" alt="">
                             </div>
                             <div class="company_info">
                                 <ul>

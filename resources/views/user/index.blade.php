@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-md-3 info_wrap">
                         <div>
-                            <img class="info_img" src="storage/images/{{$items->img_name}}" alt="画像">
+                            <img class="info_img" src="http://s-ryota.sakura.ne.jp/futureMind/storage/images/{{$items->img_name}}" alt="画像">
                         </div>
                         <div class="toEdit_btn">
                             <a href="{{route('user.edit')}}"><p>編集</p></a>
