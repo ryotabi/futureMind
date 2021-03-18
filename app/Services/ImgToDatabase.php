@@ -8,7 +8,6 @@ use Intervention\Image\Facades\Image;
 class ImgToDatabase {
     public static function ImgToDatabase($requestImg) {
         $imageFile = $requestImg;
-        dd('test');
         $filenameWithExt = $imageFile->getClientOriginalName();
         $fileName = pathinfo($filenameWithExt,PATHINFO_FILENAME);
         $extension = $imageFile->getClientOriginalExtension();
