@@ -32,7 +32,7 @@
                     <button type="submit" class="btn btn-primary">ログイン</button>
                 </div>
                 <div class="text-center" style="margin-top:10px;">
-                    <a href="/company/register" class="mt-10">新規登録</a>
+                    <a href="{{route('company.register')}}" class="mt-10">新規登録</a>
                 </div>
             </form>
         </div>

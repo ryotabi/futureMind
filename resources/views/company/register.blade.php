@@ -47,7 +47,7 @@
                     <button type="submit" class="btn btn-primary">新規登録</button>
                 </div>
                 <div class="text-center" style="margin-top:10px;">
-                    <a href="/company/login" class="mt-10">ログイン</a>
+                    <a href="{{route('company.login')}}" class="mt-10">ログイン</a>
                 </div>
             </form>
         </div>
