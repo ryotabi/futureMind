@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-md-3 info_wrap">
                         <div>
-                            <img class="info_img" src="/storage/app/public/images/{{$user->img_name}}" alt="画像">
+                            <img class="info_img" src="storage/images/{{$user->img_name}}" alt="画像">
                         </div>
                         <div class="toEdit_btn">
                             <a href="{{route('company.chat',['student_id'=>$user->id,'id'=>$Room_id])}}"><p>チャット</p></a>

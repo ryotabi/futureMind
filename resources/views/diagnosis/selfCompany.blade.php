@@ -9,7 +9,7 @@
                     @if(!$companies->isEmpty())
                         @foreach($companies as $company)
                         <div class="col-md-4">
-                            <a  href="{{route('diagnosis.selfSingleCompany',['id'=>$company->id])}}"><img class="company_logo primary_border" src="/storage/app/public/images/{{$company->company_icon}}" alt=""></a>
+                            <a  href="{{route('diagnosis.selfSingleCompany',['id'=>$company->id])}}"><img class="company_logo primary_border" src="storage/images/{{$company->company_icon}}" alt=""></a>
                             <p class="company_name">{{$company->name}}</p>
                         </div>
                         @endforeach

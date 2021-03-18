@@ -7,7 +7,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-6 order-xl-2  company_details">
-                            <div class="text-center"><img class="company_logo self_logo" src="/storage/app/public/images/{{$company->company_icon}}" alt=""></div>
+                            <div class="text-center"><img class="company_logo self_logo" src="storage/images/{{$company->company_icon}}" alt=""></div>
                             <div class="company_info">
                                 <ul>
                                     <li>企業名：{{$company->name}}</li>
