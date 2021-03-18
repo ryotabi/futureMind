@@ -8,7 +8,7 @@
                 <?php if(!$likeUsers->isEmpty()): ?>
                     <?php $__currentLoopData = $likeUsers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-md-4">
-                        <a  href="<?php echo e(route('company.singleStudent',['id'=>$user->id])); ?>"><img class="company_logo primary_border" src="/storage/images/<?php echo e($user->img_name); ?>" alt=""></a>
+                        <a  href="<?php echo e(route('company.singleStudent',['id'=>$user->id])); ?>"><img class="company_logo primary_border" src="storage/images/<?php echo e($user->img_name); ?>" alt=""></a>
                         <p class="company_name"><?php echo e($user->name); ?></p>
                     </div>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
