@@ -61,7 +61,7 @@
                         </div>
                         <div class="col-md-3 info_wrap">
                             <div >
-                                <img class="info_img" src="/storage/images/{{$items->img_name}}" alt="画像">
+                                <img class="info_img" src="/storage/app/public/images/{{$items->img_name}}" alt="画像">
                             </div>
                             <input type="file" name="img_name" value="{{$items->img_name}}">
                             <input type="submit" value="更新" class="toEdit_btn">

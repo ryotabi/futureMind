@@ -21,7 +21,7 @@
                             <form action="{{route('company.update')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                                 <div class="text-center">
-                                    <img class="company_logo company_admin" src="/storage/images/{{$items->company_icon}}" alt="">
+                                    <img class="company_logo company_admin" src="/storage/app/public/images/{{$items->company_icon}}" alt="">
                                 </div>
                                 <div class="text-center mb-10"><input type="file" name="company_icon"></div>
                                 <div class="company_info company_edit">
