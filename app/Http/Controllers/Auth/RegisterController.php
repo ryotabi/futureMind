@@ -108,6 +108,6 @@ class RegisterController extends Controller
             'password' => Hash::make($request['password']),
             'company_icon' => $fileNameToStore,
         ]);
-        return redirect()->intended('company/login');
+        return redirect()->intended('/company');
     }
 }
