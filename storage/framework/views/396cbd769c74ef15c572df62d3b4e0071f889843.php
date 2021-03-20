@@ -6,7 +6,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-6 order-xl-2 company_details">
-                            <div class="text-center"><img class="company_logo future_logo" src="/storage/images/<?php echo e($company->company_icon); ?>" alt=""></div>
+                            <div class="text-center"><img class="company_logo future_logo" src="http://s-ryota.sakura.ne.jp/futureMind/storage/images/<?php echo e($company->company_icon); ?>" alt=""></div>
                             <div class="company_info">
                                 <ul>
                                     <li>企業名：<?php echo e($company->name); ?></li>
@@ -25,10 +25,12 @@
                             <div class="analysis_title future_color">あなたが足りない点</div>
                             <div class="analysis_content">
                                 <ul>
-                                    <li>〇<?php echo e($companyValue->comment_type); ?><br>
-                                        <?php echo e($companyValue->comment); ?>
+                                    <?php $__currentLoopData = $companyComments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $companyComment): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <li style="margin-top: 20px;">〇<?php echo e($companyComment->comment_type); ?><br>
+                                        <?php echo e($companyComment->comment); ?>
 
                                     </li>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </ul>
                             </div>
                         </div>

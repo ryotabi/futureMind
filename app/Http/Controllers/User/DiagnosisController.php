@@ -83,25 +83,25 @@ class DiagnosisController extends Controller
     public function futureSingleCompany($id){
         $company = Company::find($id);
         $userId = Auth::user()->id;
-        $companyValue = GetMatchingCompany::GetFutureSingleCompany($id, $userId);
+        $companyComments = GetMatchingCompany::GetFutureSingleCompany($id, $userId);
         if(DB::table('likes')->where('user_id',Auth::user()->id)->where('company_id',$id)->exists()){
             $isLiked=true;
         }else{
             $isLiked=false;
         }
-        return view('diagnosis.futureSingleCompany',compact('company','companyValue','isLiked'));
+        return view('diagnosis.futureSingleCompany',compact('company','companyComments','isLiked'));
     }
 
     public function selfSingleCompany($id){
         $company = Company::find($id);
         $userId = Auth::user()->id;
-        $companyValue = GetMatchingCompany::GetSelfSingleCompany($id, $userId);
+        $companyComments = GetMatchingCompany::GetSelfSingleCompany($id, $userId);
         if(DB::table('likes')->where('user_id',Auth::user()->id)->where('company_id',$id)->exists()){
             $isLiked=true;
         }else{
             $isLiked=false;
         }
-        return view('diagnosis.selfSingleCompany',compact('company','companyValue','isLiked'));
+        return view('diagnosis.selfSingleCompany',compact('company','companyComments','isLiked'));
     }
 
     public function futureLikeCompany(Request $request){

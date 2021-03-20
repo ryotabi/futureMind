@@ -25,9 +25,11 @@
                             <div class="analysis_title future_color">あなたが足りない点</div>
                             <div class="analysis_content">
                                 <ul>
-                                    <li>〇{{$companyValue->comment_type}}<br>
-                                        {{$companyValue->comment}}
+                                    @foreach($companyComments as $companyComment)
+                                    <li style="margin-top: 20px;">〇{{$companyComment->comment_type}}<br>
+                                        {{$companyComment->comment}}
                                     </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>

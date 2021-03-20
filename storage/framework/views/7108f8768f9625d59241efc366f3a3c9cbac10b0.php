@@ -26,10 +26,12 @@
                             <div class="analysis_title self_color">あなたに物足りない点</div>
                             <div class="analysis_content">
                                 <ul>
-                                    <li>〇<?php echo e($companyValue->comment_type); ?><br>
-                                        <?php echo e($companyValue->comment); ?>
+                                    <?php $__currentLoopData = $companyComments; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $companyComment): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <li style="margin-top: 20px;">〇<?php echo e($companyComment->comment_type); ?><br>
+                                        <?php echo e($companyComment->comment); ?>
 
                                     </li>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </ul>
                             </div>
                         </div>
