@@ -6,6 +6,7 @@
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
     <title>FutureMind</title>
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
+    <link rel="shortcut icon" href="<?php echo e(asset('/futureMindfavicon.ico')); ?>">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 </head>
