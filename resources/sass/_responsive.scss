@@ -1,4 +1,10 @@
-@mixin tab($width: 1025px) {
+@mixin tab_iPadPro($width: 1025px) {
+    @media only screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin tab_iPad($width: 768px) {
     @media only screen and (max-width: $width) {
         @content;
     }

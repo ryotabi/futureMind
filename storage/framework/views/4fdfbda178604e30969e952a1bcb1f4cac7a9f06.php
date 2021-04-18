@@ -7,7 +7,7 @@
                     <div class="col-md-3">
                         <div class="text-center chat_user">
                             <p class="chat_name"><?php echo e($company_user->name); ?></p>
-                            <img class="chat_img" src="/storage/images/<?php echo e($company_user->company_icon); ?>" alt="画像">
+                            <img class="chat_img" src="http://s-ryota.sakura.ne.jp/futureMind/storage/images/<?php echo e($company_user->company_icon); ?>" alt="画像">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -34,7 +34,7 @@
                     <div class="col-md-3 auth_profile">
                         <div class="text-center chat_user">
                             <p class="chat_name">あなた</p>
-                            <img class="chat_img" src="/storage/images/<?php echo e($student_user->img_name); ?>" alt="画像">
+                            <img class="chat_img" src="http://s-ryota.sakura.ne.jp/futureMind/storage/images/<?php echo e($student_user->img_name); ?>" alt="画像">
                         </div>
                     </div>
                 </div>

@@ -18,7 +18,7 @@
                 </div>
                 <?php endif; ?>
                 </div>
-                <div class="text-center" style="margin:0 auto; width:12%;">
+                <div class="text-center">
                     <?php echo e($likeCompanies->links()); ?>
 
                 </div>

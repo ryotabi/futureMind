@@ -9,7 +9,7 @@ $future_color: #30e3df;
         text-shadow: 0 15px 4px rgba(0, 0, 0, 0.25);
         position: relative;
         font-family: fantasy;
-        @include tab {
+        @include tab_iPadPro {
             font-size: 130px;
         }
         @include sp {
@@ -24,7 +24,7 @@ $future_color: #30e3df;
         width: 65%;
         margin: 0 auto;
         padding: 10px 25px;
-        @include tab {
+        @include tab_iPadPro {
             width: 90%;
             margin: 30px auto;
         }

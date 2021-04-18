@@ -23,7 +23,7 @@ $future_color: #30e3df;
         padding: 20px 50px;
         width: 90%;
         height: 450px;
-        @include tab {
+        @include tab_iPadPro {
             height: 750px;
         }
         @include sp {
@@ -92,7 +92,7 @@ $future_color: #30e3df;
             text-align: center;
             background-color: $primary-color;
             box-shadow: 0px 8px 4px rgba(209, 211, 39, 0.25);
-            @include tab {
+            @include tab_iPadPro {
                 margin-top: 35px;
             }
             @include sp {

@@ -72,6 +72,11 @@ $future_color: #30e3df;
         .circle_big {
             width: 150px;
             height: 150px;
+            @include tab_iPad {
+                width: 110px;
+                height: 110px;
+                margin-top: 25px;
+            }
             @include sp {
                 width: 50px;
                 height: 50px;
@@ -123,7 +128,7 @@ $future_color: #30e3df;
         p {
             text-align: center;
             font-size: 25px;
-            @include tab {
+            @include tab_iPadPro {
                 font-size: 20px;
             }
         }
@@ -159,7 +164,7 @@ $future_color: #30e3df;
         border-radius: 30px;
         font-size: 20px;
         font-weight: bold;
-        @include tab {
+        @include tab_iPadPro {
             width: 50%;
             margin: 10vh auto;
         }

@@ -14,11 +14,9 @@
 <header>
         <div class="container">
             <div class="row">
-                <div class="header_logo col-md-3">
+                <div class="header_logo col-3">
                     <h1>
                         <a href="{{route('diagnosis.index')}}">FutureMind</a>
-                        <span class="hum_btn"><i class="fas fa-bars"></i></span>
-                        <span class="hum_close"><i class="fas fa-times"></i></span>
                     </h1>
                 </div>
                 <div class="header_nav col-md-7">
@@ -35,6 +33,10 @@
                     <div>
                         <span><a href="{{route('user.index')}}"><i class="far fa-user"></i></a></span>
                     </div>
+                </div>
+                <div class="header_ham col-9">
+                    <span class="hum_btn"><i class="fas fa-bars"></i></span>
+                    <span class="hum_close"><i class="fas fa-times"></i></span>
                 </div>
                 <div class="hum_wrap">
                     <nav>

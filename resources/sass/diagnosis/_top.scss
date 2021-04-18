@@ -53,8 +53,11 @@ main {
             padding: 90px;
             margin: 0 auto;
             text-align: center;
-            @include tab {
+            @include tab_iPadPro {
                 width: 54%;
+            }
+            @include tab_iPad {
+                width: 80%;
             }
             @include sp {
                 width: 70%;
